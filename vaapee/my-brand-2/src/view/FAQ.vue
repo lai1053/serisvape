@@ -1,36 +1,13 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const faqs = [
-  {
-    question: 'What is the maximum puff count?',
-    answer: 'Our STAR 100K series offers up to 100,000 puffs, while other series range from 18K to 50K puffs depending on the model.'
-  },
-  {
-    question: 'How long does shipping take?',
-    answer: 'Shipping times vary by region: North America (3-5 days), European Union (5-7 days), Middle East (4-6 days), Southeast Asia (2-4 days).'
-  },
-  {
-    question: 'What is the minimum order quantity (MOQ)?',
-    answer: 'MOQ varies by product series. Please contact our wholesale team for specific MOQ requirements and pricing.'
-  },
-  {
-    question: 'Are your products certified?',
-    answer: 'Yes, all our products are CE, FCC, and RoHS certified. European models are TPD compliant.'
-  },
-  {
-    question: 'Do you offer custom packaging?',
-    answer: 'Yes, we offer custom packaging options for bulk orders. Contact our sales team to discuss your requirements.'
-  },
-  {
-    question: 'What payment methods do you accept?',
-    answer: 'We accept T/T (bank transfer), L/C (letter of credit), and other secure payment methods for wholesale orders.'
-  }
-]
+const { t, tm } = useI18n()
+const faqs = computed(() => tm('faq.items'))
 
 const openIndex = ref(null)
 
@@ -63,11 +40,11 @@ onMounted(() => {
       <!-- 标题 -->
       <div class="text-center mb-20" data-aos="fade-up">
         <span class="text-[#39FF14] font-mono text-[10px] tracking-[0.6em] block mb-4 uppercase">
-          FAQ // Got Questions?
+          {{ t('faq.badge') }}
         </span>
         <h2 class="text-6xl md:text-8xl font-black font-['Anton'] italic text-white uppercase leading-none mb-6">
-          We've Got<br>
-          <span class="text-[#39FF14]">Answers.</span>
+          {{ t('faq.titleLine1') }}<br>
+          <span class="text-[#39FF14]">{{ t('faq.titleLine2') }}</span>
         </h2>
       </div>
 
@@ -100,9 +77,9 @@ onMounted(() => {
 
       <!-- CTA -->
       <div class="text-center mt-20">
-        <p class="text-gray-400 text-sm mb-6 tracking-widest uppercase">Still have questions?</p>
+        <p class="text-gray-400 text-sm mb-6 tracking-widest uppercase">{{ t('faq.ctaPrompt') }}</p>
         <button class="px-12 py-5 border border-[#39FF14] text-[#39FF14] font-black uppercase text-xs tracking-widest hover:bg-[#39FF14] hover:text-black transition-all">
-          Contact Our Team
+          {{ t('faq.ctaButton') }}
         </button>
       </div>
     </div>
@@ -112,4 +89,3 @@ onMounted(() => {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 </style>
-

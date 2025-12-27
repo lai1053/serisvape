@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "date": "2024-12-15",
+    "category": "Product Launch",
+    "title": "VAPANDA STAR 100K Series Launched",
+    "excerpt": "Introducing our revolutionary 100K puff technology with dual mesh coil system.",
+    "image": "/img/bg.png",
+    "docUrl": "https://docs.google.com/document/d/1XkkNq90FxT3IKjw32VEtnURF3L5hEZlcmmjAwMDATCQ/edit?usp=sharing"
+  },
+  {
+    "id": 2,
+    "date": "2024-12-10",
+    "category": "Event",
+    "title": "VAPANDA at Vape Expo Europe 2024",
+    "excerpt": "Join us at the largest vape exhibition in Europe. Experience our latest innovations.",
+    "image": "/img/bg.png",
+    "docUrl": "https://docs.google.com/document/d/1XkkNq90FxT3IKjw32VEtnURF3L5hEZlcmmjAwMDATCQ/edit?usp=sharing"
+  },
+  {
+    "id": 3,
+    "date": "2024-12-05",
+    "category": "Award",
+    "title": "Best Innovation Award 2024",
+    "excerpt": "VAPANDA receives recognition for breakthrough technology in vaping industry.",
+    "image": "/img/bg.png",
+    "docUrl": "https://docs.google.com/document/d/1XkkNq90FxT3IKjw32VEtnURF3L5hEZlcmmjAwMDATCQ/edit?usp=sharing"
+  },
+  {
+    "id": 4,
+    "date": "2024-11-28",
+    "category": "Partnership",
+    "title": "New Distribution Partners in Europe",
+    "excerpt": "Expanding our network with trusted partners across France, Germany, and Italy.",
+    "image": "/img/bg.png",
+    "docUrl": "https://docs.google.com/document/d/1XkkNq90FxT3IKjw32VEtnURF3L5hEZlcmmjAwMDATCQ/edit?usp=sharing"
+  },
+  {
+    "id": 5,
+    "date": "2024-11-20",
+    "category": "Technology",
+    "title": "4-IN-1 Technology Explained",
+    "excerpt": "Learn about our revolutionary multi-flavor system that changes the game.",
+    "image": "/img/bg.png",
+    "docUrl": "https://docs.google.com/document/d/1XkkNq90FxT3IKjw32VEtnURF3L5hEZlcmmjAwMDATCQ/edit?usp=sharing"
+  },
+  {
+    "id": 6,
+    "date": "2024-11-15",
+    "category": "Compliance",
+    "title": "TPD Certification Achieved",
+    "excerpt": "All VAPANDA products now fully compliant with European TPD regulations.",
+    "image": "/img/bg.png",
+    "docUrl": "https://docs.google.com/document/d/1XkkNq90FxT3IKjw32VEtnURF3L5hEZlcmmjAwMDATCQ/edit?usp=sharing"
+  }
+]

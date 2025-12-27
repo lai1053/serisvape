@@ -5,6 +5,7 @@ import { useI18n } from 'vue-i18n'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { products } from '@/data/products'
+import { getProductMarketing, formatDescription } from '@/data/productMarketing'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -23,16 +24,16 @@ const imageTypes = computed(() => {
   // 4in1 产品有额外的 single_product_spin
   if (product.value.id === '4in1-120k') {
     return [
-      { key: 'single_product', label: 'Product' },
-      { key: 'single_product_spin', label: 'Spin View' },
-      { key: 'large_box_3d', label: 'Large Box' },
-      { key: 'small_box_3d', label: 'Small Box' }
+      { key: 'single_product', label: t('product.imageTypes.product') },
+      { key: 'single_product_spin', label: t('product.imageTypes.spinView') },
+      { key: 'large_box_3d', label: t('product.imageTypes.largeBox') },
+      { key: 'small_box_3d', label: t('product.imageTypes.smallBox') }
     ]
   }
   return [
-    { key: 'single_product', label: 'Product' },
-    { key: 'large_box_3d', label: 'Large Box' },
-    { key: 'small_box_3d', label: 'Small Box' }
+    { key: 'single_product', label: t('product.imageTypes.product') },
+    { key: 'large_box_3d', label: t('product.imageTypes.largeBox') },
+    { key: 'small_box_3d', label: t('product.imageTypes.smallBox') }
   ]
 })
 
@@ -50,6 +51,24 @@ const selectFlavor = (index) => {
 const changeImageType = (type) => {
   imageType.value = type
 }
+
+// 获取营销文案
+const marketing = computed(() => {
+  if (!product.value) return null
+  return getProductMarketing(product.value.id)
+})
+
+// 格式化的描述段落
+const descriptionParagraphs = computed(() => {
+  if (!marketing.value) return []
+  return formatDescription(marketing.value.description)
+})
+
+// 格式化的口味描述段落
+const flavorParagraphs = computed(() => {
+  if (!marketing.value) return []
+  return formatDescription(marketing.value.flavors)
+})
 
 onMounted(() => {
   // 滚动到页面顶部
@@ -99,7 +118,7 @@ onMounted(() => {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <span class="text-gray-500 text-xs uppercase tracking-widest">Back to Products</span>
+          <span class="text-gray-500 text-xs uppercase tracking-widest">{{ t('product.backToProducts') }}</span>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -161,7 +180,7 @@ onMounted(() => {
             <div>
               <span class="font-mono text-[10px] tracking-[0.5em] font-bold mb-4 block uppercase"
                     :style="{ color: product.color }">
-                {{ product.id === '4in1-120k' ? 'SERIES A // THE MULTIVERSE' : 'SERIES B // THE TITANS' }}
+                {{ product.id === '4in1-120k' ? t('product.seriesA') : t('product.seriesB') }}
               </span>
               <h1 class="text-6xl md:text-8xl font-black font-['Anton'] italic text-white uppercase leading-none mb-4">
                 {{ product.name }}
@@ -170,7 +189,7 @@ onMounted(() => {
               
               <div class="flex items-center gap-4 mb-8">
                 <div class="text-4xl font-black font-['Anton'] italic" :style="{ color: product.color }">
-                  {{ product.puffs }} PUFFS
+                  {{ product.puffs }} {{ t('product.puffsLabel') }}
                 </div>
               </div>
 
@@ -188,7 +207,7 @@ onMounted(() => {
 
             <!-- 核心特性 -->
             <div class="space-y-4">
-              <h3 class="text-xl font-black font-['Anton'] italic uppercase" :style="{ color: product.color }">Key Features</h3>
+              <h3 class="text-xl font-black font-['Anton'] italic uppercase" :style="{ color: product.color }">{{ t('product.keyFeatures') }}</h3>
               <div class="grid grid-cols-1 gap-3">
                 <div v-for="feature in product.features" :key="feature"
                      class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 transition-all hover:opacity-80"
@@ -208,15 +227,43 @@ onMounted(() => {
                   boxShadow: `0 0 40px ${product.color}30`
                 }"
               >
-                Wholesale Inquiry
+                {{ t('product.wholesaleInquiry') }}
               </button>
               <button 
                 class="px-8 py-5 border text-white font-black uppercase text-xs tracking-widest hover:opacity-80 transition-all"
                 :style="{ borderColor: product.color }"
               >
-                Download Catalog
+                {{ t('product.downloadCatalog') }}
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 营销文案 -->
+    <section v-if="marketing" class="py-20 border-b border-white/10">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-5xl font-black font-['Anton'] italic text-white uppercase mb-12 text-center">
+          {{ t('product.storyTitle') }} <span :style="{ color: product.color }">{{ t('product.storyEmphasis') }}</span>
+        </h2>
+        
+        <!-- 产品描述 -->
+        <div class="space-y-6 mb-16">
+          <div v-for="(paragraph, index) in descriptionParagraphs" :key="index"
+               class="text-gray-300 text-base leading-relaxed tracking-wide">
+            {{ paragraph }}
+          </div>
+        </div>
+        
+        <!-- 口味描述 -->
+        <div v-if="flavorParagraphs.length > 0" class="space-y-6">
+          <h3 class="text-3xl font-black font-['Anton'] italic uppercase mb-8" :style="{ color: product.color }">
+            {{ t('product.flavorCollection') }}
+          </h3>
+          <div v-for="(paragraph, index) in flavorParagraphs" :key="index"
+               class="text-gray-300 text-base leading-relaxed tracking-wide">
+            {{ paragraph }}
           </div>
         </div>
       </div>
@@ -226,7 +273,7 @@ onMounted(() => {
     <section class="py-20 border-b border-white/10">
       <div class="container mx-auto px-6">
         <h2 class="text-5xl font-black font-['Anton'] italic text-white uppercase mb-12 text-center">
-          Technical <span :style="{ color: product.color }">Specifications</span>
+          {{ t('product.specTitle') }} <span :style="{ color: product.color }">{{ t('product.specEmphasis') }}</span>
         </h2>
         
         <div class="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -247,7 +294,7 @@ onMounted(() => {
     <section class="py-20">
       <div class="container mx-auto px-6">
         <h2 class="text-5xl font-black font-['Anton'] italic text-white uppercase mb-12 text-center">
-          Available <span :style="{ color: product.color }">Flavors</span>
+          {{ t('product.flavorsTitle') }} <span :style="{ color: product.color }">{{ t('product.flavorsEmphasis') }}</span>
         </h2>
         
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
@@ -294,4 +341,3 @@ onMounted(() => {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 </style>
-

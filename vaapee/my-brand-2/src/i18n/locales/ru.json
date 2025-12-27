@@ -30,6 +30,60 @@
     "wholesaleInquire": "Оптовый Запрос",
     "exploreProducts": "Изучите Наши Продукты",
     "contactTeam": "Свяжитесь с Нашей Командой"
+  },
+  "productMarketing": {
+    "items": [
+      {
+        "id": "VAAPEE_DOUBLE_45K",
+        "description": "VAAPEE Double 45K — это перезаряжаемый одноразовый вейп, созданный для максимального удобства, долгой автономности и разнообразия вкусов, обеспечивая до 45 000 затяжек в компактном корпусе.\nКлючевые особенности:\n\nДвойной вкус — два премиальных вкуса в одном устройстве, легкое переключение без необходимости носить несколько девайсов.\nДвойная mesh‑катушка — равномерный нагрев, более густой пар и стабильный вкус от первой до последней затяжки.\nType‑C зарядка — аккумулятор 900mAh и быстрая зарядка продлевают срок службы до полного использования 36 мл жидкости.\nБольшая емкость и варианты — 36 мл солевого никотина с крепостью 2% или 5%.\nПростой дизайн — активация по затяжке, без кнопок и экранов, без заправки и замены испарителя.",
+        "flavors": "10 вкусовых комбинаций, по одному предложению на каждую:\n\n1.DOUBLE APPLE ICE + STRAWBERRY DRAGONFRUIT: хрустящее двойное яблоко с ментолом и экзотический клубника‑драгонфрут.\n2.CHERRY COLA + WATERMELON ICE: вишневая кола и освежающий ледяной арбуз.\n3.STRAWBERRY WATERMELON + COLA ICE: сочная клубника‑арбуз и газированная кола с льдом.\n4.BLUEBERRY WATERMELON + STRAWBERRY MANGO: черника‑арбуз и тропическая клубника‑манго.\n5.BLUEBERRY ICE + KIWI PASSION FRUIT GUAVA: ледяная черника и яркий микс киви‑маракуйи‑гуавы.\n6.STRAWBERRY RASPBERRY CHERRY ICE + GRAPE ICE: ледяные ягоды и глубокий виноград с ментолом.\n7.RED BULL + BLUEBERRY WATERMELON: энергетик Red Bull и мягкий черника‑арбуз.\n8.STRAWBERRY RASPBERRY CHERRY ICE + BLUEBERRY MINT: ледяные ягоды и черника с мятой.\n9.TRIPLE MELON + PINEAPPLE COCONUT: три дыни и ананас‑кокос, как пина‑колада.\n10.GUMMY BEAR + RAINBOW CANDY: вкус жевательных мишек и яркие фруктовые леденцы."
+      },
+      {
+        "id": "VAAPEE_STAR_100K",
+        "description": "Откройте будущее: VAAPEE STAR 100K\nРеволюционный одноразовый вейп с огромной автономностью и футуристичным дизайном.\n3D изогнутый экран, AI‑регулировка мощности и VPU обеспечивают стабильный вкус и безопасность.\nДва режима:\n\nPulse Power — ритмичная подача мощности для ровного вкуса и плотного пара.\nSuper Boost — максимальная мощность для яркого вкуса и мощного удара.\n\nType‑C зарядка, премиальная жидкость и сверхдолгая работа — STAR 100K меняет стандарты.",
+        "flavors": "10 насыщенных вкусов:\n\n1.Peach Ice: персик с охлаждающим ментолом.\n2.Red Bull: фирменный энергетический вкус.\n3.Blue Razz Ice: яркая голубая малина со льдом.\n4.Double Apple Ice: зеленое и красное яблоко с двойным охлаждением.\n5.Grape Ice: сочный виноград и лед.\n6.Cherry Cola: вишневая кола.\n7.Watermelon Ice: арбуз со льдом.\n8.Peach Mango Watermelon: тропический микс персика, манго и арбуза.\n9.Blueberry Raspberry Cherry: тройная ягода.\n10.Mixed Berries: ассорти лесных ягод.\n\nГотовы к новому уровню? VAAPEE STAR 100K ждёт вас."
+      },
+      {
+        "id": "VAAPEE_X_30K",
+        "description": "Следующий уровень: VAAPEE X 30K\nДо 30 000 затяжек и умное управление в одном устройстве.\nПолноэкранный LED показывает заряд, счетчик затяжек и режим; сенсорное управление — 4 режима на выбор.\nДвойная mesh‑катушка и Type‑C зарядка обеспечивают насыщенный вкус и длительную работу.\nБез кнопок — просто коснись и парь.",
+        "flavors": "10 взрывных вкусов:\n\n1.Blue Raspberry Ice: голубая малина со льдом.\n2.Fruit Gum: сладкая фруктовая жвачка.\n3.Double Apple: двойное яблоко.\n4.Cola Ice: кола со льдом.\n5.Blueberry Ice: черника со льдом.\n6.Kiwi Passion Fruit: киви и маракуйя.\n7.Monster Drink: вкус энергетика.\n8.Pina Colada: ананас‑кокос.\n9.Peach Ice: персик со льдом.\n10.Strawberry Watermelon: клубника‑арбуз.\n\nVAAPEE X 30K — прикоснись к будущему."
+      },
+      {
+        "id": "VAPANDA_4_IN_1_120K",
+        "description": "Революция вкуса: VAPANDA 4 IN 1 120K\nЧетыре вкуса в одном устройстве и до 120 000 затяжек.\nLED‑дисплей, активация по затяжке и Type‑C зарядка. Переключение вкусов — одним движением.\nМаксимальная вариативность и долговечность в компактном корпусе.",
+        "flavors": "10 наборов 4‑в‑1:\n\n1.Strawberry Ice - Strawberry Raspberry Cherry - Blue Raspberry Ice - Strawberry Kiwi.\n2.Red Bull - Blue Razz Ice - Kiwi Passion Fruit Guava - Strawberry Watermelon.\n3.Red Bull - Cherry Cola - Blueberry Ice - Black Dragon Ice.\n4.Peach Ice - Grape Ice - Peach Mango Watermelon - Watermelon Ice.\n5.Strawberry Raspberry Cherry - Mixed Berries - Blue Raspberry Ice - Raspberry Watermelon.\n6.Sour Apple Blueberry - Double Apple Ice - Apple Peach - Peach Ice.\n7.Blue Razz Lemonade - Lemon Lime - Grape Ice - Cherry Cola Ice.\n8.Tangerine Ice - Lemon Ice - Mango Ice - Strawberry Banana.\n9.Cola Ice - Blueberry Ice - Triple Melon - Strawberry Grape.\n10.Vanilla Cola - Pink Lemonade - Pineapple Orange - Mango Peach.\n\nОдин девайс — четыре вкуса."
+      },
+      {
+        "id": "VAPANDA_PRO_40K",
+        "description": "Премиум уровень: VAPANDA PRO 40K\nДо 40 000 затяжек, полный экран и сенсорное управление.\nДва режима мощности, быстрая Type‑C зарядка и стабильный вкус весь день.",
+        "flavors": "12 ярких вкусов:\n\n1.STRAWBERRY RASPBERRY CHERRY\n2.RED BULL\n3.BLUEBERRY ICE\n4.KIWI PASSION FRUIT GUAVA\n5.PEACH MANGO WATERMELON\n6.CHERRY COLA ICE\n7.STRAWBERRY WATERMELON\n8.WATERMELON ICE\n9.MIXED BERRIES\n10.BLUE RAZZ LEMONADE\n11.GRAPE ICE\n12.STRAWBERRY BANANA\n\nVAPANDA PRO 40K — профессиональный выбор."
+      },
+      {
+        "id": "Vapanda_2_In_1_80K",
+        "description": "Два вкуса — один девайс: VAPANDA 2 IN 1 80K\nДо 80 000 затяжек, двойные баки и OLED‑экран.\nСмена вкуса одним движением, Type‑C зарядка и два режима мощности.",
+        "flavors": "10 двойных комбинаций:\n\n1.Red Bull + Blue Razz Ice\n2.Blueberry Ice + Mixed Berries\n3.Double Apple + Peach Ice\n4.Blueberry Watermelon + Strawberry Watermelon\n5.Kiwi Passion Fruit Guava + Sour Apple Blueberry\n6.Lemon Lime + Peach Ice\n7.Blueberry Mint + Strawberry Raspberry Cherry\n8.Peach Mango Watermelon + Watermelon Ice\n9.Blue Razz Lemonade + Apple Peach\n10.Red Energy Ice + Cherry Cola\n\nБольше разнообразия в каждом дне."
+      },
+      {
+        "id": "Vapanda_Tornado_18K",
+        "description": "Vapanda Tornado 18K — классика и мощь\n18 000 затяжек, Type‑C зарядка и цифровой экран.\nMesh‑катушка обеспечивает насыщенный вкус без усилий.",
+        "flavors": "Коллекция вкусов:\n\n1.Watermelon Ice\n2.Strawberry Raspberry Cherry\n3.Gummy Bear\n4.Kiwi Passion Fruit Guava\n5.Mixed Berries\n6.Cranberry Grape\n7.Grape Ice\n8.Strawberry Mango\n9.Blueberry Ice\n10.Blue Raspberry Ice\n11.Blue Raspberry Lemonade\n12.Peach Ice\n13.Cherry Cola\n14.Strawberry Ice Cream\n15.Strawberry Watermelon\n\nВыберите свой идеальный вкус."
+      },
+      {
+        "id": "Vapanda_Ultra_50K",
+        "description": "Vapanda Ultra 50K — роскошь и мощность\nКожаная отделка, 50 000 затяжек и боковой экран.\nType‑C зарядка и двойная mesh‑катушка для плотного пара и стабильного вкуса.",
+        "flavors": "Премиальная линейка:\n\n1.Strawberry Kiwi\n2.Strawberry Ice\n3.Watermelon Ice\n4.Strawberry Raspberry Cherry\n5.Red Bull\n6.Sour Apple Blueberry\n7.Mixed Berries\n8.Blue Raspberry Ice\n9.Raspberry Watermelon\n10.Kiwi Passion Fruit Guava\n\nПремиальный вкус каждый день."
+      },
+      {
+        "id": "VAAPEE_Tornado_25K",
+        "description": "VAAPEE Tornado 25K — больше мощности\n25 000 затяжек, Type‑C и цифровой экран.\nСильный пар и стабильный вкус в классическом дизайне.",
+        "flavors": "Выбор вкусов:\n\n1.Kiwi Berry Mango\n2.Blueberry Ice\n3.Watermelon Ice\n4.Kiwi Passion Fruit Guava\n5.Blue Raspberry Ice\n6.Strawberry Raspberry Cherry\n7.Blueberry Orange Gummy\n8.Lemon Bubble Gum\n9.Cherry Cola\n10.Red Berries\n11.Strawberry Watermelon\n12.Peach Ice\n\nБольше затяжек, больше вкуса."
+      },
+      {
+        "id": "VAPLIQ_e_liquid",
+        "description": "VAPLIQ E‑Liquid — премиальная жидкость\n10 мл, 20 мг солевого никотина, TPD, баланс 50/50 PG/VG.\nЧистый вкус от первого до последнего вдоха.",
+        "flavors": "Ассортимент вкусов:\n\n1.Blue Razz Ice\n2.Blueberry Ice\n3.Grape Ice\n4.Gummy Bear\n5.Mixed Berries\n6.Straw Raspberry Cherry\n7.Strawberry Ice\n8.Strawberry Kiwi\n9.Strawberry Watermelon\n10.Watermelon Ice\n11.Kiwi Passion Fruit Guava\n12.Cherry Cola\n13.Double Apple Ice\n14.Triple Mango\n15.Peach Mango Pineapple\n16.Kiwi Berry Mango\n17.Peach Ice\n18.Blueberry Cranberry Grape\n19.Blue Razz Lemonade\n20.Strawberry Banana\n\nВыберите свой вкус свободы."
+      }
+    ]
   }
 }
 

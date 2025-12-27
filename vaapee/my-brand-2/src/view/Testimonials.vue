@@ -1,5 +1,6 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import gsap from 'gsap'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay, Pagination } from 'swiper/modules'
@@ -8,36 +9,8 @@ import 'swiper/css/pagination'
 
 const modules = [Autoplay, Pagination]
 
-const testimonials = [
-  {
-    name: 'Alex Chen',
-    role: 'Retail Store Owner, NYC',
-    content: 'VAPANDA products fly off the shelves. The quality is unmatched and customers keep coming back. Best wholesale partner we\'ve worked with.',
-    rating: 5,
-    product: 'STAR 100K Series'
-  },
-  {
-    name: 'Maria Rodriguez',
-    role: 'Distributor, Madrid',
-    content: 'Fast shipping, excellent quality control, and the devices last longer than competitors. Our sales have increased 40% since switching to VAPANDA.',
-    rating: 5,
-    product: 'Tornado 18K Series'
-  },
-  {
-    name: 'James Wilson',
-    role: 'Online Shop Owner, London',
-    content: 'The 4-in-1 technology is a game changer. Customers love the variety and the long-lasting battery. Zero complaints in 6 months.',
-    rating: 5,
-    product: '4 IN 1 120K'
-  },
-  {
-    name: 'Sarah Kim',
-    role: 'Chain Store Manager, Seoul',
-    content: 'Professional service, reliable products, and great pricing. The B2B support team is always responsive. Highly recommended.',
-    rating: 5,
-    product: 'Ultra 50K Series'
-  }
-]
+const { t, tm } = useI18n()
+const testimonials = computed(() => tm('testimonials.items'))
 
 const currentIndex = ref(0)
 
@@ -67,11 +40,11 @@ onMounted(() => {
       <!-- 标题 -->
       <div class="text-center mb-20" data-aos="fade-up">
         <span class="text-[#39FF14] font-mono text-[10px] tracking-[0.6em] block mb-4 uppercase">
-          Testimonials // Real Voices
+          {{ t('testimonials.badge') }}
         </span>
         <h2 class="text-6xl md:text-8xl font-black font-['Anton'] italic text-white uppercase leading-none mb-6">
-          Trusted By<br>
-          <span class="text-[#39FF14]">Thousands.</span>
+          {{ t('testimonials.titleLine1') }}<br>
+          <span class="text-[#39FF14]">{{ t('testimonials.titleLine2') }}</span>
         </h2>
       </div>
 

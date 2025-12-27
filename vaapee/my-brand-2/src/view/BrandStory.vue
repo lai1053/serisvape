@@ -1,18 +1,25 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, computed } from 'vue'
+import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+const router = useRouter()
+const { t, tm } = useI18n()
+
 gsap.registerPlugin(ScrollTrigger)
 
-const milestones = [
-  { year: '2015', title: 'Founded', desc: 'Started with a vision to revolutionize vaping experience' },
-  { year: '2018', title: 'First Breakthrough', desc: 'Launched our first high-capacity device series' },
-  { year: '2020', title: 'Global Expansion', desc: 'Expanded to 50+ countries worldwide' },
-  { year: '2024', title: 'Innovation Leader', desc: 'Leading the industry with 100K+ puff technology' }
-]
+const milestones = computed(() => tm('brandStory.milestones'))
+const valueCards = computed(() => tm('brandStory.values'))
+
+const activeMilestone = ref(0)
 
 onMounted(() => {
+  // 设置初始激活状态
+  activeMilestone.value = 0
+
+  // 品牌理念卡片动画
   gsap.utils.toArray('.milestone-item').forEach((item, i) => {
     gsap.from(item, {
       scrollTrigger: {
@@ -26,13 +33,52 @@ onMounted(() => {
       delay: i * 0.1
     })
   })
+
+  // 等待DOM更新后初始化ScrollTrigger
+  setTimeout(() => {
+    // Sticky Scroll 交互 - 监听滚动，切换激活的里程碑
+    milestones.value.forEach((milestone, index) => {
+      const element = document.querySelector(`.timeline-item-${index}`)
+      if (element) {
+        ScrollTrigger.create({
+          trigger: element,
+          start: 'top 50%',
+          end: 'bottom 50%',
+          onEnter: () => {
+            activeMilestone.value = index
+          },
+          onEnterBack: () => {
+            activeMilestone.value = index
+          }
+        })
+      }
+    })
+
+    // 文字描述动画
+    milestones.value.forEach((milestone, index) => {
+      const descElement = document.querySelector(`.timeline-item-${index} .timeline-desc`)
+      if (descElement) {
+        gsap.from(descElement, {
+          scrollTrigger: {
+            trigger: descElement,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+          },
+          opacity: 0,
+          y: 20,
+          duration: 0.6,
+          delay: 0.2
+        })
+      }
+    })
+  }, 100)
 })
 </script>
 
 <template>
   <section class="relative bg-black py-32 overflow-hidden border-t border-white/5">
     <!-- 背景网格 -->
-    <div class="absolute inset-0 opacity-5 pointer-events-none">
+    <div class="absolute inset-0 opacity-[0.05] pointer-events-none">
       <div class="absolute inset-0 bg-[linear-gradient(to_right,#39FF14_1px,transparent_1px),linear-gradient(to_bottom,#39FF14_1px,transparent_1px)] bg-[size:100px_100px]"></div>
     </div>
 
@@ -40,62 +86,91 @@ onMounted(() => {
       <!-- 标题区域 -->
       <div class="text-center mb-20" data-aos="fade-up">
         <span class="text-[#39FF14] font-mono text-[10px] tracking-[0.6em] block mb-4 uppercase">
-          Our Story // Since 2015
+          {{ t('brandStory.badge') }}
         </span>
         <h2 class="text-6xl md:text-8xl font-black font-['Anton'] italic text-white uppercase leading-none mb-6">
-          Full Power.<br>
-          <span class="text-[#39FF14]">Full Fun.</span>
+          {{ t('brandStory.titleLine1') }}<br>
+          <span class="text-[#39FF14]">{{ t('brandStory.titleLine2') }}</span>
         </h2>
         <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed tracking-wider uppercase">
-          Born from the streets, built for the future. We're not just making devices, we're crafting experiences that push boundaries.
+          {{ t('brandStory.subtitle') }}
         </p>
       </div>
 
       <!-- 品牌理念卡片 -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
-        <div class="milestone-item p-8 border border-white/10 bg-white/5 backdrop-blur-xl hover:border-[#39FF14]/50 transition-all group">
-          <div class="text-[#39FF14] text-5xl font-black font-['Anton'] mb-4">01</div>
-          <h3 class="text-2xl font-black font-['Anton'] italic text-white uppercase mb-4">Innovation</h3>
+        <div v-for="card in valueCards" :key="card.number" class="milestone-item p-8 border border-white/10 bg-white/5 backdrop-blur-xl hover:border-[#39FF14]/50 transition-all group">
+          <div class="text-[#39FF14] text-5xl font-black font-['Anton'] mb-4">{{ card.number }}</div>
+          <h3 class="text-2xl font-black font-['Anton'] italic text-white uppercase mb-4">{{ card.title }}</h3>
           <p class="text-gray-400 text-xs leading-relaxed tracking-wider uppercase">
-            Cutting-edge technology meets street culture. Every device is engineered for maximum performance.
-          </p>
-        </div>
-
-        <div class="milestone-item p-8 border border-white/10 bg-white/5 backdrop-blur-xl hover:border-[#39FF14]/50 transition-all group">
-          <div class="text-[#39FF14] text-5xl font-black font-['Anton'] mb-4">02</div>
-          <h3 class="text-2xl font-black font-['Anton'] italic text-white uppercase mb-4">Quality</h3>
-          <p class="text-gray-400 text-xs leading-relaxed tracking-wider uppercase">
-            1000m² dust-free manufacturing base. Every product undergoes rigorous quality control.
-          </p>
-        </div>
-
-        <div class="milestone-item p-8 border border-white/10 bg-white/5 backdrop-blur-xl hover:border-[#39FF14]/50 transition-all group">
-          <div class="text-[#39FF14] text-5xl font-black font-['Anton'] mb-4">03</div>
-          <h3 class="text-2xl font-black font-['Anton'] italic text-white uppercase mb-4">Community</h3>
-          <p class="text-gray-400 text-xs leading-relaxed tracking-wider uppercase">
-            Built by vapers, for vapers. We listen, we evolve, we deliver what the community demands.
+            {{ card.desc }}
           </p>
         </div>
       </div>
 
-      <!-- 时间线 -->
-      <div class="relative">
-        <div class="absolute left-1/2 transform -translate-x-1/2 w-[2px] h-full bg-[#39FF14]/20 hidden md:block"></div>
-        
-        <div v-for="(milestone, i) in milestones" :key="i" 
-             class="milestone-item relative mb-16 md:mb-24 flex flex-col md:flex-row items-center md:items-start gap-8">
-          <div :class="i % 2 === 0 ? 'md:text-right md:pr-8 md:w-1/2' : 'md:ml-auto md:pl-8 md:w-1/2'"
-               class="w-full md:w-1/2">
-            <div class="text-[#39FF14] font-mono text-[10px] tracking-[0.5em] mb-2 uppercase">{{ milestone.year }}</div>
-            <h3 class="text-3xl font-black font-['Anton'] italic text-white uppercase mb-2">{{ milestone.title }}</h3>
-            <p class="text-gray-400 text-xs leading-relaxed tracking-wider uppercase">{{ milestone.desc }}</p>
+      <!-- 时间线 - Sticky Scroll 布局 -->
+      <div class="timeline-container relative">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <!-- 左侧：年份节点列表 -->
+          <div class="timeline-left">
+            <div v-for="(milestone, index) in milestones" :key="index"
+                 :class="`timeline-item-${index} timeline-item`"
+                 class="mb-24 last:mb-0 min-h-[400px] flex flex-col justify-center">
+              <div class="text-[#39FF14] font-mono text-[10px] tracking-[0.5em] mb-4 uppercase">
+                {{ milestone.year }}
+              </div>
+              <h3 class="text-4xl md:text-5xl font-black font-['Anton'] italic text-white uppercase mb-6">
+                {{ milestone.title }}
+              </h3>
+              <div class="timeline-desc text-gray-400 text-sm md:text-base leading-relaxed tracking-wider">
+                {{ milestone.desc }}
+              </div>
+              <!-- 移动端图片 -->
+              <img
+                :src="milestone.image"
+                :alt="milestone.title"
+                class="lg:hidden w-full h-auto rounded-lg object-cover mt-8 border border-[#39FF14]"
+              />
+            </div>
           </div>
-          
-          <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#39FF14] rounded-full border-4 border-black z-10 hidden md:block"></div>
-          
-          <div :class="i % 2 === 0 ? 'md:ml-auto md:pl-8 md:w-1/2' : 'md:text-right md:pr-8 md:w-1/2'"
-               class="w-full md:w-1/2 hidden md:block"></div>
+
+          <!-- 右侧：粘性图片容器 -->
+          <div class="timeline-right hidden lg:block">
+            <div class="sticky-image-container" style="position: sticky; top: 20%;">
+              <div class="relative aspect-[4/3] w-full">
+                <div v-for="(milestone, index) in milestones" :key="index"
+                     :class="['timeline-image-wrapper', { 'active': activeMilestone === index }]"
+                     class="absolute inset-0 transition-opacity duration-500"
+                     :style="{ 
+                       opacity: activeMilestone === index ? 1 : 0,
+                       zIndex: activeMilestone === index ? 10 : 0,
+                       pointerEvents: activeMilestone === index ? 'auto' : 'none'
+                     }">
+                  <img
+                    :src="milestone.image"
+                    :alt="milestone.title"
+                    class="w-full h-full rounded-lg object-cover"
+                    :style="{
+                      filter: activeMilestone === index ? 'grayscale(0%)' : 'grayscale(100%)',
+                      border: activeMilestone === index ? '1px solid #39FF14' : 'none',
+                      transition: 'all 0.5s ease'
+                    }"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- 品牌宣言 -->
+      <div class="mt-32 mb-20 text-center">
+        <h2 class="text-5xl md:text-7xl font-black font-['Anton'] italic text-white uppercase leading-none mb-6">
+          Built by Passion. Defined by Innovation.
+        </h2>
+        <p class="text-gray-400 text-sm md:text-base max-w-3xl mx-auto leading-relaxed tracking-wider uppercase mt-6">
+          Since 2015, Shenzhen Vaapee Technology has evolved from an OEM pioneer to a global brand innovator.
+        </p>
       </div>
 
       <!-- 工厂信息 -->
@@ -132,6 +207,14 @@ onMounted(() => {
             <div class="text-xs text-gray-400 uppercase tracking-wider">Innovation Leader</div>
           </div>
         </div>
+
+        <!-- 证书链接 -->
+        <div class="mt-12 text-center">
+          <button @click="router.push('/certificates')" 
+                  class="px-8 py-4 border border-[#39FF14] text-[#39FF14] font-black uppercase text-xs tracking-widest hover:bg-[#39FF14] hover:text-black transition-all">
+            View Our Certificates
+          </button>
+        </div>
       </div>
 
       <!-- CTA 区域 -->
@@ -147,5 +230,25 @@ onMounted(() => {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-</style>
 
+/* 时间线描述文字动效 */
+.timeline-desc {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.timeline-item.active .timeline-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 图片容器样式 */
+.sticky-image-container {
+  height: fit-content;
+}
+
+.timeline-image-wrapper img {
+  border-radius: 8px;
+  padding: 2px;
+}
+
+</style>

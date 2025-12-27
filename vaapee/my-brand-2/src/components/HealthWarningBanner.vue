@@ -19,9 +19,8 @@ const { t } = useI18n()
         </div>
       </div>
       <div class="text-[8px] md:text-[9px] text-gray-600 uppercase tracking-widest font-black flex-shrink-0">
-        21+ ONLY
+        {{ t('healthWarning.ageOnly') }}
       </div>
     </div>
   </div>
 </template>
-

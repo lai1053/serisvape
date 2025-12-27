@@ -1,48 +1,14 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const advantages = [
-  {
-    icon: '⚡',
-    title: 'Premium Quality',
-    desc: '1000m² dust-free manufacturing base with 100% QC inspection',
-    stat: '100% QC'
-  },
-  {
-    icon: '🌍',
-    title: 'Global Shipping',
-    desc: 'Fast delivery to 50+ countries with DHL, UPS, and local carriers',
-    stat: '3-7 Days'
-  },
-  {
-    icon: '🔋',
-    title: 'Long Lasting',
-    desc: 'Up to 100K puffs with advanced battery and coil technology',
-    stat: '100K+'
-  },
-  {
-    icon: '🛡️',
-    title: 'Certified Safe',
-    desc: 'CE, FCC, RoHS certified. TPD compliant for European markets',
-    stat: 'Certified'
-  },
-  {
-    icon: '💼',
-    title: 'B2B Focused',
-    desc: 'Dedicated wholesale support with competitive pricing and MOQ',
-    stat: 'B2B Ready'
-  },
-  {
-    icon: '🎨',
-    title: 'Unique Design',
-    desc: 'Streetwear-inspired aesthetics with cutting-edge technology',
-    stat: 'Street Style'
-  }
-]
+const { t, tm } = useI18n()
+const advantages = computed(() => tm('whyUs.advantages'))
+const stats = computed(() => tm('whyUs.stats'))
 
 onMounted(() => {
   gsap.utils.toArray('.advantage-card').forEach((card, i) => {
@@ -72,11 +38,11 @@ onMounted(() => {
       <!-- 标题 -->
       <div class="text-center mb-20" data-aos="fade-up">
         <span class="text-[#39FF14] font-mono text-[10px] tracking-[0.6em] block mb-4 uppercase">
-          Why Choose Us // The Edge
+          {{ t('whyUs.badge') }}
         </span>
         <h2 class="text-6xl md:text-8xl font-black font-['Anton'] italic text-white uppercase leading-none mb-6">
-          Built Different.<br>
-          <span class="text-[#39FF14]">Built Better.</span>
+          {{ t('whyUs.titleLine1') }}<br>
+          <span class="text-[#39FF14]">{{ t('whyUs.titleLine2') }}</span>
         </h2>
       </div>
 
@@ -104,12 +70,7 @@ onMounted(() => {
 
       <!-- 数据展示 -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-20">
-        <div v-for="stat in [
-          { label: 'Countries', value: '50+', color: '#39FF14' },
-          { label: 'Products', value: '100+', color: '#FF00FF' },
-          { label: 'Puffs Max', value: '100K', color: '#00FFFF' },
-          { label: 'Years', value: '10+', color: '#39FF14' }
-        ]" :key="stat.label" class="text-center">
+        <div v-for="stat in stats" :key="stat.label" class="text-center">
           <div class="text-5xl md:text-6xl font-black font-['Anton'] italic mb-2 transition-colors"
                :style="{ color: stat.color }">{{ stat.value }}</div>
           <div class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{{ stat.label }}</div>

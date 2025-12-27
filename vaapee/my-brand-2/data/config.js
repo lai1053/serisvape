@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-    company: "深圳市赛瑞斯电子烟科技有限公司",
+    company: "Shenzhen Seres Electronic Cigarette Technology Co., Ltd.",
     brand: "VAPANDA / VAAPEE",
     founded: 2015,
     contact: {

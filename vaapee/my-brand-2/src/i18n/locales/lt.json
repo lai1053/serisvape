@@ -30,6 +30,60 @@
     "wholesaleInquire": "Didmeninės Prekybos Užklausa",
     "exploreProducts": "Tyrinėkite Mūsų Produktus",
     "contactTeam": "Susisiekite su Mūsų Komanda"
+  },
+  "productMarketing": {
+    "items": [
+      {
+        "id": "VAAPEE_DOUBLE_45K",
+        "description": "VAAPEE Double 45K – pažangus įkraunamas vienkartinis vape, sukurtas patogumui, ilgam veikimui ir skonių įvairovei – iki 45 000 įtraukimų kompaktiškame įrenginyje.\nPagrindinės savybės:\n\nDvigubas skonis — dvi premium skonio versijos viename įrenginyje, lengvas perjungimas.\nDvigubas mesh kaitiklis — tolygus kaitinimas, tankesni garai ir stabilus skonis.\nType‑C įkrovimas — 900mAh baterija ir greitas įkrovimas pilnam 36 ml sunaudojimui.\nDidelė talpa — 36 ml nikotino druskos 2% arba 5%.\nPaprastas dizainas — aktyvacija įtraukiant, be mygtukų ir pildymo.",
+        "flavors": "10 derinių:\n\n1.DOUBLE APPLE ICE + STRAWBERRY DRAGONFRUIT\n2.CHERRY COLA + WATERMELON ICE\n3.STRAWBERRY WATERMELON + COLA ICE\n4.BLUEBERRY WATERMELON + STRAWBERRY MANGO\n5.BLUEBERRY ICE + KIWI PASSION FRUIT GUAVA\n6.STRAWBERRY RASPBERRY CHERRY ICE + GRAPE ICE\n7.RED BULL + BLUEBERRY WATERMELON\n8.STRAWBERRY RASPBERRY CHERRY ICE + BLUEBERRY MINT\n9.TRIPLE MELON + PINEAPPLE COCONUT\n10.GUMMY BEAR + RAINBOW CANDY"
+      },
+      {
+        "id": "VAAPEE_STAR_100K",
+        "description": "Atraskite ateitį: VAAPEE STAR 100K\nRevoliucinis vienkartinis vape su didžiule ištverme ir futuristiniu dizainu.\n3D lenktas ekranas, AI galios reguliavimas ir VPU užtikrina stabilų skonį ir saugumą.\nDu režimai:\n\nPulse Power: ritminiai impulsai tolygiems įtraukimams.\nSuper Boost: maksimalus galingumas intensyviems garams.\n\nType‑C įkrovimas ir premium skystis – STAR 100K nustato naują standartą.",
+        "flavors": "10 skonių:\n\n1.Peach Ice\n2.Red Bull\n3.Blue Razz Ice\n4.Double Apple Ice\n5.Grape Ice\n6.Cherry Cola\n7.Watermelon Ice\n8.Peach Mango Watermelon\n9.Blueberry Raspberry Cherry\n10.Mixed Berries"
+      },
+      {
+        "id": "VAAPEE_X_30K",
+        "description": "Kitas lygis: VAAPEE X 30K\nIki 30 000 įtraukimų su išmaniu valdymu.\nLED jutiklinis ekranas rodo bateriją, įtraukimus ir režimą; 4 galios režimai.\nDvigubas mesh ir Type‑C įkrovimas – pilnas skonis.",
+        "flavors": "Skoniai:\n\n1.Blue Raspberry Ice\n2.Fruit Gum\n3.Double Apple\n4.Cola Ice\n5.Blueberry Ice\n6.Kiwi Passion Fruit\n7.Monster Drink\n8.Pina Colada\n9.Peach Ice\n10.Strawberry Watermelon"
+      },
+      {
+        "id": "VAPANDA_4_IN_1_120K",
+        "description": "Skonio revoliucija: VAPANDA 4 IN 1 120K\nKeturi skoniai viename įrenginyje ir iki 120 000 įtraukimų.\nLED ekranas, aktyvacija įtraukiant ir Type‑C įkrovimas. Skonio keitimas vienu judesiu.",
+        "flavors": "4‑in‑1 rinkiniai:\n\n1.Strawberry Ice - Strawberry Raspberry Cherry - Blue Raspberry Ice - Strawberry Kiwi.\n2.Red Bull - Blue Razz Ice - Kiwi Passion Fruit Guava - Strawberry Watermelon.\n3.Red Bull - Cherry Cola - Blueberry Ice - Black Dragon Ice.\n4.Peach Ice - Grape Ice - Peach Mango Watermelon - Watermelon Ice.\n5.Strawberry Raspberry Cherry - Mixed Berries - Blue Raspberry Ice - Raspberry Watermelon.\n6.Sour Apple Blueberry - Double Apple Ice - Apple Peach - Peach Ice.\n7.Blue Razz Lemonade - Lemon Lime - Grape Ice - Cherry Cola Ice.\n8.Tangerine Ice - Lemon Ice - Mango Ice - Strawberry Banana.\n9.Cola Ice - Blueberry Ice - Triple Melon - Strawberry Grape.\n10.Vanilla Cola - Pink Lemonade - Pineapple Orange - Mango Peach."
+      },
+      {
+        "id": "VAPANDA_PRO_40K",
+        "description": "Pro lygis: VAPANDA PRO 40K\nIki 40 000 įtraukimų su pilnu ekranu ir jutikliniu valdymu.\nDu galios režimai, greitas Type‑C įkrovimas ir stabilus veikimas.",
+        "flavors": "12 skonių:\n\n1.STRAWBERRY RASPBERRY CHERRY\n2.RED BULL\n3.BLUEBERRY ICE\n4.KIWI PASSION FRUIT GUAVA\n5.PEACH MANGO WATERMELON\n6.CHERRY COLA ICE\n7.STRAWBERRY WATERMELON\n8.WATERMELON ICE\n9.MIXED BERRIES\n10.BLUE RAZZ LEMONADE\n11.GRAPE ICE\n12.STRAWBERRY BANANA"
+      },
+      {
+        "id": "Vapanda_2_In_1_80K",
+        "description": "Dvigubas skonis: VAPANDA 2 IN 1 80K\nDu skoniai viename įrenginyje, iki 80 000 įtraukimų.\nDvigubas rezervuaras, OLED ekranas ir Type‑C įkrovimas.",
+        "flavors": "Dvigubi deriniai:\n\n1.Red Bull + Blue Razz Ice\n2.Blueberry Ice + Mixed Berries\n3.Double Apple + Peach Ice\n4.Blueberry Watermelon + Strawberry Watermelon\n5.Kiwi Passion Fruit Guava + Sour Apple Blueberry\n6.Lemon Lime + Peach Ice\n7.Blueberry Mint + Strawberry Raspberry Cherry\n8.Peach Mango Watermelon + Watermelon Ice\n9.Blue Razz Lemonade + Apple Peach\n10.Red Energy Ice + Cherry Cola"
+      },
+      {
+        "id": "Vapanda_Tornado_18K",
+        "description": "Vapanda Tornado 18K: galia ir elegancija\n18 000 įtraukimų, Type‑C įkrovimas ir skaitmeninis ekranas.\nMesh kaitiklis užtikrina tolygų skonį.",
+        "flavors": "Skoniai:\n\n1.Watermelon Ice\n2.Strawberry Raspberry Cherry\n3.Gummy Bear\n4.Kiwi Passion Fruit Guava\n5.Mixed Berries\n6.Cranberry Grape\n7.Grape Ice\n8.Strawberry Mango\n9.Blueberry Ice\n10.Blue Raspberry Ice\n11.Blue Raspberry Lemonade\n12.Peach Ice\n13.Cherry Cola\n14.Strawberry Ice Cream\n15.Strawberry Watermelon"
+      },
+      {
+        "id": "Vapanda_Ultra_50K",
+        "description": "Vapanda Ultra 50K: prabanga ir galia\nOdos apdaila, 50 000 įtraukimų ir šoninis ekranas.\nDvigubas mesh – tankiems garams ir stabiliam skoniui.",
+        "flavors": "Premium linija:\n\n1.Strawberry Kiwi\n2.Strawberry Ice\n3.Watermelon Ice\n4.Strawberry Raspberry Cherry\n5.Red Bull\n6.Sour Apple Blueberry\n7.Mixed Berries\n8.Blue Raspberry Ice\n9.Raspberry Watermelon\n10.Kiwi Passion Fruit Guava"
+      },
+      {
+        "id": "VAAPEE_Tornado_25K",
+        "description": "VAAPEE Tornado 25K: daugiau galios\n25 000 įtraukimų, Type‑C įkrovimas ir ekranas.\nDideli debesys ir stabilus skonis.",
+        "flavors": "Pasirinkimas:\n\n1.Kiwi Berry Mango\n2.Blueberry Ice\n3.Watermelon Ice\n4.Kiwi Passion Fruit Guava\n5.Blue Raspberry Ice\n6.Strawberry Raspberry Cherry\n7.Blueberry Orange Gummy\n8.Lemon Bubble Gum\n9.Cherry Cola\n10.Red Berries\n11.Strawberry Watermelon\n12.Peach Ice"
+      },
+      {
+        "id": "VAPLIQ_e_liquid",
+        "description": "VAPLIQ E‑Liquid: premium kokybė\n10 ml, 20 mg nikotino druskos, TPD, 50/50 PG/VG.\nŠvarus skonis nuo pirmo iki paskutinio įtraukimo.",
+        "flavors": "Skoniai:\n\n1.Blue Razz Ice\n2.Blueberry Ice\n3.Grape Ice\n4.Gummy Bear\n5.Mixed Berries\n6.Straw Raspberry Cherry\n7.Strawberry Ice\n8.Strawberry Kiwi\n9.Strawberry Watermelon\n10.Watermelon Ice\n11.Kiwi Passion Fruit Guava\n12.Cherry Cola\n13.Double Apple Ice\n14.Triple Mango\n15.Peach Mango Pineapple\n16.Kiwi Berry Mango\n17.Peach Ice\n18.Blueberry Cranberry Grape\n19.Blue Razz Lemonade\n20.Strawberry Banana"
+      }
+    ]
   }
 }
 

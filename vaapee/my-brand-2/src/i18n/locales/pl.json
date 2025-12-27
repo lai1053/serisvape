@@ -30,6 +30,60 @@
     "wholesaleInquire": "Zapytanie Hurtowe",
     "exploreProducts": "Odkryj Nasze Produkty",
     "contactTeam": "Skontaktuj Się z Naszym Zespołem"
+  },
+  "productMarketing": {
+    "items": [
+      {
+        "id": "VAAPEE_DOUBLE_45K",
+        "description": "VAAPEE Double 45K to nowoczesny, ładowalny jednorazowy vape stworzony dla maksymalnej wygody, długiej pracy i różnorodności smaków — do 45 000 zaciągnięć w kompaktowej obudowie.\nNajważniejsze cechy:\n\nPodwójny smak — dwa premium smaki w jednym urządzeniu, szybkie przełączanie.\nPodwójna siatka — równomierne grzanie, gęstsza para i stały smak.\nŁadowanie Type‑C — bateria 900mAh i szybkie ładowanie dla pełnych 36 ml liquidu.\nDuża pojemność — 36 ml soli nikotynowej 2% lub 5%.\nProsty design — aktywacja zaciągnięciem, bez przycisków i uzupełniania.",
+        "flavors": "10 kombinacji:\n\n1.DOUBLE APPLE ICE + STRAWBERRY DRAGONFRUIT\n2.CHERRY COLA + WATERMELON ICE\n3.STRAWBERRY WATERMELON + COLA ICE\n4.BLUEBERRY WATERMELON + STRAWBERRY MANGO\n5.BLUEBERRY ICE + KIWI PASSION FRUIT GUAVA\n6.STRAWBERRY RASPBERRY CHERRY ICE + GRAPE ICE\n7.RED BULL + BLUEBERRY WATERMELON\n8.STRAWBERRY RASPBERRY CHERRY ICE + BLUEBERRY MINT\n9.TRIPLE MELON + PINEAPPLE COCONUT\n10.GUMMY BEAR + RAINBOW CANDY"
+      },
+      {
+        "id": "VAAPEE_STAR_100K",
+        "description": "Poznaj przyszłość: VAAPEE STAR 100K\nRewolucyjny jednorazowy vape z ogromną żywotnością i futurystycznym designem.\nZakrzywiony ekran 3D, regulacja mocy AI i VPU zapewniają stabilny smak i bezpieczeństwo.\nDwa tryby:\n\nPulse Power: rytmiczne impulsy dla równych zaciągnięć.\nSuper Boost: maksymalna moc dla intensywnej pary.\n\nŁadowanie Type‑C i premium liquid — STAR 100K wyznacza nowe standardy.",
+        "flavors": "10 smaków:\n\n1.Peach Ice\n2.Red Bull\n3.Blue Razz Ice\n4.Double Apple Ice\n5.Grape Ice\n6.Cherry Cola\n7.Watermelon Ice\n8.Peach Mango Watermelon\n9.Blueberry Raspberry Cherry\n10.Mixed Berries"
+      },
+      {
+        "id": "VAAPEE_X_30K",
+        "description": "Następny poziom: VAAPEE X 30K\nDo 30 000 zaciągnięć z inteligentnym sterowaniem.\nDotykowy ekran LED pokazuje baterię, liczbę zaciągnięć i tryb; 4 tryby mocy.\nPodwójna siatka i ładowanie Type‑C dla pełnego smaku.",
+        "flavors": "Smaki:\n\n1.Blue Raspberry Ice\n2.Fruit Gum\n3.Double Apple\n4.Cola Ice\n5.Blueberry Ice\n6.Kiwi Passion Fruit\n7.Monster Drink\n8.Pina Colada\n9.Peach Ice\n10.Strawberry Watermelon"
+      },
+      {
+        "id": "VAPANDA_4_IN_1_120K",
+        "description": "Rewolucja smaku: VAPANDA 4 IN 1 120K\nCztery smaki w jednym urządzeniu i do 120 000 zaciągnięć.\nEkran LED, aktywacja zaciągnięciem i ładowanie Type‑C. Zmiana smaku jednym ruchem.",
+        "flavors": "Zestawy 4‑w‑1:\n\n1.Strawberry Ice - Strawberry Raspberry Cherry - Blue Raspberry Ice - Strawberry Kiwi.\n2.Red Bull - Blue Razz Ice - Kiwi Passion Fruit Guava - Strawberry Watermelon.\n3.Red Bull - Cherry Cola - Blueberry Ice - Black Dragon Ice.\n4.Peach Ice - Grape Ice - Peach Mango Watermelon - Watermelon Ice.\n5.Strawberry Raspberry Cherry - Mixed Berries - Blue Raspberry Ice - Raspberry Watermelon.\n6.Sour Apple Blueberry - Double Apple Ice - Apple Peach - Peach Ice.\n7.Blue Razz Lemonade - Lemon Lime - Grape Ice - Cherry Cola Ice.\n8.Tangerine Ice - Lemon Ice - Mango Ice - Strawberry Banana.\n9.Cola Ice - Blueberry Ice - Triple Melon - Strawberry Grape.\n10.Vanilla Cola - Pink Lemonade - Pineapple Orange - Mango Peach."
+      },
+      {
+        "id": "VAPANDA_PRO_40K",
+        "description": "Poziom pro: VAPANDA PRO 40K\nDo 40 000 zaciągnięć z pełnym ekranem i sterowaniem dotykowym.\nDwa tryby mocy, szybkie ładowanie Type‑C i stabilna wydajność.",
+        "flavors": "12 smaków:\n\n1.STRAWBERRY RASPBERRY CHERRY\n2.RED BULL\n3.BLUEBERRY ICE\n4.KIWI PASSION FRUIT GUAVA\n5.PEACH MANGO WATERMELON\n6.CHERRY COLA ICE\n7.STRAWBERRY WATERMELON\n8.WATERMELON ICE\n9.MIXED BERRIES\n10.BLUE RAZZ LEMONADE\n11.GRAPE ICE\n12.STRAWBERRY BANANA"
+      },
+      {
+        "id": "Vapanda_2_In_1_80K",
+        "description": "Podwójny smak: VAPANDA 2 IN 1 80K\nDwa smaki w jednym urządzeniu, do 80 000 zaciągnięć.\nPodwójny zbiornik, ekran OLED i ładowanie Type‑C.",
+        "flavors": "Podwójne kombinacje:\n\n1.Red Bull + Blue Razz Ice\n2.Blueberry Ice + Mixed Berries\n3.Double Apple + Peach Ice\n4.Blueberry Watermelon + Strawberry Watermelon\n5.Kiwi Passion Fruit Guava + Sour Apple Blueberry\n6.Lemon Lime + Peach Ice\n7.Blueberry Mint + Strawberry Raspberry Cherry\n8.Peach Mango Watermelon + Watermelon Ice\n9.Blue Razz Lemonade + Apple Peach\n10.Red Energy Ice + Cherry Cola"
+      },
+      {
+        "id": "Vapanda_Tornado_18K",
+        "description": "Vapanda Tornado 18K: moc i elegancja\n18 000 zaciągnięć, ładowanie Type‑C i cyfrowy ekran.\nSiatka mesh dla stałego smaku.",
+        "flavors": "Smaki:\n\n1.Watermelon Ice\n2.Strawberry Raspberry Cherry\n3.Gummy Bear\n4.Kiwi Passion Fruit Guava\n5.Mixed Berries\n6.Cranberry Grape\n7.Grape Ice\n8.Strawberry Mango\n9.Blueberry Ice\n10.Blue Raspberry Ice\n11.Blue Raspberry Lemonade\n12.Peach Ice\n13.Cherry Cola\n14.Strawberry Ice Cream\n15.Strawberry Watermelon"
+      },
+      {
+        "id": "Vapanda_Ultra_50K",
+        "description": "Vapanda Ultra 50K: luksus i moc\nWykończenie skórzane, 50 000 zaciągnięć i boczny ekran.\nPodwójna siatka dla gęstej pary i stabilnego smaku.",
+        "flavors": "Linia premium:\n\n1.Strawberry Kiwi\n2.Strawberry Ice\n3.Watermelon Ice\n4.Strawberry Raspberry Cherry\n5.Red Bull\n6.Sour Apple Blueberry\n7.Mixed Berries\n8.Blue Raspberry Ice\n9.Raspberry Watermelon\n10.Kiwi Passion Fruit Guava"
+      },
+      {
+        "id": "VAAPEE_Tornado_25K",
+        "description": "VAAPEE Tornado 25K: więcej mocy\n25 000 zaciągnięć, ładowanie Type‑C i ekran.\nDuże chmury i stabilny smak.",
+        "flavors": "Wybór:\n\n1.Kiwi Berry Mango\n2.Blueberry Ice\n3.Watermelon Ice\n4.Kiwi Passion Fruit Guava\n5.Blue Raspberry Ice\n6.Strawberry Raspberry Cherry\n7.Blueberry Orange Gummy\n8.Lemon Bubble Gum\n9.Cherry Cola\n10.Red Berries\n11.Strawberry Watermelon\n12.Peach Ice"
+      },
+      {
+        "id": "VAPLIQ_e_liquid",
+        "description": "VAPLIQ E‑Liquid: jakość premium\n10 ml, 20 mg soli nikotynowej, TPD, 50/50 PG/VG.\nCzysty smak od pierwszego do ostatniego zaciągnięcia.",
+        "flavors": "Smaki:\n\n1.Blue Razz Ice\n2.Blueberry Ice\n3.Grape Ice\n4.Gummy Bear\n5.Mixed Berries\n6.Straw Raspberry Cherry\n7.Strawberry Ice\n8.Strawberry Kiwi\n9.Strawberry Watermelon\n10.Watermelon Ice\n11.Kiwi Passion Fruit Guava\n12.Cherry Cola\n13.Double Apple Ice\n14.Triple Mango\n15.Peach Mango Pineapple\n16.Kiwi Berry Mango\n17.Peach Ice\n18.Blueberry Cranberry Grape\n19.Blue Razz Lemonade\n20.Strawberry Banana"
+      }
+    ]
   }
 }
 

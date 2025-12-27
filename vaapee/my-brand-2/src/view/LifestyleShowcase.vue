@@ -1,33 +1,14 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const lifestyleScenes = [
-  {
-    title: 'Night Life',
-    subtitle: 'Where the city never sleeps',
-    desc: 'From rooftop parties to underground clubs, VAPANDA keeps the energy flowing all night long.',
-    mood: 'vibrant',
-    color: '#FF00FF'
-  },
-  {
-    title: 'Daily Commute',
-    subtitle: 'Your perfect travel companion',
-    desc: 'Compact, powerful, and reliable. Perfect for those who demand excellence on the go.',
-    mood: 'professional',
-    color: '#39FF14'
-  },
-  {
-    title: 'Creative Sessions',
-    subtitle: 'Fuel your inspiration',
-    desc: 'When creativity strikes, you need a device that matches your intensity. Full power, full focus.',
-    mood: 'artistic',
-    color: '#00FFFF'
-  }
-]
+const { t, tm } = useI18n()
+
+const lifestyleScenes = computed(() => tm('lifestyle.scenes'))
 
 const activeScene = ref(0)
 
@@ -60,11 +41,11 @@ onMounted(() => {
       <!-- 标题 -->
       <div class="text-center mb-20" data-aos="fade-up">
         <span class="text-[#39FF14] font-mono text-[10px] tracking-[0.6em] block mb-4 uppercase">
-          Lifestyle // Your World
+          {{ t('lifestyle.badge') }}
         </span>
         <h2 class="text-6xl md:text-8xl font-black font-['Anton'] italic text-white uppercase leading-none mb-6">
-          Live It.<br>
-          <span class="text-[#39FF14]">Vape It.</span>
+          {{ t('lifestyle.titleLine1') }}<br>
+          <span class="text-[#39FF14]">{{ t('lifestyle.titleLine2') }}</span>
         </h2>
       </div>
 
@@ -93,7 +74,7 @@ onMounted(() => {
             
             <div class="flex items-center gap-4">
               <div class="w-12 h-[2px]" :style="{ backgroundColor: scene.color }"></div>
-              <span class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">Explore</span>
+              <span class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">{{ t('lifestyle.explore') }}</span>
             </div>
           </div>
 
@@ -110,7 +91,7 @@ onMounted(() => {
           <!-- 这里可以放置实际的生活场景图片 -->
           <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-white/10 to-transparent group-hover:from-[#39FF14]/20 transition-all">
             <span class="text-[8px] font-bold text-gray-500 uppercase tracking-widest group-hover:text-[#39FF14] transition-colors">
-              Scene {{ i }}
+              {{ t('lifestyle.sceneLabel', { index: i }) }}
             </span>
           </div>
         </div>

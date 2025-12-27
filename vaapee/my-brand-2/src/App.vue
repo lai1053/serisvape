@@ -51,11 +51,16 @@ const navLinks = [
   { key: 'lifestyle', href: '#lifestyle' },
   { key: 'whyUs', href: '#why-us' },
   { key: 'news', href: '#news' },
-  { key: 'wholesale', href: '#wholesale' }
+  { key: 'wholesale', href: '#wholesale' },
+  { key: 'certificates', href: '/certificates' }
 ]
 
 // 处理导航点击
 const handleNavClick = (href) => {
+  if (!href.startsWith('#')) {
+    router.push(href)
+    return
+  }
   if (isProductPage.value) {
     // 如果在产品详情页，先跳转到首页，然后滚动到对应位置
     router.push('/').then(() => {
@@ -105,13 +110,13 @@ onMounted(() => {
     // 首次访问，必须显示年龄验证弹窗
     isAgeVerified.value = false
   }
-  // 检查是否是产品详情页
-  isProductPage.value = route.path.startsWith('/product') || route.path.startsWith('/news')
+  // 检查是否是产品详情页或证书页
+  isProductPage.value = route.path.startsWith('/product') || route.path.startsWith('/news') || route.path.startsWith('/certificates')
 })
 
 // 监听路由变化
 watch(() => route.path, (newPath) => {
-  isProductPage.value = newPath.startsWith('/product') || newPath.startsWith('/news')
+  isProductPage.value = newPath.startsWith('/product') || newPath.startsWith('/news') || newPath.startsWith('/certificates')
 })
 </script>
 
@@ -179,7 +184,7 @@ watch(() => route.path, (newPath) => {
           <button 
             @click="mobileMenuOpen = !mobileMenuOpen"
             class="md:hidden p-2 text-gray-400 hover:text-[#39FF14] transition-colors"
-            :aria-label="mobileMenuOpen ? 'Close menu' : 'Open menu'"
+            :aria-label="mobileMenuOpen ? t('nav.closeMenu') : t('nav.openMenu')"
           >
             <svg v-if="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />

@@ -5,6 +5,7 @@ import { useI18n } from 'vue-i18n'
 const { locale } = useI18n()
 
 const languages = [
+  { code: 'zh', name: '中文', flag: '🇨🇳' },
   { code: 'en', name: 'English', flag: '🇬🇧' },
   { code: 'es', name: 'Español', flag: '🇪🇸' },
   { code: 'it', name: 'Italiano', flag: '🇮🇹' },

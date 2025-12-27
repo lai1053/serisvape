@@ -1,69 +1,24 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import newsData from '@/data/news.json'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const { t } = useI18n()
 const router = useRouter()
 
-const newsItems = [
-  {
-    id: 1,
-    date: '2024-12-15',
-    category: 'Product Launch',
-    title: 'VAPANDA STAR 100K Series Launched',
-    excerpt: 'Introducing our revolutionary 100K puff technology with dual mesh coil system.',
-    image: '/img/bg.png'
-  },
-  {
-    id: 2,
-    date: '2024-12-10',
-    category: 'Event',
-    title: 'VAPANDA at Vape Expo Europe 2024',
-    excerpt: 'Join us at the largest vape exhibition in Europe. Experience our latest innovations.',
-    image: '/img/bg.png'
-  },
-  {
-    id: 3,
-    date: '2024-12-05',
-    category: 'Award',
-    title: 'Best Innovation Award 2024',
-    excerpt: 'VAPANDA receives recognition for breakthrough technology in vaping industry.',
-    image: '/img/bg.png'
-  },
-  {
-    id: 4,
-    date: '2024-11-28',
-    category: 'Partnership',
-    title: 'New Distribution Partners in Europe',
-    excerpt: 'Expanding our network with trusted partners across France, Germany, and Italy.',
-    image: '/img/bg.png'
-  },
-  {
-    id: 5,
-    date: '2024-11-20',
-    category: 'Technology',
-    title: '4-IN-1 Technology Explained',
-    excerpt: 'Learn about our revolutionary multi-flavor system that changes the game.',
-    image: '/img/bg.png'
-  },
-  {
-    id: 6,
-    date: '2024-11-15',
-    category: 'Compliance',
-    title: 'TPD Certification Achieved',
-    excerpt: 'All VAPANDA products now fully compliant with European TPD regulations.',
-    image: '/img/bg.png'
-  }
-]
+const newsItems = newsData
 
 const selectedCategory = ref('All')
 
-const categories = ['All', 'Product Launch', 'Event', 'Award', 'Partnership', 'Technology', 'Compliance']
+const categories = computed(() => [
+  'All',
+  ...new Set(newsItems.map((item) => item.category))
+])
 
 const filteredNews = ref(newsItems)
 
@@ -104,7 +59,7 @@ onMounted(() => {
       <!-- 标题 -->
       <div class="text-center mb-20" data-aos="fade-up">
         <span class="text-[#39FF14] font-mono text-[10px] tracking-[0.6em] block mb-4 uppercase">
-          Info Center // Latest Updates
+          {{ t('news.badge') }}
         </span>
         <h2 class="text-6xl md:text-8xl font-black font-['Anton'] italic text-white uppercase leading-none mb-6">
           {{ t('news.title') }}<br>
@@ -169,7 +124,7 @@ onMounted(() => {
 
       <!-- CTA -->
       <div class="text-center">
-        <button class="px-12 py-5 border border-[#39FF14] text-[#39FF14] font-black uppercase text-xs tracking-widest hover:bg-[#39FF14] hover:text-black transition-all">
+        <button @click="router.push('/#news')" class="px-12 py-5 border border-[#39FF14] text-[#39FF14] font-black uppercase text-xs tracking-widest hover:bg-[#39FF14] hover:text-black transition-all">
           {{ t('news.viewAll') }}
         </button>
       </div>
@@ -180,4 +135,3 @@ onMounted(() => {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 </style>
-

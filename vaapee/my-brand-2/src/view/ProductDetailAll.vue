@@ -5,6 +5,7 @@ import { useI18n } from 'vue-i18n'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { allProducts } from '@/data/productsAll'
+import { getProductMarketing, formatDescription } from '@/data/productMarketing'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -41,40 +42,40 @@ const availableImageTypes = computed(() => {
   // 根据产品系列确定可用的图片类型
   const imageTypeMap = {
     'VAPLIQ_e_liquid': [
-      { key: 'single_product', label: 'Product' },
-      { key: 'large_box_3d', label: 'Large Box' },
-      { key: 'small_box_3d', label: 'Small Box' }
+      { key: 'single_product', label: t('product.imageTypes.product') },
+      { key: 'large_box_3d', label: t('product.imageTypes.largeBox') },
+      { key: 'small_box_3d', label: t('product.imageTypes.smallBox') }
     ],
     'Vapanda_2_In_1_80K': [
-      { key: 'single_product', label: 'Product' },
-      { key: 'large_box_3d', label: 'Large Box' },
-      { key: 'small_box_3d', label: 'Small Box' }
+      { key: 'single_product', label: t('product.imageTypes.product') },
+      { key: 'large_box_3d', label: t('product.imageTypes.largeBox') },
+      { key: 'small_box_3d', label: t('product.imageTypes.smallBox') }
     ],
     'VAAPEE_DOUBLE_45K': [
-      { key: 'front', label: 'Front' },
-      { key: 'front_back', label: 'Front & Back' },
-      { key: 'large_box_3d', label: 'Large Box' },
-      { key: 'small_box_3d', label: 'Small Box' }
+      { key: 'front', label: t('product.imageTypes.front') },
+      { key: 'front_back', label: t('product.imageTypes.frontBack') },
+      { key: 'large_box_3d', label: t('product.imageTypes.largeBox') },
+      { key: 'small_box_3d', label: t('product.imageTypes.smallBox') }
     ],
     'VAAPEE_X_30K': [
-      { key: 'single_product', label: 'Product' },
-      { key: 'side_single_product', label: 'Side View' },
-      { key: 'large_box_3d', label: 'Large Box' },
-      { key: 'small_box_3d', label: 'Small Box' }
+      { key: 'single_product', label: t('product.imageTypes.product') },
+      { key: 'side_single_product', label: t('product.imageTypes.sideView') },
+      { key: 'large_box_3d', label: t('product.imageTypes.largeBox') },
+      { key: 'small_box_3d', label: t('product.imageTypes.smallBox') }
     ],
     'Vaapee_Tornado_25K': [
-      { key: 'single_product', label: 'Product' },
-      { key: 'large_box_3d', label: 'Large Box' },
-      { key: 'small_box_3d', label: 'Small Box' }
+      { key: 'single_product', label: t('product.imageTypes.product') },
+      { key: 'large_box_3d', label: t('product.imageTypes.largeBox') },
+      { key: 'small_box_3d', label: t('product.imageTypes.smallBox') }
     ],
     'Vapanda_Tornado_18K': [
-      { key: 'single_product', label: 'Product' },
-      { key: 'large_box_3d', label: 'Large Box' },
-      { key: 'small_box_3d', label: 'Small Box' }
+      { key: 'single_product', label: t('product.imageTypes.product') },
+      { key: 'large_box_3d', label: t('product.imageTypes.largeBox') },
+      { key: 'small_box_3d', label: t('product.imageTypes.smallBox') }
     ]
   }
-  
-  return imageTypeMap[seriesKey.value] || [{ key: product.value.imageType, label: 'Product' }]
+
+  return imageTypeMap[seriesKey.value] || [{ key: product.value.imageType, label: t('product.imageTypes.product') }]
 })
 
 const currentImage = computed(() => {
@@ -150,6 +151,24 @@ const getProductSpecs = computed(() => {
   return specsMap[seriesKey.value] || {}
 })
 
+// 获取营销文案
+const marketing = computed(() => {
+  if (!seriesKey.value) return null
+  return getProductMarketing(seriesKey.value)
+})
+
+// 格式化的描述段落
+const descriptionParagraphs = computed(() => {
+  if (!marketing.value) return []
+  return formatDescription(marketing.value.description)
+})
+
+// 格式化的口味描述段落
+const flavorParagraphs = computed(() => {
+  if (!marketing.value) return []
+  return formatDescription(marketing.value.flavors)
+})
+
 onMounted(() => {
   // 滚动到页面顶部
   window.scrollTo({ top: 0, behavior: 'instant' })
@@ -203,7 +222,7 @@ onMounted(() => {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <span class="text-gray-500 text-xs uppercase tracking-widest">Back to Products</span>
+          <span class="text-gray-500 text-xs uppercase tracking-widest">{{ t('product.backToProducts') }}</span>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -243,7 +262,7 @@ onMounted(() => {
             <div>
               <span class="font-mono text-[10px] tracking-[0.5em] font-bold mb-4 block uppercase"
                     :style="{ color: currentProduct.color }">
-                SERIES C // COMMAND CENTER
+                {{ t('product.seriesC') }}
               </span>
               <h1 class="text-6xl md:text-8xl font-black font-['Anton'] italic text-white uppercase leading-none mb-4">
                 {{ currentProduct.series }}
@@ -275,15 +294,43 @@ onMounted(() => {
                   boxShadow: `0 0 40px ${currentProduct.color}30`
                 }"
               >
-                Wholesale Inquiry
+                {{ t('product.wholesaleInquiry') }}
               </button>
               <button 
                 class="px-8 py-5 border text-white font-black uppercase text-xs tracking-widest hover:opacity-80 transition-all"
                 :style="{ borderColor: currentProduct.color }"
               >
-                Download Catalog
+                {{ t('product.downloadCatalog') }}
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 营销文案 -->
+    <section v-if="marketing" class="py-20 border-b border-white/10">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-5xl font-black font-['Anton'] italic text-white uppercase mb-12 text-center">
+          {{ t('product.storyTitle') }} <span :style="{ color: currentProduct.color }">{{ t('product.storyEmphasis') }}</span>
+        </h2>
+        
+        <!-- 产品描述 -->
+        <div class="space-y-6 mb-16">
+          <div v-for="(paragraph, index) in descriptionParagraphs" :key="index"
+               class="text-gray-300 text-base leading-relaxed tracking-wide">
+            {{ paragraph }}
+          </div>
+        </div>
+        
+        <!-- 口味描述 -->
+        <div v-if="flavorParagraphs.length > 0" class="space-y-6">
+          <h3 class="text-3xl font-black font-['Anton'] italic uppercase mb-8" :style="{ color: currentProduct.color }">
+            {{ t('product.flavorCollection') }}
+          </h3>
+          <div v-for="(paragraph, index) in flavorParagraphs" :key="index"
+               class="text-gray-300 text-base leading-relaxed tracking-wide">
+            {{ paragraph }}
           </div>
         </div>
       </div>
@@ -293,7 +340,7 @@ onMounted(() => {
     <section class="py-20 border-b border-white/10" v-if="product">
       <div class="container mx-auto px-6">
         <h2 class="text-5xl font-black font-['Anton'] italic text-white uppercase mb-12 text-center">
-          More from <span :style="{ color: currentProduct.color }">{{ product.name }}</span>
+          {{ t('product.moreFrom') }} <span :style="{ color: currentProduct.color }">{{ product.name }}</span>
         </h2>
         
         <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-4">
@@ -326,4 +373,3 @@ onMounted(() => {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 </style>
-

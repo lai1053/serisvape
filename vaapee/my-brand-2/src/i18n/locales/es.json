@@ -30,6 +30,60 @@
     "wholesaleInquire": "Consulta de Mayoreo",
     "exploreProducts": "Explora Nuestros Productos",
     "contactTeam": "Contacta a Nuestro Equipo"
+  },
+  "productMarketing": {
+    "items": [
+      {
+        "id": "VAAPEE_DOUBLE_45K",
+        "description": "VAAPEE Double 45K es un vape desechable recargable de vanguardia, diseñado para máxima comodidad, gran duración y variedad de sabor, ofreciendo hasta 45,000 caladas en un dispositivo compacto.\nCaracterísticas clave:\n\nSistema de doble sabor — Dos sabores premium en un solo dispositivo con cambio sencillo, sin necesidad de llevar varios vapes.\nDoble malla — Calentamiento uniforme, vapor más denso y sabor constante de principio a fin.\nRecarga Type‑C — Batería de 900mAh y carga rápida para aprovechar los 36 ml de líquido.\nAlta capacidad y opciones — 36 ml de sales de nicotina al 2% o 5%.\nDiseño fácil — Activación por calada, sin botones ni pantallas, sin recarga ni cambio de resistencias.",
+        "flavors": "10 combinaciones de sabores, una frase por cada una:\n\n1.DOUBLE APPLE ICE + STRAWBERRY DRAGONFRUIT: doble manzana crujiente con mentol y una explosión dulce‑ácida de fresa y pitahaya.\n2.CHERRY COLA + WATERMELON ICE: cola de cereza con burbuja retro y sandía helada refrescante.\n3.STRAWBERRY WATERMELON + COLA ICE: fresa‑sandía jugosa y cola con hielo chispeante.\n4.BLUEBERRY WATERMELON + STRAWBERRY MANGO: armonía de arándano‑sandía con el toque tropical de fresa y mango.\n5.BLUEBERRY ICE + KIWI PASSION FRUIT GUAVA: arándano helado frente al mix tropical de kiwi, maracuyá y guayaba.\n6.STRAWBERRY RASPBERRY CHERRY ICE + GRAPE ICE: triple frutos rojos helados y uva intensa con mentol.\n7.RED BULL + BLUEBERRY WATERMELON: el golpe energético de Red Bull equilibrado con arándano‑sandía.\n8.STRAWBERRY RASPBERRY CHERRY ICE + BLUEBERRY MINT: mezcla helada de berries y arándano con menta.\n9.TRIPLE MELON + PINEAPPLE COCONUT: trío de melones con piña‑coco estilo piña colada.\n10.GUMMY BEAR + RAINBOW CANDY: osito de goma clásico y caramelo arcoíris dulce‑ácido."
+      },
+      {
+        "id": "VAAPEE_STAR_100K",
+        "description": "Descubre el futuro: VAAPEE STAR 100K\nUn desechable revolucionario con enorme autonomía y diseño futurista.\nPantalla 3D curvada, ajuste de potencia con IA y VPU para sabor estable, seguridad y rendimiento.\nDos modos:\n\nPulse Power: ráfagas rítmicas para caladas consistentes y nubes densas.\nSuper Boost: potencia máxima para vapor explosivo y golpe intenso.\n\nRecargable por Type‑C y con líquido premium, STAR 100K redefine la duración.",
+        "flavors": "10 sabores irresistibles:\n\n1.Peach Ice\n2.Red Bull\n3.Blue Razz Ice\n4.Double Apple Ice\n5.Grape Ice\n6.Cherry Cola\n7.Watermelon Ice\n8.Peach Mango Watermelon\n9.Blueberry Raspberry Cherry\n10.Mixed Berries\n\nVive el siguiente nivel con VAAPEE STAR 100K."
+      },
+      {
+        "id": "VAAPEE_X_30K",
+        "description": "Siguiente nivel: VAAPEE X 30K\nHasta 30,000 caladas con control inteligente.\nPantalla LED táctil con batería, contador y modo; 4 modos para personalizar la experiencia.\nDoble malla y carga Type‑C para sabor intenso y rendimiento estable.\nSin botones: toca y disfruta.",
+        "flavors": "Colección explosiva:\n\n1.Blue Raspberry Ice\n2.Fruit Gum\n3.Double Apple\n4.Cola Ice\n5.Blueberry Ice\n6.Kiwi Passion Fruit\n7.Monster Drink\n8.Pina Colada\n9.Peach Ice\n10.Strawberry Watermelon"
+      },
+      {
+        "id": "VAPANDA_4_IN_1_120K",
+        "description": "Revoluciona tu vapeo: VAPANDA 4 IN 1 120K\nCuatro sabores en un solo dispositivo y hasta 120,000 caladas.\nPantalla LED, activación por calada y carga Type‑C. Cambia de sabor con un simple giro o clic.\nVariedad, duración y potencia en un solo equipo.",
+        "flavors": "Ediciones 4‑en‑1:\n\n1.Strawberry Ice - Strawberry Raspberry Cherry - Blue Raspberry Ice - Strawberry Kiwi.\n2.Red Bull - Blue Razz Ice - Kiwi Passion Fruit Guava - Strawberry Watermelon.\n3.Red Bull - Cherry Cola - Blueberry Ice - Black Dragon Ice.\n4.Peach Ice - Grape Ice - Peach Mango Watermelon - Watermelon Ice.\n5.Strawberry Raspberry Cherry - Mixed Berries - Blue Raspberry Ice - Raspberry Watermelon.\n6.Sour Apple Blueberry - Double Apple Ice - Apple Peach - Peach Ice.\n7.Blue Razz Lemonade - Lemon Lime - Grape Ice - Cherry Cola Ice.\n8.Tangerine Ice - Lemon Ice - Mango Ice - Strawberry Banana.\n9.Cola Ice - Blueberry Ice - Triple Melon - Strawberry Grape.\n10.Vanilla Cola - Pink Lemonade - Pineapple Orange - Mango Peach."
+      },
+      {
+        "id": "VAPANDA_PRO_40K",
+        "description": "Sube el nivel: VAPANDA PRO 40K\nHasta 40,000 caladas con pantalla completa y control táctil.\nDos modos de potencia, carga rápida Type‑C y rendimiento sólido para todo el día.",
+        "flavors": "Selección de 12 sabores:\n\n1.STRAWBERRY RASPBERRY CHERRY\n2.RED BULL\n3.BLUEBERRY ICE\n4.KIWI PASSION FRUIT GUAVA\n5.PEACH MANGO WATERMELON\n6.CHERRY COLA ICE\n7.STRAWBERRY WATERMELON\n8.WATERMELON ICE\n9.MIXED BERRIES\n10.BLUE RAZZ LEMONADE\n11.GRAPE ICE\n12.STRAWBERRY BANANA"
+      },
+      {
+        "id": "Vapanda_2_In_1_80K",
+        "description": "Doble emoción: VAPANDA 2 IN 1 80K\nDos sabores en un dispositivo con hasta 80,000 caladas.\nSistema de doble tanque, pantalla OLED y carga Type‑C.",
+        "flavors": "Combinaciones dobles:\n\n1.Red Bull + Blue Razz Ice\n2.Blueberry Ice + Mixed Berries\n3.Double Apple + Peach Ice\n4.Blueberry Watermelon + Strawberry Watermelon\n5.Kiwi Passion Fruit Guava + Sour Apple Blueberry\n6.Lemon Lime + Peach Ice\n7.Blueberry Mint + Strawberry Raspberry Cherry\n8.Peach Mango Watermelon + Watermelon Ice\n9.Blue Razz Lemonade + Apple Peach\n10.Red Energy Ice + Cherry Cola"
+      },
+      {
+        "id": "Vapanda_Tornado_18K",
+        "description": "Vapanda Tornado 18K: potencia y elegancia\n18,000 caladas, carga Type‑C y pantalla digital.\nMalla avanzada para sabor constante.",
+        "flavors": "Sabores:\n\n1.Watermelon Ice\n2.Strawberry Raspberry Cherry\n3.Gummy Bear\n4.Kiwi Passion Fruit Guava\n5.Mixed Berries\n6.Cranberry Grape\n7.Grape Ice\n8.Strawberry Mango\n9.Blueberry Ice\n10.Blue Raspberry Ice\n11.Blue Raspberry Lemonade\n12.Peach Ice\n13.Cherry Cola\n14.Strawberry Ice Cream\n15.Strawberry Watermelon"
+      },
+      {
+        "id": "Vapanda_Ultra_50K",
+        "description": "Vapanda Ultra 50K: lujo en cada calada\nCuerpo con acabado en cuero, 50,000 caladas y pantalla lateral.\nDoble malla para vapor denso y sabor estable.",
+        "flavors": "Línea premium:\n\n1.Strawberry Kiwi\n2.Strawberry Ice\n3.Watermelon Ice\n4.Strawberry Raspberry Cherry\n5.Red Bull\n6.Sour Apple Blueberry\n7.Mixed Berries\n8.Blue Raspberry Ice\n9.Raspberry Watermelon\n10.Kiwi Passion Fruit Guava"
+      },
+      {
+        "id": "VAAPEE_Tornado_25K",
+        "description": "VAAPEE Tornado 25K: más potencia\n25,000 caladas, carga Type‑C y pantalla digital.\nNubes grandes y sabor consistente.",
+        "flavors": "Selección:\n\n1.Kiwi Berry Mango\n2.Blueberry Ice\n3.Watermelon Ice\n4.Kiwi Passion Fruit Guava\n5.Blue Raspberry Ice\n6.Strawberry Raspberry Cherry\n7.Blueberry Orange Gummy\n8.Lemon Bubble Gum\n9.Cherry Cola\n10.Red Berries\n11.Strawberry Watermelon\n12.Peach Ice"
+      },
+      {
+        "id": "VAPLIQ_e_liquid",
+        "description": "VAPLIQ E‑Liquid: sabor premium\nBotella de 10 ml, 20 mg de sales de nicotina, TPD y proporción 50/50 PG/VG.\nSabor limpio de principio a fin.",
+        "flavors": "Sabores:\n\n1.Blue Razz Ice\n2.Blueberry Ice\n3.Grape Ice\n4.Gummy Bear\n5.Mixed Berries\n6.Straw Raspberry Cherry\n7.Strawberry Ice\n8.Strawberry Kiwi\n9.Strawberry Watermelon\n10.Watermelon Ice\n11.Kiwi Passion Fruit Guava\n12.Cherry Cola\n13.Double Apple Ice\n14.Triple Mango\n15.Peach Mango Pineapple\n16.Kiwi Berry Mango\n17.Peach Ice\n18.Blueberry Cranberry Grape\n19.Blue Razz Lemonade\n20.Strawberry Banana"
+      }
+    ]
   }
 }
 

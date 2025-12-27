@@ -1,8 +1,10 @@
 <script setup>
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { SITE_CONFIG } from '../../data/config.js'
 
 const router = useRouter()
+const { t } = useI18n()
 
 const handleNavClick = (href) => {
   if (href.startsWith('#')) {
@@ -38,20 +40,20 @@ const handleNavClick = (href) => {
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 border-b border-gray-800 pb-16 mb-16">
 
         <div class="max-w-md">
-          <h3 class="text-3xl font-black uppercase italic mb-4">Stay <span class="text-brand-primary">Connected</span></h3>
+          <h3 class="text-3xl font-black uppercase italic mb-4">{{ t('footer.newsletterTitle') }} <span class="text-brand-primary">{{ t('footer.newsletterTitleEmphasis') }}</span></h3>
           <p class="text-gray-400 text-sm">
-            Join the movement. Get the latest drops, exclusive offers, and invites to VIP events directly to your inbox.
+            {{ t('footer.newsletterSubtitle') }}
           </p>
         </div>
 
         <div class="w-full md:w-auto flex flex-col sm:flex-row gap-4">
           <input
               type="email"
-              placeholder="ENTER YOUR EMAIL"
+              :placeholder="t('footer.emailPlaceholder')"
               class="bg-gray-900 border border-gray-700 text-white px-6 py-4 rounded-full w-full md:w-[300px] focus:outline-none focus:border-brand-primary transition-colors text-xs font-bold tracking-widest placeholder-gray-600"
           >
           <button class="bg-brand-primary text-black px-8 py-4 rounded-full font-black uppercase text-xs tracking-widest hover:bg-white transition-colors shadow-[0_0_20px_rgba(57,255,20,0.4)]">
-            Subscribe
+            {{ t('footer.subscribe') }}
           </button>
         </div>
       </div>
@@ -59,37 +61,38 @@ const handleNavClick = (href) => {
       <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
 
         <div>
-          <h4 class="font-bold uppercase tracking-widest mb-6 text-[#39FF14] text-xs">Products</h4>
+          <h4 class="font-bold uppercase tracking-widest mb-6 text-[#39FF14] text-xs">{{ t('footer.sections.products') }}</h4>
           <ul class="space-y-4 text-sm text-gray-500 font-medium">
-            <li><a @click.prevent="handleNavClick('#products')" class="hover:text-white transition-colors cursor-pointer">All Products</a></li>
-            <li><a @click.prevent="handleNavClick('#multiverse')" class="hover:text-white transition-colors cursor-pointer">4-IN-1 Series</a></li>
-            <li><a @click.prevent="handleNavClick('#titans')" class="hover:text-white transition-colors cursor-pointer">Titans Series</a></li>
-            <li><a @click.prevent="handleNavClick('#smart-grid')" class="hover:text-white transition-colors cursor-pointer">Smart Grid</a></li>
+            <li><a @click.prevent="handleNavClick('#products')" class="hover:text-white transition-colors cursor-pointer">{{ t('footer.links.allProducts') }}</a></li>
+            <li><a @click.prevent="handleNavClick('#multiverse')" class="hover:text-white transition-colors cursor-pointer">{{ t('footer.links.seriesA') }}</a></li>
+            <li><a @click.prevent="handleNavClick('#titans')" class="hover:text-white transition-colors cursor-pointer">{{ t('footer.links.seriesB') }}</a></li>
+            <li><a @click.prevent="handleNavClick('#smart-grid')" class="hover:text-white transition-colors cursor-pointer">{{ t('footer.links.seriesC') }}</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-bold uppercase tracking-widest mb-6 text-[#39FF14] text-xs">Support</h4>
+          <h4 class="font-bold uppercase tracking-widest mb-6 text-[#39FF14] text-xs">{{ t('footer.sections.support') }}</h4>
           <ul class="space-y-4 text-sm text-gray-500 font-medium">
-            <li><a @click.prevent="handleNavClick('#faq')" class="hover:text-white transition-colors cursor-pointer">FAQ</a></li>
-            <li><a @click.prevent="handleNavClick('#wholesale')" class="hover:text-white transition-colors cursor-pointer">Wholesale</a></li>
-            <li><a @click.prevent="handleNavClick('#news')" class="hover:text-white transition-colors cursor-pointer">News</a></li>
-            <li><a @click.prevent="handleNavClick('#wholesale')" class="hover:text-white transition-colors cursor-pointer">Contact Us</a></li>
+            <li><a @click.prevent="handleNavClick('#faq')" class="hover:text-white transition-colors cursor-pointer">{{ t('footer.links.faq') }}</a></li>
+            <li><a @click.prevent="handleNavClick('#wholesale')" class="hover:text-white transition-colors cursor-pointer">{{ t('footer.links.wholesale') }}</a></li>
+            <li><a @click.prevent="handleNavClick('#news')" class="hover:text-white transition-colors cursor-pointer">{{ t('footer.links.news') }}</a></li>
+            <li><a @click.prevent="handleNavClick('#wholesale')" class="hover:text-white transition-colors cursor-pointer">{{ t('footer.links.contact') }}</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-bold uppercase tracking-widest mb-6 text-[#39FF14] text-xs">Company</h4>
+          <h4 class="font-bold uppercase tracking-widest mb-6 text-[#39FF14] text-xs">{{ t('footer.sections.company') }}</h4>
           <ul class="space-y-4 text-sm text-gray-500 font-medium">
-            <li><a @click.prevent="handleNavClick('#story')" class="hover:text-white transition-colors cursor-pointer">About Us</a></li>
-            <li><a @click.prevent="handleNavClick('#why-us')" class="hover:text-white transition-colors cursor-pointer">Why Choose Us</a></li>
-            <li><a @click.prevent="handleNavClick('#lifestyle')" class="hover:text-white transition-colors cursor-pointer">Lifestyle</a></li>
-            <li><a @click.prevent="handleNavClick('#testimonials')" class="hover:text-white transition-colors cursor-pointer">Testimonials</a></li>
+            <li><a @click.prevent="handleNavClick('#story')" class="hover:text-white transition-colors cursor-pointer">{{ t('footer.links.about') }}</a></li>
+            <li><a @click.prevent="handleNavClick('/certificates')" class="hover:text-white transition-colors cursor-pointer">{{ t('footer.links.certificates') }}</a></li>
+            <li><a @click.prevent="handleNavClick('#why-us')" class="hover:text-white transition-colors cursor-pointer">{{ t('footer.links.whyUs') }}</a></li>
+            <li><a @click.prevent="handleNavClick('#lifestyle')" class="hover:text-white transition-colors cursor-pointer">{{ t('footer.links.lifestyle') }}</a></li>
+            <li><a @click.prevent="handleNavClick('#testimonials')" class="hover:text-white transition-colors cursor-pointer">{{ t('footer.links.testimonials') }}</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-bold uppercase tracking-widest mb-6 text-[#39FF14] text-xs">Contact Info</h4>
+          <h4 class="font-bold uppercase tracking-widest mb-6 text-[#39FF14] text-xs">{{ t('footer.sections.contact') }}</h4>
           <ul class="space-y-3 text-xs text-gray-500 font-medium">
             <li class="leading-relaxed">
               <div class="text-white font-bold mb-1">{{ SITE_CONFIG.company }}</div>
@@ -115,16 +118,16 @@ const handleNavClick = (href) => {
       </div>
 
       <div class="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-gray-600 uppercase tracking-wider">
-        <p>© 2025 {{ SITE_CONFIG.brand }}. ALL RIGHTS RESERVED.</p>
+        <p>© 2025 {{ SITE_CONFIG.brand }}. {{ t('footer.rights') }}</p>
         <div class="flex gap-6">
-          <a href="#" class="hover:text-gray-400">Privacy Policy</a>
-          <a href="#" class="hover:text-gray-400">Terms of Service</a>
+          <a href="#" class="hover:text-gray-400">{{ t('footer.privacy') }}</a>
+          <a href="#" class="hover:text-gray-400">{{ t('footer.terms') }}</a>
         </div>
       </div>
 
       <div class="mt-12 p-4 bg-gray-900 text-center rounded-lg border border-gray-800">
         <p class="text-xs font-bold text-gray-400 uppercase">
-          WARNING: This product contains nicotine. Nicotine is an addictive chemical. Only for adults (21+).
+          {{ t('footer.warning') }}
         </p>
       </div>
 

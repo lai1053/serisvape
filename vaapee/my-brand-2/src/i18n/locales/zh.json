@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "story": "品牌故事",
+    "products": "产品",
+    "lifestyle": "生活方式",
+    "whyUs": "选择我们",
+    "news": "新闻",
+    "wholesale": "批发",
+    "contactUs": "联系我们"
+  },
+  "ageVerification": {
+    "title": "年龄验证",
+    "subtitle": "您必须年满法定吸烟年龄（21岁以上）才能浏览此网站。",
+    "warning": "警告：本产品含有尼古丁。尼古丁是成瘾性化学物质。仅限成年人（21岁以上）。禁止未成年人购买电子烟。",
+    "confirm": "我已年满21岁",
+    "exit": "退出 / 我未成年"
+  },
+  "healthWarning": {
+    "title": "警告：本产品含有尼古丁。",
+    "subtitle": "尼古丁是成瘾性化学物质。仅限成年人（21岁以上）。",
+    "smokingWarning": "吸烟有害健康。"
+  },
+  "news": {
+    "title": "新闻与活动",
+    "subtitle": "了解VAPANDA最新动态",
+    "readMore": "阅读更多",
+    "viewAll": "查看全部新闻"
+  },
+  "common": {
+    "wholesaleInquire": "批发咨询",
+    "exploreProducts": "探索产品",
+    "contactTeam": "联系团队"
+  },
+  "productMarketing": {
+    "items": [
+      {
+        "id": "VAAPEE_DOUBLE_45K",
+        "description": "VAAPEE Double 45K 是一款面向极致便捷、持久续航与多风味体验的可充电一次性电子烟，小巧机身内可提供高达 45,000 口的惊人体验。\n核心亮点：\n\n双口味系统 —— 一台设备两种高端口味，轻松切换，随心更换心情，无需携带多台设备。\n双网格雾化芯 —— 先进双网格线圈与双核处理带来均匀加热、更浓烟雾、稳定浓郁口感，从第一口到最后一口都顺滑饱满。\nType-C 充电 —— 内置 900mAh 电池与 Type-C 快充接口，快速补电，直到 36mL 烟油完全用尽。\n大容量与选择 —— 预注 36mL 盐尼古丁烟油，2% 或 5% 可选，满足不同强度需求。\n便捷设计 —— 吸气启动，无需按键或屏幕，便携省心，无需加油或更换雾化芯。",
+        "flavors": "以下为 10 款双口味组合，每一款用一句话描述：\n\n1.DOUBLE APPLE ICE + STRAWBERRY DRAGONFRUIT：一侧是清脆双苹果叠加冰爽薄荷，另一侧是草莓与火龙果的甜酸热带爆发。\n2.CHERRY COLA + WATERMELON ICE：樱桃可乐的复古汽泡感与清凉西瓜薄荷交替切换，夏日感十足。\n3.STRAWBERRY WATERMELON + COLA ICE：草莓西瓜的清甜多汁与冰爽可乐的气泡感互补，甜爽兼具。\n4.BLUEBERRY WATERMELON + STRAWBERRY MANGO：蓝莓与西瓜的活力融合，搭配草莓芒果的热带甜香。\n5.BLUEBERRY ICE + KIWI PASSION FRUIT GUAVA：冰爽蓝莓的清凉酸甜，对比猕猴桃百香果番石榴的热带酸香。\n6.STRAWBERRY RASPBERRY CHERRY ICE + GRAPE ICE：冰感三莓的锐利果香与深邃冰葡萄的凉感厚度切换。\n7.RED BULL + BLUEBERRY WATERMELON：能量饮料的劲爽气泡感，搭配蓝莓西瓜的柔和清甜。\n8.STRAWBERRY RASPBERRY CHERRY ICE + BLUEBERRY MINT：冰感莓果爆发与蓝莓薄荷的清爽冷冽交替上头。\n9.TRIPLE MELON + PINEAPPLE COCONUT：三重蜜瓜的清润鲜甜，搭配菠萝椰子奶香的热带鸡尾酒感。\n10.GUMMY BEAR + RAINBOW CANDY：软糖的童年甜感与彩虹糖的酸甜爆破随心切换。"
+      },
+      {
+        "id": "VAAPEE_STAR_100K",
+        "description": "探索未来：VAAPEE STAR 100K\nVAAPEE STAR 100K 以超大口数与未来感设计革新一次性电子烟体验，带来惊人的超大续航与连续畅快口感。\n配备 3D 曲面屏、AI 智能功率调节与 VPU 处理单元，实时优化雾化表现，口感更稳定、更顺滑、更安全。\n双模式强度可选：\n\n脉冲模式：节奏式能量输出，口感稳定，烟雾饱满。\n超级增压：瞬时提升功率，带来更强烈的烟雾与喉感。\n\nType-C 可充电、优质烟油与超强续航集于一身，STAR 100K 重新定义了耐用性与创新体验。",
+        "flavors": "诱人风味阵容\n精选 10 款爆发型口味：\n\n1.Peach Ice：蜜桃甜香配合清爽冰感，清凉怡人。\n2.Red Bull：经典能量饮料的气泡冲击与提神感。\n3.Blue Razz Ice：蓝树莓的酸甜爆发与冰凉薄荷。\n4.Double Apple Ice：青红双苹果叠加双倍冰感。\n5.Grape Ice：浓郁葡萄甜感与强劲冰凉。\n6.Cherry Cola：樱桃可乐的复古气泡甜香。\n7.Watermelon Ice：多汁西瓜搭配冰爽薄荷。\n8.Peach Mango Watermelon：蜜桃、芒果、西瓜的热带三重奏。\n9.Blueberry Raspberry Cherry：三莓合奏，酸甜层次丰富。\n10.Mixed Berries：多种浆果的饱满混合风味。\n\n准备好体验前所未有的畅爽了吗？STAR 100K，强力与风味的终极组合！"
+      },
+      {
+        "id": "VAAPEE_X_30K",
+        "description": "解锁新境界：VAAPEE X 30K\nVAAPEE X 30K 以高达 30,000 口续航与智能触控体验重新定义一次性电子烟。\n智能全屏 LED 显示电量、口数、模式，手指触控即可切换 4 种功率模式，从顺滑口感到强劲烟雾随心调节。\n双网格线圈 + Type-C 快充，稳定输出、风味更浓、续航更久。无需按键，轻触即享未来感体验。",
+        "flavors": "爆裂风味合集\n10 款精心打造的口味：\n\n1.Blue Raspberry Ice：蓝树莓酸甜与冰爽薄荷的冲击。\n2.Fruit Gum：水果口香糖的甜蜜回忆。\n3.Double Apple：青红苹果的清脆层次。\n4.Cola Ice：可乐气泡感配合冰凉薄荷。\n5.Blueberry Ice：蓝莓果香与清爽冰感。\n6.Kiwi Passion Fruit：猕猴桃与百香果的热带酸甜。\n7.Monster Drink：能量饮料的劲爽刺激。\n8.Pina Colada：菠萝椰子的热带度假感。\n9.Peach Ice：蜜桃甜香加冰爽。\n10.Strawberry Watermelon：草莓西瓜的经典清甜组合。\n\n触碰未来，尽享风味——VAAPEE X 30K。"
+      },
+      {
+        "id": "VAPANDA_4_IN_1_120K",
+        "description": "革新体验：VAPANDA 4 IN 1 120K\nVAPANDA 4 IN 1 120K 将四种风味集于一体，续航高达 120,000 口，满足多口味探索的极致需求。\n配备智能 LED 显示、吸气启动与 Type-C 充电，只需简单旋转或按压即可切换四种口味，无需携带多台设备。\n便利、耐用与强烈风味合一，让多样化体验真正一步到位。",
+        "flavors": "史诗级四合一风味\n10 组预置组合：\n\n1.Strawberry Ice - Strawberry Raspberry Cherry - Blue Raspberry Ice - Strawberry Kiwi：草莓冰感开场，三莓爆发、蓝树莓冰爽收尾。\n2.Red Bull - Blue Razz Ice - Kiwi Passion Fruit Guava - Strawberry Watermelon：能量感、蓝树莓冰、热带果香与草莓西瓜轮番登场。\n3.Red Bull - Cherry Cola - Blueberry Ice - Black Dragon Ice：能量饮料、樱桃可乐、蓝莓冰与黑龙果冰的神秘组合。\n4.Peach Ice - Grape Ice - Peach Mango Watermelon - Watermelon Ice：蜜桃冰、葡萄冰与热带混合、西瓜冰收尾。\n5.Strawberry Raspberry Cherry - Mixed Berries - Blue Raspberry Ice - Raspberry Watermelon：多莓狂欢与清爽蓝树莓交替。\n6.Sour Apple Blueberry - Double Apple Ice - Apple Peach - Peach Ice：酸苹果蓝莓、双苹果冰、苹果桃与蜜桃冰层层递进。\n7.Blue Razz Lemonade - Lemon Lime - Grape Ice - Cherry Cola Ice：蓝树莓柠檬汽水、柠檬莱姆、葡萄冰、樱桃可乐冰。\n8.Tangerine Ice - Lemon Ice - Mango Ice - Strawberry Banana：柑橘冰、柠檬冰、芒果冰与草莓香蕉奶昔感。\n9.Cola Ice - Blueberry Ice - Triple Melon - Strawberry Grape：可乐冰、蓝莓冰、三重蜜瓜与草莓葡萄。\n10.Vanilla Cola - Pink Lemonade - Pineapple Orange - Mango Peach：香草可乐、粉红柠檬水、菠萝橙与芒果桃。\n\n一次四味，尽享自由——VAPANDA 4 IN 1 120K。"
+      },
+      {
+        "id": "VAPANDA_PRO_40K",
+        "description": "进阶体验：VAPANDA PRO 40K\nVAPANDA PRO 40K 以高端设计与 40,000 口续航带来强劲而持久的体验。\n全屏显示实时电量与口数，触控切换模式，双模式输出（顺滑/增压），Type-C 快充续航强劲。\n吸气启动、便携高效，是全天候稳定体验的理想之选。",
+        "flavors": "12 款爆发风味\n\n1.STRAWBERRY RASPBERRY CHERRY：草莓、树莓、樱桃的三重莓果爆发。\n2.RED BULL：经典能量饮料风味。\n3.BLUEBERRY ICE：蓝莓与冰爽薄荷。\n4.KIWI PASSION FRUIT GUAVA：热带三果酸甜交织。\n5.PEACH MANGO WATERMELON：蜜桃、芒果、西瓜的热带三重奏。\n6.CHERRY COLA ICE：樱桃可乐加冰感。\n7.STRAWBERRY WATERMELON：草莓西瓜的经典清甜。\n8.WATERMELON ICE：西瓜配清爽冰感。\n9.MIXED BERRIES：多莓混合的浓郁果香。\n10.BLUE RAZZ LEMONADE：蓝树莓柠檬汽水。\n11.GRAPE ICE：葡萄冰感。\n12.STRAWBERRY BANANA：草莓香蕉奶昔风味。\n\n触达专业级体验——VAPANDA PRO 40K。"
+      },
+      {
+        "id": "Vapanda_2_In_1_80K",
+        "description": "双倍畅感：VAPANDA 2 IN 1 80K\nVAPANDA 2 IN 1 80K 将双口味与 80,000 口续航合一，轻松切换风味。\n双油仓系统、OLED 智能显示、双功率模式与 Type-C 快充，让体验更直观、更持久。\n适合喜欢多口味变化的玩家。",
+        "flavors": "10 组双口味组合\n\n1.Red Bull + Blue Razz Ice：能量感与蓝树莓冰爽切换。\n2.Blueberry Ice + Mixed Berries：蓝莓冰与混合莓果交替。\n3.Double Apple + Peach Ice：双苹果清爽与蜜桃冰感。\n4.Blueberry Watermelon + Strawberry Watermelon：蓝莓西瓜与草莓西瓜轮换。\n5.Kiwi Passion Fruit Guava + Sour Apple Blueberry：热带果香与酸苹果蓝莓。\n6.Lemon Lime + Peach Ice：柠檬莱姆清爽配蜜桃冰。\n7.Blueberry Mint + Strawberry Raspberry Cherry：蓝莓薄荷与三莓风味。\n8.Peach Mango Watermelon + Watermelon Ice：热带混合与西瓜冰。\n9.Blue Razz Lemonade + Apple Peach：蓝树莓柠檬汽水与苹果桃。\n10.Red Energy Ice + Cherry Cola：能量冰感与樱桃可乐。\n\n双倍风味，双倍乐趣。"
+      },
+      {
+        "id": "Vapanda_Tornado_18K",
+        "description": "Vapanda Tornado 18K：经典与力量的融合\nTornado 18K 以经典造型结合现代性能，提供 18,000 口续航与 Type-C 快充，吸气即用。\n内置数显屏实时显示电量与烟油，网格雾化芯带来稳定浓郁口感。",
+        "flavors": "精选口味合集\n\n1.Watermelon Ice：西瓜清甜配冰爽。\n2.Strawberry Raspberry Cherry：三莓合奏。\n3.Gummy Bear：软糖甜香。\n4.Kiwi Passion Fruit Guava：热带三果。\n5.Mixed Berries：多莓混合。\n6.Cranberry Grape：蔓越莓葡萄。\n7.Grape Ice：葡萄冰。\n8.Strawberry Mango：草莓芒果。\n9.Blueberry Ice：蓝莓冰。\n10.Blue Raspberry Ice：蓝树莓冰。\n11.Blue Raspberry Lemonade：蓝树莓柠檬汽水。\n12.Peach Ice：蜜桃冰。\n13.Cherry Cola：樱桃可乐。\n14.Strawberry Ice Cream：草莓冰淇淋。\n15.Strawberry Watermelon：草莓西瓜。\n\n释放风暴般的畅爽体验。"
+      },
+      {
+        "id": "Vapanda_Ultra_50K",
+        "description": "奢享体验：Vapanda Ultra 50K\n皮革包覆机身搭配 50,000 口超长续航，侧边大屏实时显示电量与烟油，Type-C 快充随时续航。\n双网格雾化带来更浓烟雾与顺滑口感，适合追求质感与性能的用户。",
+        "flavors": "高端风味阵容\n\n1.Strawberry Kiwi：草莓猕猴桃的清新酸甜。\n2.Strawberry Ice：草莓冰感清爽。\n3.Watermelon Ice：西瓜冰爽。\n4.Strawberry Raspberry Cherry：三莓爆发。\n5.Red Bull：能量感可乐风味。\n6.Sour Apple Blueberry：酸苹果蓝莓。\n7.Mixed Berries：多莓混合。\n8.Blue Raspberry Ice：蓝树莓冰。\n9.Raspberry Watermelon：树莓西瓜。\n10.Kiwi Passion Fruit Guava：热带三果。\n\n手握奢享，尽享澎湃。"
+      },
+      {
+        "id": "VAAPEE_Tornado_25K",
+        "description": "释放风暴：VAAPEE Tornado 25K\n经典龙卷风设计 + 更大容量，续航高达 25,000 口，Type-C 快充与数显屏让体验更轻松。\n网格雾化带来更强烟雾与更稳定口感。",
+        "flavors": "不可抗拒的风味选择\n\n1.Kiwi Berry Mango：猕猴桃、莓果、芒果热带融合。\n2.Blueberry Ice：蓝莓冰。\n3.Watermelon Ice：西瓜冰。\n4.Kiwi Passion Fruit Guava：热带三果。\n5.Blue Raspberry Ice：蓝树莓冰。\n6.Strawberry Raspberry Cherry：三莓合奏。\n7.Blueberry Orange Gummy：蓝莓橙味软糖。\n8.Lemon Bubble Gum：柠檬泡泡糖。\n9.Cherry Cola：樱桃可乐。\n10.Red Berries：红莓混合。\n11.Strawberry Watermelon：草莓西瓜。\n12.Peach Ice：蜜桃冰。\n\n更强续航，更浓风味。"
+      },
+      {
+        "id": "VAPLIQ_e_liquid",
+        "description": "VAPLIQ 烟油：高端口感体验\n10ml 容量、20mg 盐尼古丁，TPD 合规，50:50 PG/VG 平衡比例，适配小烟与入门套装。\n从清凉果味到甜品风味，口感稳定纯净。",
+        "flavors": "丰富口味选择\n\n1.Blue Razz Ice：蓝树莓冰。\n2.Blueberry Ice：蓝莓冰。\n3.Grape Ice：葡萄冰。\n4.Gummy Bear：软糖。\n5.Mixed Berries：混合莓果。\n6.Straw Raspberry Cherry：草莓树莓樱桃。\n7.Strawberry Ice：草莓冰。\n8.Strawberry Kiwi：草莓猕猴桃。\n9.Strawberry Watermelon：草莓西瓜。\n10.Watermelon Ice：西瓜冰。\n11.Kiwi Passion Fruit Guava：热带三果。\n12.Cherry Cola：樱桃可乐。\n13.Double Apple Ice：双苹果冰。\n14.Triple Mango：三重芒果。\n15.Peach Mango Pineapple：蜜桃芒果菠萝。\n16.Kiwi Berry Mango：猕猴桃莓果芒果。\n17.Peach Ice：蜜桃冰。\n18.Blueberry Cranberry Grape：蓝莓蔓越莓葡萄。\n19.Blue Razz Lemonade：蓝树莓柠檬汽水。\n20.Strawberry Banana：草莓香蕉。\n\n纯净口感，随心选择。"
+      }
+    ]
+  }
+}

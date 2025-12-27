@@ -1,6 +1,9 @@
 <script setup>
 import { onMounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import gsap from 'gsap'
+
+const { t } = useI18n()
 
 const glowRef = ref(null)
 const videoRef = ref(null)
@@ -65,18 +68,18 @@ onMounted(() => {
     <div class="ui-element relative z-20 container mx-auto px-6 pt-32 flex justify-between items-start">
       <div class="space-y-2">
         <div class="text-[#39FF14] font-mono text-[10px] tracking-[0.4em] font-bold relative">
-          <span class="absolute -left-4 top-1/2 -translate-y-1/2 w-2 h-[1px] bg-[#39FF14]"></span> PROJECT STREETWEAR V4.0
+          <span class="absolute -left-4 top-1/2 -translate-y-1/2 w-2 h-[1px] bg-[#39FF14]"></span> {{ t('hero.projectLabel') }}
         </div>
         <div class="text-white font-['Anton'] italic text-3xl tracking-tighter uppercase">VAPANDA<span class="text-[#39FF14]">.</span></div>
       </div>
       <div class="hidden md:block text-right font-mono text-[9px] text-white/40 space-y-1">
-        <div>SYS_LOAD: 100%</div>
+        <div>{{ t('hero.sysLoad') }}</div>
         <div class="flex items-center justify-end gap-2">
-          VAPOR_DENSITY: OPTIMIZED
+          {{ t('hero.vaporDensity') }}
           <div class="w-10 h-[2px] bg-white/20 relative overflow-hidden"> <div class="absolute inset-0 bg-[#39FF14] animate-progress"></div>
           </div>
         </div>
-        <div class="text-[#39FF14] animate-pulse">● LIVE_FEED_ACTIVE</div>
+        <div class="text-[#39FF14] animate-pulse">● {{ t('hero.liveFeed') }}</div>
       </div>
     </div>
 
@@ -87,17 +90,17 @@ onMounted(() => {
         <div class="ui-element absolute -left-8 top-0 h-full w-[1px] bg-gradient-to-b from-[#39FF14]/50 to-transparent hidden md:block"></div>
 
         <p class="ui-element text-white text-lg md:text-2xl font-bold italic tracking-wider mb-8 uppercase leading-tight">
-          AUTHENTIC RELEASE. <br>
-          <span class="text-gray-500">RIGHT HERE, RIGHT NOW.</span>
+          {{ t('hero.headlineLine1') }} <br>
+          <span class="text-gray-500">{{ t('hero.headlineLine2') }}</span>
         </p>
 
         <div class="main-cta flex flex-wrap gap-4">
           <button @click="scrollToSection('#multiverse')" class="px-10 py-5 bg-[#39FF14] text-black font-black uppercase text-xs tracking-[0.2em] hover:bg-white transition-all shadow-[0_0_40px_rgba(57,255,20,0.3)] relative overflow-hidden group">
-            <span class="relative z-10">Explore Collection</span>
+            <span class="relative z-10">{{ t('hero.ctaPrimary') }}</span>
             <div class="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out skew-x-12"></div>
           </button>
           <button @click="scrollToSection('#wholesale')" class="px-10 py-5 border border-white/20 backdrop-blur-md text-white font-black uppercase text-xs tracking-[0.2em] hover:bg-white/10 transition-all">
-            Wholesale Portal
+            {{ t('hero.ctaSecondary') }}
           </button>
         </div>
       </div>
@@ -105,7 +108,7 @@ onMounted(() => {
 
     <div class="relative z-30 w-full py-4 bg-black border-t border-white/10 text-center">
       <p class="text-[9px] md:text-[11px] text-gray-600 font-bold tracking-[0.3em] uppercase">
-        WARNING: This product contains nicotine. Nicotine is an addictive chemical.
+        {{ t('hero.warning') }}
       </p>
     </div>
 
@@ -132,4 +135,3 @@ section {
   animation: progress 2s linear infinite;
 }
 </style>
-

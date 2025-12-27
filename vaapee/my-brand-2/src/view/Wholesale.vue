@@ -1,5 +1,6 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import gsap from 'gsap'
 import emailjs from '@emailjs/browser'
 import { SITE_CONFIG } from '../../data/config.js'
@@ -18,13 +19,12 @@ const EMAILJS_CONFIG = {
 // 初始化 EmailJS
 emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY)
 
+const { t, tm } = useI18n()
+
 // 1. 物流时效数据
-const logistics = [
-  { region: "North America", carrier: "DHL / UPS", time: "3-5 Days", status: "STABLE" },
-  { region: "European Union", carrier: "DPD / DHL", time: "5-7 Days", status: "FAST" },
-  { region: "Middle East", carrier: "Aramex", time: "4-6 Days", status: "EXPRESS" },
-  { region: "Southeast Asia", carrier: "Special Line", time: "2-4 Days", status: "HOT" }
-]
+const logistics = computed(() => tm('wholesale.logistics'))
+const businessTypes = computed(() => tm('wholesale.businessTypes'))
+const orderVolumes = computed(() => tm('wholesale.orderVolumes'))
 
 // 2. 表单逻辑
 const form = ref({ 
@@ -45,7 +45,7 @@ const submitInquiry = async () => {
   if (EMAILJS_CONFIG.SERVICE_ID === 'YOUR_SERVICE_ID' || 
       EMAILJS_CONFIG.TEMPLATE_ID === 'YOUR_TEMPLATE_ID' || 
       EMAILJS_CONFIG.PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
-    alert('Email service is not configured. Please contact us directly at ' + SITE_CONFIG.contact.email)
+    alert(`${t('wholesale.emailNotConfigured')} ${SITE_CONFIG.contact.email}`)
     return
   }
 
@@ -75,7 +75,7 @@ const submitInquiry = async () => {
     if (result.text === 'OK') {
       submitStatus.value = { 
         type: 'success', 
-        message: 'Inquiry Sent Successfully! Our sales team will contact you within 2 hours.' 
+        message: t('wholesale.submitSuccess') 
       }
       // 清空表单
       form.value = { 
@@ -98,7 +98,7 @@ const submitInquiry = async () => {
     console.error('EmailJS Error:', error)
     submitStatus.value = { 
       type: 'error', 
-      message: 'Failed to send inquiry. Please try again or contact us directly at ' + SITE_CONFIG.contact.email 
+      message: `${t('wholesale.submitError')} ${SITE_CONFIG.contact.email}` 
     }
     
     // 5秒后清除错误消息
@@ -130,12 +130,12 @@ onMounted(() => {
     <div class="container mx-auto px-6 relative z-10">
 
       <div class="mb-20">
-        <span class="text-[#39FF14] font-mono text-[10px] tracking-[0.6em] block mb-4 uppercase">Global Supply Chain // V4.0</span>
+        <span class="text-[#39FF14] font-mono text-[10px] tracking-[0.6em] block mb-4 uppercase">{{ t('wholesale.badge') }}</span>
         <h2 class="text-6xl md:text-8xl font-black font-['Anton'] italic text-white uppercase leading-none">
-          Wholesale<br><span class="text-[#39FF14]">Logistics.</span>
+          {{ t('wholesale.titleLine1') }}<br><span class="text-[#39FF14]">{{ t('wholesale.titleLine2') }}</span>
         </h2>
         <p class="mt-6 text-gray-500 text-sm tracking-widest uppercase max-w-xl">
-          Empowering your business with high-speed delivery and a 1000m² dust-free manufacturing base.
+          {{ t('wholesale.subtitle') }}
         </p>
       </div>
 
@@ -159,69 +159,69 @@ onMounted(() => {
           <div class="grid grid-cols-2 gap-4 mt-12">
             <div class="p-6 border border-white/10 text-center">
               <div class="text-3xl font-black font-['Anton'] text-white">1,000㎡+</div>
-              <div class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">Production Base</div>
+              <div class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">{{ t('wholesale.stats.base') }}</div>
             </div>
             <div class="p-6 border border-white/10 text-center">
               <div class="text-3xl font-black font-['Anton'] text-[#39FF14]">100% QC</div>
-              <div class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">Dust-free Workshop</div>
+              <div class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">{{ t('wholesale.stats.workshop') }}</div>
             </div>
           </div>
         </div>
 
         <div class="bg-white/5 p-10 md:p-12 border border-white/10 backdrop-blur-xl relative">
           <div class="absolute -top-4 -right-4 bg-[#39FF14] text-black text-[10px] font-black px-4 py-2 uppercase tracking-tighter">
-            B2B Priority
+            {{ t('wholesale.badgeSecondary') }}
           </div>
 
-          <h3 class="text-3xl font-black font-['Anton'] italic text-white uppercase mb-8">Start Your Partnership</h3>
+          <h3 class="text-3xl font-black font-['Anton'] italic text-white uppercase mb-8">{{ t('wholesale.formTitle') }}</h3>
 
           <form @submit.prevent="submitInquiry" class="space-y-6">
             <!-- Company / Store Name -->
             <div class="space-y-2">
-              <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Company / Store Name <span class="text-red-500">*</span></label>
-              <input v-model="form.companyName" type="text" required class="w-full bg-black/50 border border-white/10 p-4 text-white font-mono focus:border-[#39FF14] outline-none transition-all" placeholder="Enter company or store name" />
+              <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{{ t('wholesale.labels.company') }} <span class="text-red-500">*</span></label>
+              <input v-model="form.companyName" type="text" required class="w-full bg-black/50 border border-white/10 p-4 text-white font-mono focus:border-[#39FF14] outline-none transition-all" :placeholder="t('wholesale.placeholders.company')" />
             </div>
 
             <!-- Contact Name -->
             <div class="space-y-2">
-              <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Contact Name <span class="text-red-500">*</span></label>
-              <input v-model="form.contactName" type="text" required class="w-full bg-black/50 border border-white/10 p-4 text-white font-mono focus:border-[#39FF14] outline-none transition-all" placeholder="Enter contact person name" />
+              <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{{ t('wholesale.labels.contact') }} <span class="text-red-500">*</span></label>
+              <input v-model="form.contactName" type="text" required class="w-full bg-black/50 border border-white/10 p-4 text-white font-mono focus:border-[#39FF14] outline-none transition-all" :placeholder="t('wholesale.placeholders.contact')" />
             </div>
 
             <!-- Email and Phone -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div class="space-y-2">
-                <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Email <span class="text-red-500">*</span></label>
-                <input v-model="form.email" type="email" required class="w-full bg-black/50 border border-white/10 p-4 text-white font-mono focus:border-[#39FF14] outline-none transition-all" placeholder="your@email.com" />
+                <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{{ t('wholesale.labels.email') }} <span class="text-red-500">*</span></label>
+                <input v-model="form.email" type="email" required class="w-full bg-black/50 border border-white/10 p-4 text-white font-mono focus:border-[#39FF14] outline-none transition-all" :placeholder="t('wholesale.placeholders.email')" />
               </div>
               <div class="space-y-2">
-                <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Phone / WhatsApp <span class="text-red-500">*</span></label>
-                <input v-model="form.phone" type="tel" required class="w-full bg-black/50 border border-white/10 p-4 text-white font-mono focus:border-[#39FF14] outline-none transition-all" placeholder="+1 234 567 8900" />
+                <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{{ t('wholesale.labels.phone') }} <span class="text-red-500">*</span></label>
+                <input v-model="form.phone" type="tel" required class="w-full bg-black/50 border border-white/10 p-4 text-white font-mono focus:border-[#39FF14] outline-none transition-all" :placeholder="t('wholesale.placeholders.phone')" />
               </div>
             </div>
 
             <!-- Country / Region -->
             <div class="space-y-2">
-              <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Country / Region <span class="text-red-500">*</span></label>
-              <input v-model="form.country" type="text" required class="w-full bg-black/50 border border-white/10 p-4 text-white font-mono focus:border-[#39FF14] outline-none transition-all" placeholder="Enter country or region" />
+              <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{{ t('wholesale.labels.country') }} <span class="text-red-500">*</span></label>
+              <input v-model="form.country" type="text" required class="w-full bg-black/50 border border-white/10 p-4 text-white font-mono focus:border-[#39FF14] outline-none transition-all" :placeholder="t('wholesale.placeholders.country')" />
             </div>
 
             <!-- Business Type and Order Volume -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div class="space-y-2">
-                <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Business Type <span class="text-red-500">*</span></label>
+                <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{{ t('wholesale.labels.businessType') }} <span class="text-red-500">*</span></label>
                 <select v-model="form.businessType" required class="w-full bg-black/50 border border-white/10 p-4 text-white font-mono focus:border-[#39FF14] outline-none transition-all appearance-none cursor-pointer">
-                  <option value="" disabled selected>Select business type</option>
-                  <option v-for="type in SITE_CONFIG.wholesaleForm.businessTypes" :key="type" :value="type" class="bg-black text-white">
+                  <option value="" disabled selected>{{ t('wholesale.placeholders.businessType') }}</option>
+                  <option v-for="type in businessTypes" :key="type" :value="type" class="bg-black text-white">
                     {{ type }}
                   </option>
                 </select>
               </div>
               <div class="space-y-2">
-                <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Expected Order Volume <span class="text-red-500">*</span></label>
+                <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{{ t('wholesale.labels.orderVolume') }} <span class="text-red-500">*</span></label>
                 <select v-model="form.orderVolume" required class="w-full bg-black/50 border border-white/10 p-4 text-white font-mono focus:border-[#39FF14] outline-none transition-all appearance-none cursor-pointer">
-                  <option value="" disabled selected>Select order volume</option>
-                  <option v-for="volume in SITE_CONFIG.wholesaleForm.orderVolumes" :key="volume" :value="volume" class="bg-black text-white">
+                  <option value="" disabled selected>{{ t('wholesale.placeholders.orderVolume') }}</option>
+                  <option v-for="volume in orderVolumes" :key="volume" :value="volume" class="bg-black text-white">
                     {{ volume }}
                   </option>
                 </select>
@@ -230,8 +230,8 @@ onMounted(() => {
 
             <!-- Message -->
             <div class="space-y-2">
-              <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Message / Requirements</label>
-              <textarea v-model="form.message" rows="4" class="w-full bg-black/50 border border-white/10 p-4 text-white font-mono focus:border-[#39FF14] outline-none transition-all" placeholder="Enter your message or specific requirements..."></textarea>
+              <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{{ t('wholesale.labels.message') }}</label>
+              <textarea v-model="form.message" rows="4" class="w-full bg-black/50 border border-white/10 p-4 text-white font-mono focus:border-[#39FF14] outline-none transition-all" :placeholder="t('wholesale.placeholders.message')"></textarea>
             </div>
 
             <!-- 状态消息 -->
@@ -245,7 +245,7 @@ onMounted(() => {
 
             <button type="submit" :disabled="isSubmitting"
                     class="w-full py-6 bg-[#39FF14] text-black font-black uppercase text-xs tracking-[0.3em] hover:bg-white transition-all shadow-neon disabled:opacity-50 disabled:cursor-not-allowed">
-              {{ isSubmitting ? 'PROCESSING...' : 'SUBMIT PARTNERSHIP REQUEST' }}
+              {{ isSubmitting ? t('wholesale.submitting') : t('wholesale.submit') }}
             </button>
           </form>
         </div>
@@ -255,7 +255,7 @@ onMounted(() => {
 
     <div class="mt-32 w-full py-6 bg-black border-t border-white/10 text-center">
       <p class="text-[9px] md:text-[11px] text-gray-600 font-bold tracking-[0.3em] uppercase">
-        WARNING: This product contains nicotine. Nicotine is an addictive chemical.
+        {{ t('wholesale.warning') }}
       </p>
     </div>
   </section>
