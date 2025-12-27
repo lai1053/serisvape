@@ -222,7 +222,7 @@
     "placeholders": {
       "company": "Enter company or store name",
       "contact": "Enter contact person name",
-      "email": "your@@email.com",
+      "email": "your-email(at)example.com",
       "phone": "+1 234 567 8900",
       "country": "Enter country or region",
       "businessType": "Select business type",
