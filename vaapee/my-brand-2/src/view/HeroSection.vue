@@ -45,7 +45,7 @@ onMounted(() => {
 
     <div class="absolute inset-0 z-0">
       <video ref="videoRef" autoplay loop muted playsinline class="h-full w-full object-cover saturate-150 contrast-110 brightness-90">
-        <source src="../img/Cyberpunk_E_cigarette_Promo_Video.mp4" type="video/mp4" />
+        <source src="../img/bg-video2.mp4" type="video/mp4" />
       </video>
 
       <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
@@ -132,3 +132,4 @@ section {
   animation: progress 2s linear infinite;
 }
 </style>
+
