@@ -34,6 +34,17 @@ const currentProduct = computed(() => {
 
 const imageType = ref('single_product')
 
+const getImageColor = (name) => {
+  if (!name) return ''
+  let hash = 0
+  for (let i = 0; i < name.length; i += 1) {
+    hash = (hash << 5) - hash + name.charCodeAt(i)
+    hash |= 0
+  }
+  const hue = Math.abs(hash) % 360
+  return `hsl(${hue} 80% 55%)`
+}
+
 // 获取可用的图片类型
 const availableImageTypes = computed(() => {
   if (!product.value) return []
@@ -82,6 +93,15 @@ const currentImage = computed(() => {
   if (!currentProduct.value) return ''
   return `${product.value.basePath}/${imageType.value}/${fileName.value}`
 })
+
+const selectedImageColor = computed(() => {
+  if (!currentProduct.value) return ''
+  return getImageColor(currentProduct.value.fileName) || currentProduct.value.color
+})
+
+const goHome = () => {
+  router.push('/')
+}
 
 const changeImageType = (type) => {
   imageType.value = type
@@ -208,7 +228,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div v-if="currentProduct" class="min-h-screen text-white transition-colors duration-1000" :style="{ background: `linear-gradient(180deg, ${currentProduct.color}05 0%, #000000 50%)` }">
+  <div v-if="currentProduct" class="min-h-screen text-white transition-colors duration-1000" :style="{ background: `linear-gradient(180deg, ${selectedImageColor}05 0%, #000000 50%)` }">
     <!-- Hero Section -->
     <section class="relative pt-32 pb-20 overflow-hidden border-b border-white/10">
       <div class="absolute inset-0 opacity-5 pointer-events-none">
@@ -217,7 +237,7 @@ onMounted(() => {
 
       <div class="container mx-auto px-6 relative z-10">
         <div class="flex items-center gap-4 mb-8">
-          <button @click="router.back()" class="hover:opacity-80 transition-colors" :style="{ color: currentProduct.color }">
+          <button @click="goHome" class="hover:opacity-80 transition-colors" :style="{ color: selectedImageColor }">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
@@ -236,8 +256,8 @@ onMounted(() => {
                 @click="changeImageType(type.key)"
                 :class="imageType === type.key ? 'text-black' : 'bg-white/5 border text-gray-400'"
                 :style="imageType === type.key 
-                  ? { backgroundColor: currentProduct.color } 
-                  : { borderColor: `${currentProduct.color}30` }"
+                  ? { backgroundColor: selectedImageColor } 
+                  : { borderColor: `${selectedImageColor}30` }"
                 class="px-4 py-2 text-[10px] font-black uppercase tracking-widest transition-all hover:opacity-80"
               >
                 {{ type.label }}
@@ -247,7 +267,7 @@ onMounted(() => {
             <!-- 主图 -->
             <div class="relative bg-white/5 border border-white/10 p-8 rounded-lg backdrop-blur-xl">
               <div class="absolute inset-0 blur-[60px] opacity-20 transition-colors duration-1000"
-                   :style="{ background: currentProduct.color }"></div>
+                   :style="{ background: selectedImageColor }"></div>
               <img
                 :src="currentImage"
                 :alt="currentProduct.fileName"
@@ -255,13 +275,35 @@ onMounted(() => {
                 @error="console.error('Image not found:', currentImage)"
               />
             </div>
+
+            <!-- 缩略图 -->
+            <div v-if="product?.images?.length" class="grid grid-cols-6 gap-3 mt-5">
+              <button
+                v-for="(img, index) in product.images"
+                :key="index"
+                @click="router.push(`/product-all/${seriesKey}/${encodeURIComponent(img)}`)"
+                :class="fileName === img ? 'border-2 scale-105' : 'border'"
+                :style="fileName === img 
+                  ? { borderColor: currentProduct.color } 
+                  : { borderColor: `${currentProduct.color}30` }"
+                class="relative bg-white/5 rounded overflow-hidden transition-all hover:opacity-90"
+                :aria-label="img.replace('.png', '').replace(/_/g, ' ')"
+              >
+                <img
+                  :src="`${product.basePath}/${product.imageType}/${img}`"
+                  :alt="img"
+                  class="w-full h-20 object-contain p-2"
+                  loading="lazy"
+                />
+              </button>
+            </div>
           </div>
 
           <!-- 产品信息 -->
           <div class="space-y-8">
             <div>
               <span class="font-mono text-[10px] tracking-[0.5em] font-bold mb-4 block uppercase"
-                    :style="{ color: currentProduct.color }">
+                    :style="{ color: selectedImageColor }">
                 {{ t('product.seriesC') }}
               </span>
               <h1 class="text-6xl md:text-8xl font-black font-['Anton'] italic text-white uppercase leading-none mb-4">
@@ -290,15 +332,15 @@ onMounted(() => {
               <button 
                 class="flex-1 px-8 py-5 text-black font-black uppercase text-xs tracking-widest hover:opacity-90 transition-all"
                 :style="{ 
-                  backgroundColor: currentProduct.color,
-                  boxShadow: `0 0 40px ${currentProduct.color}30`
+                  backgroundColor: selectedImageColor,
+                  boxShadow: `0 0 40px ${selectedImageColor}30`
                 }"
               >
                 {{ t('product.wholesaleInquiry') }}
               </button>
               <button 
                 class="px-8 py-5 border text-white font-black uppercase text-xs tracking-widest hover:opacity-80 transition-all"
-                :style="{ borderColor: currentProduct.color }"
+                :style="{ borderColor: selectedImageColor }"
               >
                 {{ t('product.downloadCatalog') }}
               </button>
@@ -312,7 +354,7 @@ onMounted(() => {
     <section v-if="marketing" class="py-20 border-b border-white/10">
       <div class="container mx-auto px-6 max-w-4xl">
         <h2 class="text-5xl font-black font-['Anton'] italic text-white uppercase mb-12 text-center">
-          {{ t('product.storyTitle') }} <span :style="{ color: currentProduct.color }">{{ t('product.storyEmphasis') }}</span>
+          {{ t('product.storyTitle') }} <span :style="{ color: selectedImageColor }">{{ t('product.storyEmphasis') }}</span>
         </h2>
         
         <!-- 产品描述 -->
@@ -325,7 +367,7 @@ onMounted(() => {
         
         <!-- 口味描述 -->
         <div v-if="flavorParagraphs.length > 0" class="space-y-6">
-          <h3 class="text-3xl font-black font-['Anton'] italic uppercase mb-8" :style="{ color: currentProduct.color }">
+          <h3 class="text-3xl font-black font-['Anton'] italic uppercase mb-8" :style="{ color: selectedImageColor }">
             {{ t('product.flavorCollection') }}
           </h3>
           <div v-for="(paragraph, index) in flavorParagraphs" :key="index"
@@ -340,7 +382,7 @@ onMounted(() => {
     <section class="py-20 border-b border-white/10" v-if="product">
       <div class="container mx-auto px-6">
         <h2 class="text-5xl font-black font-['Anton'] italic text-white uppercase mb-12 text-center">
-          {{ t('product.moreFrom') }} <span :style="{ color: currentProduct.color }">{{ product.name }}</span>
+          {{ t('product.moreFrom') }} <span :style="{ color: selectedImageColor }">{{ product.name }}</span>
         </h2>
         
         <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-4">
@@ -348,8 +390,8 @@ onMounted(() => {
                @click="router.push(`/product-all/${seriesKey}/${encodeURIComponent(img)}`)"
                :class="fileName === img ? 'border-2 scale-105' : 'border'"
                :style="fileName === img 
-                 ? { borderColor: currentProduct.color } 
-                 : { borderColor: `${currentProduct.color}30` }"
+                 ? { borderColor: selectedImageColor } 
+                 : { borderColor: `${selectedImageColor}30` }"
                class="cursor-pointer bg-white/5 backdrop-blur-xl p-2 rounded-lg transition-all group hover:opacity-80"
             >
             <div class="relative aspect-[3/4] bg-white/5 overflow-hidden rounded">

@@ -120,17 +120,10 @@ const handleNavClick = (href) => {
       <div class="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-gray-600 uppercase tracking-wider">
         <p>© 2025 {{ SITE_CONFIG.brand }}. {{ t('footer.rights') }}</p>
         <div class="flex gap-6">
-          <a href="#" class="hover:text-gray-400">{{ t('footer.privacy') }}</a>
-          <a href="#" class="hover:text-gray-400">{{ t('footer.terms') }}</a>
+          <a @click.prevent="handleNavClick('/privacy')" class="hover:text-gray-400 cursor-pointer">{{ t('footer.privacy') }}</a>
+          <a @click.prevent="handleNavClick('/terms')" class="hover:text-gray-400 cursor-pointer">{{ t('footer.terms') }}</a>
         </div>
       </div>
-
-      <div class="mt-12 p-4 bg-gray-900 text-center rounded-lg border border-gray-800">
-        <p class="text-xs font-bold text-gray-400 uppercase">
-          {{ t('footer.warning') }}
-        </p>
-      </div>
-
     </div>
   </footer>
 </template>

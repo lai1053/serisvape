@@ -222,7 +222,7 @@
     "placeholders": {
       "company": "Enter company or store name",
       "contact": "Enter contact person name",
-      "email": "your@email.com",
+      "email": "your@@email.com",
       "phone": "+1 234 567 8900",
       "country": "Enter country or region",
       "businessType": "Select business type",
@@ -357,6 +357,118 @@
         "content": "Professional service, reliable products, and great pricing. The B2B support team is always responsive. Highly recommended.",
         "rating": 5,
         "product": "Ultra 50K Series"
+      },
+      {
+        "name": "Luca Romano",
+        "role": "Distributor, Milan",
+        "content": "Strong margins, consistent stock, and premium packaging. The lineup is easy to sell and customers ask for repeat orders.",
+        "rating": 5,
+        "product": "PRO 40K Series"
+      },
+      {
+        "name": "Emily Parker",
+        "role": "Vape Shop Owner, Toronto",
+        "content": "Flavor accuracy is excellent and the hardware is reliable. Returns dropped noticeably after we switched.",
+        "rating": 5,
+        "product": "Tornado 25K Series"
+      },
+      {
+        "name": "Omar Al-Farsi",
+        "role": "Wholesale Buyer, Dubai",
+        "content": "Fast replenishment and clear QC documentation. The team handles customs and logistics smoothly.",
+        "rating": 5,
+        "product": "STAR 100K Series"
+      },
+      {
+        "name": "Hannah Lee",
+        "role": "E-commerce Manager, Singapore",
+        "content": "Great product photos and support materials. Listings convert well and reviews stay strong.",
+        "rating": 5,
+        "product": "4 IN 1 120K"
+      },
+      {
+        "name": "Diego Navarro",
+        "role": "Retail Manager, Mexico City",
+        "content": "Reliable devices, low defect rates, and clear flavor labeling. Customers appreciate the consistency.",
+        "rating": 5,
+        "product": "Tornado 18K Series"
+      },
+      {
+        "name": "Sophie Laurent",
+        "role": "Boutique Owner, Paris",
+        "content": "The design language stands out on the shelf. It elevates our premium section and drives walk-ins.",
+        "rating": 5,
+        "product": "Ultra 50K Series"
+      },
+      {
+        "name": "Marek Nowak",
+        "role": "Distributor, Warsaw",
+        "content": "Stable supply and clear documentation for compliance. Everything arrives on schedule.",
+        "rating": 5,
+        "product": "PRO 40K Series"
+      },
+      {
+        "name": "Anna Svensson",
+        "role": "Chain Store Buyer, Stockholm",
+        "content": "Excellent after-sales support and quick replacements when needed. Very professional partner.",
+        "rating": 5,
+        "product": "STAR 100K Series"
+      },
+      {
+        "name": "Yuki Tanaka",
+        "role": "Retailer, Osaka",
+        "content": "Flavor balance is clean and smooth. Customers often ask for the same series again.",
+        "rating": 5,
+        "product": "4 IN 1 120K"
+      },
+      {
+        "name": "Nadia Petrova",
+        "role": "Online Shop Owner, Sofia",
+        "content": "Fast logistics and helpful marketing materials. Conversions improved within two weeks.",
+        "rating": 5,
+        "product": "Tornado 25K Series"
+      },
+      {
+        "name": "Carlos Mendes",
+        "role": "Distributor, Lisbon",
+        "content": "Clear SKU lineup and stable supply. Our reorder cycle is shorter because sell-through is strong.",
+        "rating": 5,
+        "product": "PRO 40K Series"
+      },
+      {
+        "name": "Mia Jensen",
+        "role": "Shop Owner, Copenhagen",
+        "content": "The build quality feels premium. We get fewer complaints and more repeat buyers.",
+        "rating": 5,
+        "product": "Ultra 50K Series"
+      },
+      {
+        "name": "Gabriel Silva",
+        "role": "Retail Buyer, Sao Paulo",
+        "content": "Great shelf presence and clean flavor descriptions. It helps customers decide quickly.",
+        "rating": 5,
+        "product": "STAR 100K Series"
+      },
+      {
+        "name": "Zara Patel",
+        "role": "E-commerce Owner, Sydney",
+        "content": "Reliable fulfillment and strong product photos. Returns are low and reviews are positive.",
+        "rating": 5,
+        "product": "4 IN 1 120K"
+      },
+      {
+        "name": "Arjun Mehta",
+        "role": "Wholesale Partner, Mumbai",
+        "content": "Consistent quality and responsive support. Our stores report steady demand.",
+        "rating": 5,
+        "product": "Tornado 18K Series"
+      },
+      {
+        "name": "Elena Popescu",
+        "role": "Distributor, Bucharest",
+        "content": "Documentation is clear for compliance, and delivery updates are timely.",
+        "rating": 5,
+        "product": "Tornado 25K Series"
       }
     ]
   },
@@ -392,6 +504,31 @@
         "answer": "We accept T/T (bank transfer), L/C (letter of credit), and other secure payment methods for wholesale orders."
       }
     ]
+  },
+  "legal": {
+    "back": "Back",
+    "privacyTitle": "Privacy Policy",
+    "privacySubtitle": "How we collect, use, and protect your information for a vaping brand.",
+    "termsTitle": "Terms of Service",
+    "termsSubtitle": "The rules and conditions for using this vaping brand website.",
+    "sections": {
+      "collectTitle": "Information We Collect",
+      "collectBody": "We collect information you provide directly (such as contact details in wholesale inquiries) and limited technical data for site performance, analytics, and security.",
+      "useTitle": "How We Use Information",
+      "useBody": "We use collected data to respond to business inquiries, provide product information, and maintain a secure, reliable website experience.",
+      "shareTitle": "Sharing",
+      "shareBody": "We do not sell personal data. We only share information with trusted service providers when required to deliver services such as email communications.",
+      "securityTitle": "Security",
+      "securityBody": "We apply reasonable safeguards to protect your information, but no online system can be guaranteed 100% secure.",
+      "contentTitle": "Content & Intellectual Property",
+      "contentBody": "All content, trademarks, product names, and design assets are owned by the brand or its licensors and may not be used without permission.",
+      "liabilityTitle": "Limitations of Liability",
+      "liabilityBody": "To the maximum extent permitted by law, we are not liable for indirect or consequential damages arising from the use of this website or products.",
+      "changesTitle": "Changes to These Terms",
+      "changesBody": "We may update these terms from time to time. Continued use of the site means you accept the revised terms.",
+      "contactTitle": "Contact",
+      "contactBody": "For legal requests or compliance questions, contact us at info@serisvape.com."
+    }
   },
   "product": {
     "backToProducts": "Back to Products",

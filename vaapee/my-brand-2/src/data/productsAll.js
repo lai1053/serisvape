@@ -69,8 +69,8 @@ export const allProducts = {
       'Peach_Ice.png',
       'Red_BERRIES.png',
       'Strawberry_Raspberry_Cherry.png',
-      'Watermelon_Ice.png',
-      'White_Grape_Ice.png'
+      'Strawberry_Watermelon.png',
+      'Watermelon_Ice.png'
     ]
   },
   'Vapanda_Tornado_18K': {
@@ -154,4 +154,3 @@ const getColorForProduct = (productKey) => {
   }
   return colors[productKey] || '#39FF14'
 }
-

@@ -12,6 +12,14 @@ gsap.registerPlugin(ScrollTrigger)
 
 const milestones = computed(() => tm('brandStory.milestones'))
 const valueCards = computed(() => tm('brandStory.values'))
+const certificateThumbs = [
+  '/certificates/international-certificates/11.png',
+  '/certificates/international-certificates/12.png',
+  '/certificates/patents/3.png',
+  '/certificates/patents/4.png',
+  '/certificates/alibaba-and-made-in-china-certificates/1.png',
+  '/certificates/alibaba-and-made-in-china-certificates/2.png'
+]
 
 const activeMilestone = ref(0)
 
@@ -76,7 +84,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="relative bg-black py-32 overflow-hidden border-t border-white/5">
+  <section class="relative bg-black py-32 overflow-visible border-t border-white/5">
     <!-- 背景网格 -->
     <div class="absolute inset-0 opacity-[0.05] pointer-events-none">
       <div class="absolute inset-0 bg-[linear-gradient(to_right,#39FF14_1px,transparent_1px),linear-gradient(to_bottom,#39FF14_1px,transparent_1px)] bg-[size:100px_100px]"></div>
@@ -115,7 +123,7 @@ onMounted(() => {
           <div class="timeline-left">
             <div v-for="(milestone, index) in milestones" :key="index"
                  :class="`timeline-item-${index} timeline-item`"
-                 class="mb-24 last:mb-0 min-h-[400px] flex flex-col justify-center">
+                 class="mb-16 md:mb-20 last:mb-0 min-h-[260px] flex flex-col justify-center">
               <div class="text-[#39FF14] font-mono text-[10px] tracking-[0.5em] mb-4 uppercase">
                 {{ milestone.year }}
               </div>
@@ -136,12 +144,12 @@ onMounted(() => {
 
           <!-- 右侧：粘性图片容器 -->
           <div class="timeline-right hidden lg:block">
-            <div class="sticky-image-container" style="position: sticky; top: 20%;">
+            <div class="sticky-image-container" style="position: sticky; top: 10%;">
               <div class="relative aspect-[4/3] w-full">
                 <div v-for="(milestone, index) in milestones" :key="index"
                      :class="['timeline-image-wrapper', { 'active': activeMilestone === index }]"
                      class="absolute inset-0 transition-opacity duration-500"
-                     :style="{ 
+                     :style="{
                        opacity: activeMilestone === index ? 1 : 0,
                        zIndex: activeMilestone === index ? 10 : 0,
                        pointerEvents: activeMilestone === index ? 'auto' : 'none'
@@ -194,13 +202,13 @@ onMounted(() => {
             <div class="text-sm font-black uppercase tracking-widest text-white mb-2">SQM Facility</div>
             <div class="text-xs text-gray-400 uppercase tracking-wider">Dust-free Manufacturing</div>
           </div>
-          
+
           <div class="milestone-item p-8 border border-white/10 bg-white/5 backdrop-blur-xl text-center">
             <div class="text-5xl font-black font-['Anton'] text-[#39FF14] mb-4">TPD</div>
             <div class="text-sm font-black uppercase tracking-widest text-white mb-2">FDA, CE, RoHS</div>
             <div class="text-xs text-gray-400 uppercase tracking-wider">Certified</div>
           </div>
-          
+
           <div class="milestone-item p-8 border border-white/10 bg-white/5 backdrop-blur-xl text-center">
             <div class="text-5xl font-black font-['Anton'] text-[#39FF14] mb-4">10+</div>
             <div class="text-sm font-black uppercase tracking-widest text-white mb-2">Years R&D</div>
@@ -210,19 +218,31 @@ onMounted(() => {
 
         <!-- 证书链接 -->
         <div class="mt-12 text-center">
-          <button @click="router.push('/certificates')" 
+          <button @click="router.push('/certificates')"
                   class="px-8 py-4 border border-[#39FF14] text-[#39FF14] font-black uppercase text-xs tracking-widest hover:bg-[#39FF14] hover:text-black transition-all">
-            View Our Certificates
+            All manufacturing processes are fully compliant with international standards.
           </button>
         </div>
       </div>
 
-      <!-- CTA 区域 -->
-      <div class="mt-32 text-center">
-        <p class="text-gray-400 text-sm mb-8 tracking-widest uppercase">Ready to join the movement?</p>
-        <button @click="window.scrollTo({ top: document.querySelector('#multiverse')?.offsetTop - 80, behavior: 'smooth' })" class="px-12 py-5 bg-[#39FF14] text-black font-black uppercase text-xs tracking-widest hover:bg-white transition-all shadow-[0_0_40px_rgba(57,255,20,0.3)]">
-          Explore Our Products
-        </button>
+      <!-- 证书缩略图列表 -->
+      <div class="mt-24">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <button
+            v-for="(thumb, index) in certificateThumbs"
+            :key="thumb"
+            @click="router.push('/certificates')"
+            class="group aspect-[4/3] border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden hover:border-[#39FF14]/50 transition-all"
+            :aria-label="`Certificate ${index + 1}`"
+          >
+            <img
+              :src="thumb"
+              :alt="t('certificates.imageAlt')"
+              class="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -244,6 +264,7 @@ onMounted(() => {
 /* 图片容器样式 */
 .sticky-image-container {
   height: fit-content;
+  transform: translateY(60%);
 }
 
 .timeline-image-wrapper img {

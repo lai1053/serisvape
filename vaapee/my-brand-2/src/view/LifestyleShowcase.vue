@@ -11,6 +11,16 @@ const { t, tm } = useI18n()
 const lifestyleScenes = computed(() => tm('lifestyle.scenes'))
 
 const activeScene = ref(0)
+const lifestyleImages = [
+  '/life/img.png',
+  '/life/img_1.png',
+  '/life/img_3.png',
+  '/life/img_4.png',
+  '/life/img_5.png',
+  '/life/img_6.png',
+  '/life/img_7.png',
+  '/life/img_8.png'
+]
 
 onMounted(() => {
   gsap.utils.toArray('.scene-card').forEach((card, i) => {
@@ -49,51 +59,28 @@ onMounted(() => {
         </h2>
       </div>
 
-      <!-- 场景展示 -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-        <div v-for="(scene, i) in lifestyleScenes" :key="i"
-             @mouseenter="activeScene = i"
-             class="scene-card group relative h-[500px] border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden cursor-pointer transition-all hover:border-[#39FF14]/50 hover:scale-105">
-          
-          <!-- 背景渐变 -->
-          <div class="absolute inset-0 opacity-20 transition-opacity duration-500"
-               :style="{ background: `linear-gradient(135deg, ${scene.color}20, transparent)` }"></div>
-          
-          <!-- 内容 -->
-          <div class="relative z-10 h-full flex flex-col justify-between p-8">
-            <div>
-              <div class="text-[10px] font-mono tracking-[0.5em] mb-4 uppercase"
-                   :style="{ color: scene.color }">{{ scene.subtitle }}</div>
-              <h3 class="text-4xl font-black font-['Anton'] italic text-white uppercase mb-4 leading-none">
-                {{ scene.title }}
-              </h3>
-              <p class="text-gray-400 text-xs leading-relaxed tracking-wider uppercase">
-                {{ scene.desc }}
-              </p>
-            </div>
-            
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-[2px]" :style="{ backgroundColor: scene.color }"></div>
-              <span class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">{{ t('lifestyle.explore') }}</span>
-            </div>
-          </div>
-
-          <!-- 悬停效果 -->
-          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-               :style="{ background: `radial-gradient(circle at center, ${scene.color}10, transparent 70%)` }"></div>
-        </div>
+      <!-- 品牌宣言 -->
+      <div class="w-full text-center py-16 px-6 mb-20 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl"
+           style="background: radial-gradient(circle at center, rgba(57, 255, 20, 0.05) 0%, transparent 70%);">
+        <h3 class="text-[#39FF14] font-extrabold text-4xl md:text-5xl tracking-[1px] uppercase"
+            style="text-shadow: 0 0 10px rgba(57, 255, 20, 0.4);">
+          REDEFINING THE PULSE OF EVERY MOMENT.
+        </h3>
+        <p class="text-[#E0E0E0] text-base md:text-lg leading-relaxed max-w-[800px] mx-auto mt-6">
+          More than just performance—it’s an extension of your lifestyle. Seamlessly elevating your journey from the daily hustle to the creative flow, and into the night.
+        </p>
       </div>
 
       <!-- 使用场景网格 -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div v-for="i in 8" :key="i"
-             class="aspect-square border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden group hover:border-[#39FF14]/50 transition-all cursor-pointer">
-          <!-- 这里可以放置实际的生活场景图片 -->
-          <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-white/10 to-transparent group-hover:from-[#39FF14]/20 transition-all">
-            <span class="text-[8px] font-bold text-gray-500 uppercase tracking-widest group-hover:text-[#39FF14] transition-colors">
-              {{ t('lifestyle.sceneLabel', { index: i }) }}
-            </span>
-          </div>
+        <div v-for="(image, i) in lifestyleImages" :key="image"
+             class="aspect-square border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden group hover:border-[#39FF14]/50 transition-all">
+          <img
+            :src="image"
+            :alt="t('lifestyle.sceneLabel', { index: i + 1 })"
+            class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
@@ -103,8 +90,6 @@ onMounted(() => {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 </style>
-
-
 
 
 

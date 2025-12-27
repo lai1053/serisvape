@@ -25,6 +25,16 @@ const router = createRouter({
       path: '/certificates',
       name: 'Certificates',
       component: () => import('@/view/Certificates.vue')
+    },
+    {
+      path: '/privacy',
+      name: 'PrivacyPolicy',
+      component: () => import('@/view/PrivacyPolicy.vue')
+    },
+    {
+      path: '/terms',
+      name: 'TermsOfService',
+      component: () => import('@/view/TermsOfService.vue')
     }
   ],
 })

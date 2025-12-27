@@ -19,6 +19,19 @@ const product = computed(() => products[productId.value])
 const selectedFlavor = ref(0)
 const imageType = ref('single_product')
 
+const getFlavorColor = (flavor) => {
+  if (typeof flavor === 'object' && flavor.color) return flavor.color
+  const name = typeof flavor === 'object' ? flavor.name : flavor
+  if (!name) return ''
+  let hash = 0
+  for (let i = 0; i < name.length; i += 1) {
+    hash = (hash << 5) - hash + name.charCodeAt(i)
+    hash |= 0
+  }
+  const hue = Math.abs(hash) % 360
+  return `hsl(${hue} 80% 55%)`
+}
+
 const imageTypes = computed(() => {
   if (!product.value) return []
   // 4in1 产品有额外的 single_product_spin
@@ -53,6 +66,12 @@ const changeImageType = (type) => {
 }
 
 // 获取营销文案
+const selectedFlavorColor = computed(() => {
+  if (!product.value) return ''
+  const flavor = product.value.flavors[selectedFlavor.value]
+  return getFlavorColor(flavor) || product.value.color
+})
+
 const marketing = computed(() => {
   if (!product.value) return null
   return getProductMarketing(product.value.id)
@@ -73,7 +92,7 @@ const flavorParagraphs = computed(() => {
 onMounted(() => {
   // 滚动到页面顶部
   window.scrollTo({ top: 0, behavior: 'instant' })
-  
+
   if (!product.value) {
     router.push('/')
     return
@@ -104,7 +123,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div v-if="product" class="min-h-screen text-white transition-colors duration-1000" :style="{ background: `linear-gradient(180deg, ${product.color}05 0%, #000000 50%)` }">
+  <div v-if="product" class="min-h-screen text-white transition-colors duration-1000" :style="{ background: `linear-gradient(180deg, ${selectedFlavorColor}05 0%, #000000 50%)` }">
     <!-- Hero Section -->
     <section class="relative pt-32 pb-20 overflow-hidden border-b border-white/10">
       <div class="absolute inset-0 opacity-5 pointer-events-none">
@@ -131,9 +150,9 @@ onMounted(() => {
                 :key="type.key"
                 @click="changeImageType(type.key)"
                 :class="imageType === type.key ? 'text-black' : 'bg-white/5 border text-gray-400'"
-                :style="imageType === type.key 
-                  ? { backgroundColor: product.color } 
-                  : { borderColor: `${product.color}30` }"
+                :style="imageType === type.key
+                  ? { backgroundColor: selectedFlavorColor }
+                  : { borderColor: `${selectedFlavorColor}30` }"
                 class="px-4 py-2 text-[10px] font-black uppercase tracking-widest transition-all hover:opacity-80"
               >
                 {{ type.label }}
@@ -141,9 +160,9 @@ onMounted(() => {
             </div>
 
             <!-- 主图 -->
-            <div class="relative bg-white/5 border border-white/10 p-8 rounded-lg backdrop-blur-xl scale-[1.0]">
+            <div :class="['relative bg-white/5 border border-white/10 p-8 rounded-lg backdrop-blur-xl scale-[0.8]', product.id === '4in1-120k' ? 'scale-[0.6]' : '']">
               <div class="absolute inset-0 blur-[60px] opacity-20 transition-colors duration-1000"
-                   :style="{ background: product.color }"></div>
+                   :style="{ background: selectedFlavorColor }"></div>
               <img
                 :src="currentImage"
                 :alt="product.flavors[selectedFlavor].name"
@@ -157,10 +176,10 @@ onMounted(() => {
                 v-for="(flavor, index) in product.flavors"
                 :key="index"
                 @click="selectFlavor(index)"
-                :class="selectedFlavor === index 
-                  ? 'border-2 scale-110' 
+                :class="selectedFlavor === index
+                  ? 'border-2 scale-110'
                   : 'border border-white/10 opacity-60 hover:opacity-100'"
-                :style="selectedFlavor === index ? { borderColor: product.color } : {}"
+                :style="selectedFlavor === index ? { borderColor: selectedFlavorColor } : {}"
                 class="relative overflow-hidden bg-white/5 rounded transition-all"
               >
                 <img
@@ -168,9 +187,9 @@ onMounted(() => {
                   :alt="typeof flavor === 'object' ? flavor.name : flavor"
                   class="w-full h-20 object-contain"
                 />
-                <div v-if="selectedFlavor === index" 
+                <div v-if="selectedFlavor === index"
                      class="absolute inset-0 transition-colors duration-300"
-                     :style="{ backgroundColor: `${product.color}20` }"></div>
+                     :style="{ backgroundColor: `${selectedFlavorColor}20` }"></div>
               </button>
             </div>
           </div>
@@ -179,22 +198,22 @@ onMounted(() => {
           <div class="space-y-8">
             <div>
               <span class="font-mono text-[10px] tracking-[0.5em] font-bold mb-4 block uppercase"
-                    :style="{ color: product.color }">
+                    :style="{ color: selectedFlavorColor }">
                 {{ product.id === '4in1-120k' ? t('product.seriesA') : t('product.seriesB') }}
               </span>
               <h1 class="text-6xl md:text-8xl font-black font-['Anton'] italic text-white uppercase leading-none mb-4">
                 {{ product.name }}
               </h1>
               <p class="text-gray-500 font-bold tracking-widest text-lg mb-6">{{ product.slogan }}</p>
-              
+
               <div class="flex items-center gap-4 mb-8">
-                <div class="text-4xl font-black font-['Anton'] italic" :style="{ color: product.color }">
+                <div class="text-4xl font-black font-['Anton'] italic" :style="{ color: selectedFlavorColor }">
                   {{ product.puffs }} {{ t('product.puffsLabel') }}
                 </div>
               </div>
 
               <!-- 4in1 产品的4个口味展示 -->
-              <div v-if="product.id === '4in1-120k' && product.flavors[selectedFlavor].flavors" 
+              <div v-if="product.id === '4in1-120k' && product.flavors[selectedFlavor].flavors"
                    class="grid grid-cols-2 gap-3 mb-8">
                 <div v-for="(flav, idx) in product.flavors[selectedFlavor].flavors" :key="idx"
                      class="p-3 bg-white/5 border border-white/10 text-center">
@@ -207,12 +226,12 @@ onMounted(() => {
 
             <!-- 核心特性 -->
             <div class="space-y-4">
-              <h3 class="text-xl font-black font-['Anton'] italic uppercase" :style="{ color: product.color }">{{ t('product.keyFeatures') }}</h3>
+              <h3 class="text-xl font-black font-['Anton'] italic uppercase" :style="{ color: selectedFlavorColor }">{{ t('product.keyFeatures') }}</h3>
               <div class="grid grid-cols-1 gap-3">
                 <div v-for="feature in product.features" :key="feature"
                      class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 transition-all hover:opacity-80"
-                     :style="{ borderColor: `${product.color}50` }">
-                  <div class="w-2 h-2 rounded-full" :style="{ backgroundColor: product.color }"></div>
+                     :style="{ borderColor: `${selectedFlavorColor}50` }">
+                  <div class="w-2 h-2 rounded-full" :style="{ backgroundColor: selectedFlavorColor }"></div>
                   <span class="text-sm font-bold uppercase tracking-wider">{{ feature }}</span>
                 </div>
               </div>
@@ -220,18 +239,18 @@ onMounted(() => {
 
             <!-- CTA 按钮 -->
             <div class="flex gap-4 pt-6">
-              <button 
+              <button
                 class="flex-1 px-8 py-5 text-black font-black uppercase text-xs tracking-widest hover:opacity-90 transition-all"
-                :style="{ 
-                  backgroundColor: product.color,
-                  boxShadow: `0 0 40px ${product.color}30`
+                :style="{
+                  backgroundColor: selectedFlavorColor,
+                  boxShadow: `0 0 40px ${selectedFlavorColor}30`
                 }"
               >
                 {{ t('product.wholesaleInquiry') }}
               </button>
-              <button 
+              <button
                 class="px-8 py-5 border text-white font-black uppercase text-xs tracking-widest hover:opacity-80 transition-all"
-                :style="{ borderColor: product.color }"
+                :style="{ borderColor: selectedFlavorColor }"
               >
                 {{ t('product.downloadCatalog') }}
               </button>
@@ -245,9 +264,9 @@ onMounted(() => {
     <section v-if="marketing" class="py-20 border-b border-white/10">
       <div class="container mx-auto px-6 max-w-4xl">
         <h2 class="text-5xl font-black font-['Anton'] italic text-white uppercase mb-12 text-center">
-          {{ t('product.storyTitle') }} <span :style="{ color: product.color }">{{ t('product.storyEmphasis') }}</span>
+          {{ t('product.storyTitle') }} <span :style="{ color: selectedFlavorColor }">{{ t('product.storyEmphasis') }}</span>
         </h2>
-        
+
         <!-- 产品描述 -->
         <div class="space-y-6 mb-16">
           <div v-for="(paragraph, index) in descriptionParagraphs" :key="index"
@@ -255,10 +274,10 @@ onMounted(() => {
             {{ paragraph }}
           </div>
         </div>
-        
+
         <!-- 口味描述 -->
         <div v-if="flavorParagraphs.length > 0" class="space-y-6">
-          <h3 class="text-3xl font-black font-['Anton'] italic uppercase mb-8" :style="{ color: product.color }">
+          <h3 class="text-3xl font-black font-['Anton'] italic uppercase mb-8" :style="{ color: selectedFlavorColor }">
             {{ t('product.flavorCollection') }}
           </h3>
           <div v-for="(paragraph, index) in flavorParagraphs" :key="index"
@@ -273,16 +292,16 @@ onMounted(() => {
     <section class="py-20 border-b border-white/10">
       <div class="container mx-auto px-6">
         <h2 class="text-5xl font-black font-['Anton'] italic text-white uppercase mb-12 text-center">
-          {{ t('product.specTitle') }} <span :style="{ color: product.color }">{{ t('product.specEmphasis') }}</span>
+          {{ t('product.specTitle') }} <span :style="{ color: selectedFlavorColor }">{{ t('product.specEmphasis') }}</span>
         </h2>
-        
+
         <div class="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           <div v-for="(value, key) in product.specs" :key="key"
                class="spec-card p-6 bg-white/5 border border-white/10 backdrop-blur-xl text-center">
             <div class="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2">
               {{ key.replace(/([A-Z])/g, ' $1').trim() }}
             </div>
-            <div class="text-2xl font-black font-['Anton'] italic" :style="{ color: product.color }">
+            <div class="text-2xl font-black font-['Anton'] italic" :style="{ color: selectedFlavorColor }">
               {{ value }}
             </div>
           </div>
@@ -294,19 +313,19 @@ onMounted(() => {
     <section class="py-20">
       <div class="container mx-auto px-6">
         <h2 class="text-5xl font-black font-['Anton'] italic text-white uppercase mb-12 text-center">
-          {{ t('product.flavorsTitle') }} <span :style="{ color: product.color }">{{ t('product.flavorsEmphasis') }}</span>
+          {{ t('product.flavorsTitle') }} <span :style="{ color: selectedFlavorColor }">{{ t('product.flavorsEmphasis') }}</span>
         </h2>
-        
+
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
           <div v-for="(flavor, index) in product.flavors" :key="index"
                @click="selectFlavor(index)"
-               :class="selectedFlavor === index 
-                 ? 'border-2 scale-105' 
+               :class="selectedFlavor === index
+                 ? 'border-2 scale-105'
                  : 'border'"
-               :style="selectedFlavor === index 
-                 ? { borderColor: product.color } 
-                 : { borderColor: `${product.color}30` }"
-               class="group cursor-pointer bg-white/5 backdrop-blur-xl p-4 rounded-lg transition-all hover:opacity-80"
+              :style="selectedFlavor === index
+                ? { borderColor: selectedFlavorColor }
+                : { borderColor: `${selectedFlavorColor}30` }"
+              class="group cursor-pointer bg-white/5 backdrop-blur-xl p-4 rounded-lg transition-all hover:opacity-80"
             >
             <div class="relative mb-4 bg-white/5 rounded overflow-hidden">
               <img
@@ -316,14 +335,14 @@ onMounted(() => {
               />
               <div v-if="selectedFlavor === index"
                    class="absolute inset-0 transition-colors duration-300"
-                   :style="{ backgroundColor: `${product.color}20` }"></div>
+                   :style="{ backgroundColor: `${selectedFlavorColor}20` }"></div>
             </div>
             <div class="text-center">
               <div class="text-xs font-black uppercase tracking-wider text-white">
                 {{ typeof flavor === 'object' ? flavor.name : flavor }}
               </div>
               <!-- 4in1 产品的4个口味标签 -->
-              <div v-if="product.id === '4in1-120k' && flavor.flavors" 
+              <div v-if="product.id === '4in1-120k' && flavor.flavors"
                    class="mt-2 grid grid-cols-2 gap-1">
                 <div v-for="(flav, idx) in flavor.flavors" :key="idx"
                      class="text-[8px] text-gray-400 uppercase">

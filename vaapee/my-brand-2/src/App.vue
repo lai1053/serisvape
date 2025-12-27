@@ -111,12 +111,12 @@ onMounted(() => {
     isAgeVerified.value = false
   }
   // 检查是否是产品详情页或证书页
-  isProductPage.value = route.path.startsWith('/product') || route.path.startsWith('/news') || route.path.startsWith('/certificates')
+  isProductPage.value = route.path.startsWith('/product') || route.path.startsWith('/news') || route.path.startsWith('/certificates') || route.path.startsWith('/privacy') || route.path.startsWith('/terms')
 })
 
 // 监听路由变化
 watch(() => route.path, (newPath) => {
-  isProductPage.value = newPath.startsWith('/product') || newPath.startsWith('/news') || newPath.startsWith('/certificates')
+  isProductPage.value = newPath.startsWith('/product') || newPath.startsWith('/news') || newPath.startsWith('/certificates') || newPath.startsWith('/privacy') || newPath.startsWith('/terms')
 })
 </script>
 
@@ -129,7 +129,7 @@ watch(() => route.path, (newPath) => {
           <div class="absolute top-0 left-0 w-full h-[2px] bg-[#39FF14] animate-pulse"></div>
 
           <h2 class="text-5xl font-black font-['Anton'] italic uppercase">VAPANDA<span class="text-[#39FF14]">.</span></h2>
-          
+
           <!-- 健康警告 -->
           <div class="p-6 bg-red-900/20 border-2 border-red-500/50 rounded-lg">
             <p class="text-red-400 font-black uppercase text-sm mb-2 tracking-widest">
@@ -179,9 +179,9 @@ watch(() => route.path, (newPath) => {
           <button @click="handleNavClick('#wholesale')" class="hidden md:block px-6 py-2 border border-[#39FF14] text-[#39FF14] font-black uppercase text-[10px] tracking-widest hover:bg-[#39FF14] hover:text-black transition-all">
             {{ t('nav.contactUs') }}
           </button>
-          
+
           <!-- Mobile Menu Button -->
-          <button 
+          <button
             @click="mobileMenuOpen = !mobileMenuOpen"
             class="md:hidden p-2 text-gray-400 hover:text-[#39FF14] transition-colors"
             :aria-label="mobileMenuOpen ? t('nav.closeMenu') : t('nav.openMenu')"
@@ -216,7 +216,7 @@ watch(() => route.path, (newPath) => {
 
     <main v-if="isAgeVerified" class="app-content">
       <router-view v-if="isProductPage" />
-      
+
       <template v-else>
         <section id="home"><HeroSection /></section>
 
@@ -247,7 +247,7 @@ watch(() => route.path, (newPath) => {
         <section id="news"><NewsCenter /></section>
 
         <section id="wholesale"><Wholesale /></section>
-        
+
         <!-- Footer -->
         <FooterSection />
       </template>
@@ -257,7 +257,7 @@ watch(() => route.path, (newPath) => {
     <HealthWarningBanner v-if="isAgeVerified && !isProductPage" />
 
     <!-- WhatsApp 悬浮按钮 -->
-    <a 
+    <a
       v-if="isAgeVerified"
       :href="`https://wa.me/8613425059749`"
       target="_blank"

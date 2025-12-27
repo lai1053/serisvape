@@ -64,11 +64,15 @@ const specTable = {
 };
 
 const flavorList = [
-  { name: "Blueberry Ice", color: "#0000FF" },
-  { name: "Grape Ice", color: "#8A2BE2" },
-  { name: "Sour Apple", color: "#32CD32" },
-  { name: "Cherry Cola", color: "#8B0000" },
-  { name: "Mint Ice", color: "#F0FFFF" },
-  // ... 更多口味
+  { name: "Blueberry Ice", color: "#3B82F6" },
+  { name: "Grape Ice", color: "#7C3AED" },
+  { name: "Sour Apple", color: "#22C55E" },
+  { name: "Cherry Cola", color: "#DC2626" },
+  { name: "Mint Ice", color: "#22D3EE" },
+  { name: "Peach Ice", color: "#F97316" },
+  { name: "Red Bull", color: "#F59E0B" },
+  { name: "Watermelon Ice", color: "#10B981" },
+  { name: "Mixed Berries", color: "#EC4899" },
+  { name: "Blue Razz Ice", color: "#2563EB" }
 ];
 </script>

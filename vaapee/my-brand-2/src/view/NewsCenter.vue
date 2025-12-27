@@ -96,6 +96,12 @@ onMounted(() => {
           <!-- 图片 -->
           <div class="relative h-48 bg-gradient-to-br from-white/10 to-transparent overflow-hidden">
             <div class="absolute inset-0 bg-[#39FF14]/10 group-hover:bg-[#39FF14]/20 transition-colors"></div>
+            <img
+              :src="item.coverImage || item.image"
+              :alt="item.title"
+              class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity"
+              loading="lazy"
+            />
             <div class="absolute top-4 left-4">
               <span class="text-[8px] font-bold text-[#39FF14] border border-[#39FF14] px-2 py-1 uppercase tracking-widest">
                 {{ item.category }}
@@ -122,12 +128,6 @@ onMounted(() => {
         </div>
       </div>
 
-      <!-- CTA -->
-      <div class="text-center">
-        <button @click="router.push('/#news')" class="px-12 py-5 border border-[#39FF14] text-[#39FF14] font-black uppercase text-xs tracking-widest hover:bg-[#39FF14] hover:text-black transition-all">
-          {{ t('news.viewAll') }}
-        </button>
-      </div>
     </div>
   </section>
 </template>

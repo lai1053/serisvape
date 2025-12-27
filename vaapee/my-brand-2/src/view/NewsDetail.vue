@@ -132,7 +132,7 @@ watch(() => route.params.id, () => {
           <!-- 主图 -->
           <div class="relative h-96 bg-white/5 border border-white/10 rounded-lg overflow-hidden mb-12">
             <div class="absolute inset-0 bg-gradient-to-br from-[#39FF14]/10 to-transparent"></div>
-            <img :src="news.image" :alt="news.title" class="w-full h-full object-cover opacity-50" />
+            <img :src="news.coverImage || news.image" :alt="news.title" class="w-full h-full object-cover opacity-50" />
           </div>
         </div>
       </div>
