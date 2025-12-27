@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "story": "Vēsture",
+    "products": "Preces",
+    "lifestyle": "Dzīvesveids",
+    "whyUs": "Kāpēc Mēs",
+    "news": "Jaunumi",
+    "wholesale": "Vairumtirdzniecība",
+    "contactUs": "Sazinieties ar Mums"
+  },
+  "ageVerification": {
+    "title": "Nepieciešama Vecuma Verifikācija",
+    "subtitle": "Jums jābūt likumīgai smēķēšanas vecumā (21+) jūsu jurisdikcijā, lai skatītu šo vietni.",
+    "warning": "BRĪDINĀJUMS: Šis produkts satur nikotīnu. Nikotīns ir radoša atkarību ķīmiskā viela. Tikai pieaugušajiem (21+). NEPILNGADĪGIEM ir aizliegts iegādāties e-cigaretes.",
+    "confirm": "Man ir 21 gads vai vairāk",
+    "exit": "Iziet / Esmu Nepilngadīgais"
+  },
+  "healthWarning": {
+    "title": "BRĪDINĀJUMS: Šis produkts satur nikotīnu.",
+    "subtitle": "Nikotīns ir radoša atkarību ķīmiskā viela. Tikai pieaugušajiem (21+).",
+    "smokingWarning": "Smēķēšana ir kaitīga veselībai."
+  },
+  "news": {
+    "title": "Jaunumi un Notikumi",
+    "subtitle": "Sekojiet līdzi jaunākajiem no VAPANDA",
+    "readMore": "Lasīt Vairāk",
+    "viewAll": "Skatīt Visus Jaunumus"
+  },
+  "common": {
+    "wholesaleInquire": "Vairumtirdzniecības Pieprasījums",
+    "exploreProducts": "Izpētiet Mūsu Preces",
+    "contactTeam": "Sazinieties ar Mūsu Komandu"
+  }
+}
+
+

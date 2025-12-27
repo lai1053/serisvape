@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "story": "Lugu",
+    "products": "Tooted",
+    "lifestyle": "Elustiil",
+    "whyUs": "Miks Me",
+    "news": "Uudised",
+    "wholesale": "Hulgimüük",
+    "contactUs": "Võta Ühendust"
+  },
+  "ageVerification": {
+    "title": "Vanuse Kinnitamine on Nõutav",
+    "subtitle": "Sa pead olema seaduslikus suitsetamise eas (21+) oma jurisdiktsioonis, et seda saidi vaadata.",
+    "warning": "HOIATUS: See toode sisaldab nikotiini. Nikotiin on sõltuvust tekitav kemikaal. Ainult täiskasvanutele (21+). ALAEALISTEL on keelatud e-sigarette osta.",
+    "confirm": "Olen 21-aastane või vanem",
+    "exit": "Välju / Olen Alaealine"
+  },
+  "healthWarning": {
+    "title": "HOIATUS: See toode sisaldab nikotiini.",
+    "subtitle": "Nikotiin on sõltuvust tekitav kemikaal. Ainult täiskasvanutele (21+).",
+    "smokingWarning": "Suitsetamine on tervisele kahjulik."
+  },
+  "news": {
+    "title": "Uudised ja Sündmused",
+    "subtitle": "Jää kursis VAPANDA viimaste uudistega",
+    "readMore": "Loe Lisaks",
+    "viewAll": "Vaata Kõiki Uudiseid"
+  },
+  "common": {
+    "wholesaleInquire": "Hulgimüügi Päring",
+    "exploreProducts": "Uuri Meie Tooteid",
+    "contactTeam": "Võta Ühendust Meie Meeskonnaga"
+  }
+}
+
+

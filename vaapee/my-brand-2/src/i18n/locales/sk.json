@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "story": "Príbeh",
+    "products": "Produkty",
+    "lifestyle": "Životný Štýl",
+    "whyUs": "Prečo My",
+    "news": "Novinky",
+    "wholesale": "Veľkoobchod",
+    "contactUs": "Kontaktujte Nás"
+  },
+  "ageVerification": {
+    "title": "Vyžaduje sa Overenie Veku",
+    "subtitle": "Musíte mať legálny vek na fajčenie (21+) vo vašej jurisdikcii na prezeranie tejto stránky.",
+    "warning": "VAROVANIE: Tento výrobok obsahuje nikotín. Nikotín je chemická látka spôsobujúca závislosť. Iba pre dospelých (21+). NEZLETILÍM je zakázané kupovať e-cigarety.",
+    "confirm": "Mám 21 rokov alebo viac",
+    "exit": "Ukončiť / Som Nezletilý"
+  },
+  "healthWarning": {
+    "title": "VAROVANIE: Tento výrobok obsahuje nikotín.",
+    "subtitle": "Nikotín je chemická látka spôsobujúca závislosť. Iba pre dospelých (21+).",
+    "smokingWarning": "Fajčenie je škodlivé pre zdravie."
+  },
+  "news": {
+    "title": "Novinky a Udalosti",
+    "subtitle": "Zostaňte v obraze s najnovšími informáciami od VAPANDA",
+    "readMore": "Čítajte Viac",
+    "viewAll": "Zobraziť Všetky Novinky"
+  },
+  "common": {
+    "wholesaleInquire": "Veľkoobchodná Žiadosť",
+    "exploreProducts": "Preskúmajte Naše Produkty",
+    "contactTeam": "Kontaktujte Náš Tím"
+  }
+}
+
+

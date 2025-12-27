@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "story": "Story",
+    "products": "Products",
+    "lifestyle": "Lifestyle",
+    "whyUs": "Why Us",
+    "news": "News",
+    "wholesale": "Wholesale",
+    "contactUs": "Contact Us"
+  },
+  "ageVerification": {
+    "title": "Age Verification Required",
+    "subtitle": "You must be of legal smoking age (21+) in your jurisdiction to view this site.",
+    "warning": "WARNING: This product contains nicotine. Nicotine is an addictive chemical. Only for adults (21+). MINORS are prohibited from buying e-cigarette.",
+    "confirm": "I am 21 or Older",
+    "exit": "Exit / I am Underage"
+  },
+  "healthWarning": {
+    "title": "WARNING: This product contains nicotine.",
+    "subtitle": "Nicotine is an addictive chemical. Only for adults (21+).",
+    "smokingWarning": "Smoking is harmful to health."
+  },
+  "news": {
+    "title": "News & Events",
+    "subtitle": "Stay updated with the latest from VAPANDA",
+    "readMore": "Read More",
+    "viewAll": "View All News"
+  },
+  "common": {
+    "wholesaleInquire": "Wholesale Inquire",
+    "exploreProducts": "Explore Our Products",
+    "contactTeam": "Contact Our Team"
+  }
+}
+
+
+
+

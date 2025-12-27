@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "story": "Geschichte",
+    "products": "Produkte",
+    "lifestyle": "Lebensstil",
+    "whyUs": "Warum wir",
+    "news": "Nachrichten",
+    "wholesale": "Großhandel",
+    "contactUs": "Kontaktieren Sie uns"
+  },
+  "ageVerification": {
+    "title": "Altersverifizierung erforderlich",
+    "subtitle": "Sie müssen das gesetzliche Rauchalter (21+) in Ihrer Gerichtsbarkeit haben, um diese Website anzuzeigen.",
+    "warning": "WARNUNG: Dieses Produkt enthält Nikotin. Nikotin ist eine süchtig machende Chemikalie. Nur für Erwachsene (21+). MINDERJÄHRIGE ist der Kauf von E-Zigaretten untersagt.",
+    "confirm": "Ich bin 21 oder älter",
+    "exit": "Verlassen / Ich bin minderjährig"
+  },
+  "healthWarning": {
+    "title": "WARNUNG: Dieses Produkt enthält Nikotin.",
+    "subtitle": "Nikotin ist eine süchtig machende Chemikalie. Nur für Erwachsene (21+).",
+    "smokingWarning": "Rauchen ist gesundheitsschädlich."
+  },
+  "news": {
+    "title": "Nachrichten & Veranstaltungen",
+    "subtitle": "Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten von VAPANDA",
+    "readMore": "Weiterlesen",
+    "viewAll": "Alle Nachrichten anzeigen"
+  },
+  "common": {
+    "wholesaleInquire": "Großhandelsanfrage",
+    "exploreProducts": "Unsere Produkte entdecken",
+    "contactTeam": "Kontaktieren Sie unser Team"
+  }
+}
+
+
+
+

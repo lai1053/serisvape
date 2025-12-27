@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "story": "Historia",
+    "products": "Produkty",
+    "lifestyle": "Styl Życia",
+    "whyUs": "Dlaczego My",
+    "news": "Aktualności",
+    "wholesale": "Sprzedaż Hurtowa",
+    "contactUs": "Skontaktuj Się"
+  },
+  "ageVerification": {
+    "title": "Wymagana Weryfikacja Wiekowa",
+    "subtitle": "Musisz być pełnoletni (21+) w swojej jurysdykcji, aby przeglądać tę stronę.",
+    "warning": "OSTRZEŻENIE: Ten produkt zawiera nikotynę. Nikotyna jest substancją uzależniającą. Tylko dla dorosłych (21+). NIELETNIM zabroniono kupowania e-papierosów.",
+    "confirm": "Mam 21 lat lub więcej",
+    "exit": "Wyjdź / Jestem Nieletni"
+  },
+  "healthWarning": {
+    "title": "OSTRZEŻENIE: Ten produkt zawiera nikotynę.",
+    "subtitle": "Nikotyna jest substancją uzależniającą. Tylko dla dorosłych (21+).",
+    "smokingWarning": "Palenie jest szkodliwe dla zdrowia."
+  },
+  "news": {
+    "title": "Aktualności i Wydarzenia",
+    "subtitle": "Bądź na bieżąco z najnowszymi informacjami z VAPANDA",
+    "readMore": "Czytaj Więcej",
+    "viewAll": "Zobacz Wszystkie Aktualności"
+  },
+  "common": {
+    "wholesaleInquire": "Zapytanie Hurtowe",
+    "exploreProducts": "Odkryj Nasze Produkty",
+    "contactTeam": "Skontaktuj Się z Naszym Zespołem"
+  }
+}
+
+

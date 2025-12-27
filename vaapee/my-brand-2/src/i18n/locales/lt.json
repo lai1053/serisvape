@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "story": "Istorija",
+    "products": "Produktai",
+    "lifestyle": "Gyvenimo Būdas",
+    "whyUs": "Kodėl Mes",
+    "news": "Naujienos",
+    "wholesale": "Didmeninė Prekyba",
+    "contactUs": "Susisiekite"
+  },
+  "ageVerification": {
+    "title": "Reikalingas Amžiaus Patvirtinimas",
+    "subtitle": "Turite būti legalaus rūkymo amžiaus (21+) jūsų jurisdikcijoje, norint peržiūrėti šią svetainę.",
+    "warning": "ĮSPĖJIMAS: Šis produktas sudėtyje turi nikotino. Nikotinas sukelia priklausomybę. Tik suaugusiems (21+). NEPILNAMEČIAMS draudžiama pirkti elektronines cigaretes.",
+    "confirm": "Man yra 21 metai arba daugiau",
+    "exit": "Išeiti / Aš Nepilnametis"
+  },
+  "healthWarning": {
+    "title": "ĮSPĖJIMAS: Šis produktas sudėtyje turi nikotino.",
+    "subtitle": "Nikotinas sukelia priklausomybę. Tik suaugusiems (21+).",
+    "smokingWarning": "Rūkymas kenkia sveikatai."
+  },
+  "news": {
+    "title": "Naujienos ir Renginiai",
+    "subtitle": "Būkite informuoti apie naujausius VAPANDA atnaujinimus",
+    "readMore": "Skaityti Daugiau",
+    "viewAll": "Žiūrėti Visas Naujienas"
+  },
+  "common": {
+    "wholesaleInquire": "Didmeninės Prekybos Užklausa",
+    "exploreProducts": "Tyrinėkite Mūsų Produktus",
+    "contactTeam": "Susisiekite su Mūsų Komanda"
+  }
+}
+
+

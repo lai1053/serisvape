@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "story": "Histoire",
+    "products": "Produits",
+    "lifestyle": "Style de vie",
+    "whyUs": "Pourquoi nous",
+    "news": "Actualités",
+    "wholesale": "Grossiste",
+    "contactUs": "Nous contacter"
+  },
+  "ageVerification": {
+    "title": "Vérification de l'âge requise",
+    "subtitle": "Vous devez avoir l'âge légal pour fumer (21+) dans votre juridiction pour consulter ce site.",
+    "warning": "AVERTISSEMENT: Ce produit contient de la nicotine. La nicotine est une substance chimique addictive. Uniquement pour les adultes (21+). Les MINEURS sont interdits d'acheter des cigarettes électroniques.",
+    "confirm": "J'ai 21 ans ou plus",
+    "exit": "Quitter / Je suis mineur"
+  },
+  "healthWarning": {
+    "title": "AVERTISSEMENT: Ce produit contient de la nicotine.",
+    "subtitle": "La nicotine est une substance chimique addictive. Uniquement pour les adultes (21+).",
+    "smokingWarning": "Fumer est nocif pour la santé."
+  },
+  "news": {
+    "title": "Actualités et événements",
+    "subtitle": "Restez informé des dernières nouvelles de VAPANDA",
+    "readMore": "Lire la suite",
+    "viewAll": "Voir toutes les actualités"
+  },
+  "common": {
+    "wholesaleInquire": "Demande de gros",
+    "exploreProducts": "Découvrir nos produits",
+    "contactTeam": "Contacter notre équipe"
+  }
+}
+
+
+
+

@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "story": "Történet",
+    "products": "Termékek",
+    "lifestyle": "Életstílus",
+    "whyUs": "Miért Mi",
+    "news": "Hírek",
+    "wholesale": "Nagykereskedelem",
+    "contactUs": "Lépjen Kapcsolatba"
+  },
+  "ageVerification": {
+    "title": "Életkor Ellenőrzés Szükséges",
+    "subtitle": "A legális dohányzási korhatárnak (21+) meg kell felelnie a joghatóságában a webhely megtekintéséhez.",
+    "warning": "FIGYELMEZTETÉS: Ez a termék nikotint tartalmaz. A nikotin függőséget okozó vegyszer. Csak felnőtteknek (21+). A KISKORÚAK számára tilos az e-cigaretta vásárlása.",
+    "confirm": "21 éves vagy idősebb vagyok",
+    "exit": "Kilépés / Kiskorú Vagyok"
+  },
+  "healthWarning": {
+    "title": "FIGYELMEZTETÉS: Ez a termék nikotint tartalmaz.",
+    "subtitle": "A nikotin függőséget okozó vegyszer. Csak felnőtteknek (21+).",
+    "smokingWarning": "A dohányzás egészségkárosító."
+  },
+  "news": {
+    "title": "Hírek és Események",
+    "subtitle": "Maradjon naprakész a VAPANDA legújabb híreivel",
+    "readMore": "Továbbiak",
+    "viewAll": "Összes Hírek Megtekintése"
+  },
+  "common": {
+    "wholesaleInquire": "Nagykereskedelmi Kérvény",
+    "exploreProducts": "Fedezze Fel Termékeinket",
+    "contactTeam": "Lépjen Kapcsolatba Csapatunkkal"
+  }
+}
+
+

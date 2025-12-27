@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "story": "Historia",
+    "products": "Produkter",
+    "lifestyle": "Livsstil",
+    "whyUs": "Varför Oss",
+    "news": "Nyheter",
+    "wholesale": "Grossist",
+    "contactUs": "Kontakta Oss"
+  },
+  "ageVerification": {
+    "title": "Åldersverifiering Krävs",
+    "subtitle": "Du måste vara myndig (21+) i din jurisdiktion för att se denna webbplats.",
+    "warning": "VARNING: Denna produkt innehåller nikotin. Nikotin är en beroendeframkallande kemikalie. Endast för vuxna (21+). MINORER är förbjudna att köpa e-cigaretter.",
+    "confirm": "Jag är 21 år eller äldre",
+    "exit": "Avsluta / Jag är Minderårig"
+  },
+  "healthWarning": {
+    "title": "VARNING: Denna produkt innehåller nikotin.",
+    "subtitle": "Nikotin är en beroendeframkallande kemikalie. Endast för vuxna (21+).",
+    "smokingWarning": "Rökning är skadligt för hälsan."
+  },
+  "news": {
+    "title": "Nyheter & Evenemang",
+    "subtitle": "Håll dig uppdaterad med det senaste från VAPANDA",
+    "readMore": "Läs Mer",
+    "viewAll": "Visa Alla Nyheter"
+  },
+  "common": {
+    "wholesaleInquire": "Grossistförfrågan",
+    "exploreProducts": "Utforska Våra Produkter",
+    "contactTeam": "Kontakta Vårt Team"
+  }
+}
+
+

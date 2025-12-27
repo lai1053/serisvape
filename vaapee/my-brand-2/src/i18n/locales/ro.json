@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "story": "Povestea",
+    "products": "Produse",
+    "lifestyle": "Stil de Viață",
+    "whyUs": "De Ce Noi",
+    "news": "Știri",
+    "wholesale": "En Gros",
+    "contactUs": "Contactează-ne"
+  },
+  "ageVerification": {
+    "title": "Verificare Vârstă Necesară",
+    "subtitle": "Trebuie să ai vârsta legală de fumat (21+) în jurisdicția ta pentru a vizualiza acest site.",
+    "warning": "AVERTISMENT: Acest produs conține nicotină. Nicotina este o substanță chimică care creează dependență. Doar pentru adulți (21+). MINORILOR le este interzis să cumpere țigări electronice.",
+    "confirm": "Am 21 de ani sau mai mult",
+    "exit": "Ieșire / Sunt Minor"
+  },
+  "healthWarning": {
+    "title": "AVERTISMENT: Acest produs conține nicotină.",
+    "subtitle": "Nicotina este o substanță chimică care creează dependență. Doar pentru adulți (21+).",
+    "smokingWarning": "Fumatul este dăunător sănătății."
+  },
+  "news": {
+    "title": "Știri și Evenimente",
+    "subtitle": "Rămâi la curent cu cele mai noi de la VAPANDA",
+    "readMore": "Citește Mai Mult",
+    "viewAll": "Vezi Toate Știrile"
+  },
+  "common": {
+    "wholesaleInquire": "Solicitare En Gros",
+    "exploreProducts": "Explorează Produsele Noastre",
+    "contactTeam": "Contactează Echipa Noastră"
+  }
+}
+
+
