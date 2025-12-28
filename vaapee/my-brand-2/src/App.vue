@@ -93,7 +93,6 @@ const handleNavClick = (href) => {
 // 1. 年龄验证逻辑
 const verifyAge = () => {
   isAgeVerified.value = true
-  localStorage.setItem('vapanda_verified', 'true')
   gsap.from('.app-content', { opacity: 0, duration: 1, ease: 'power2.out' })
 }
 
@@ -102,14 +101,8 @@ const exitSite = () => {
 }
 
 onMounted(() => {
-  // 检查是否是首次访问（没有验证记录）
-  const verified = localStorage.getItem('vapanda_verified')
-  if (verified === 'true') {
-    isAgeVerified.value = true
-  } else {
-    // 首次访问，必须显示年龄验证弹窗
-    isAgeVerified.value = false
-  }
+  // 每次访问都显示年龄验证弹窗
+  isAgeVerified.value = false
   // 检查是否是产品详情页或证书页
   isProductPage.value = route.path.startsWith('/product') || route.path.startsWith('/news') || route.path.startsWith('/certificates') || route.path.startsWith('/privacy') || route.path.startsWith('/terms')
 })

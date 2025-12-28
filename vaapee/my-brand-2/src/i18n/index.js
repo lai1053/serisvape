@@ -18,7 +18,7 @@ import ru from './locales/ru.json'
 
 const i18n = createI18n({
   legacy: false,
-  locale: localStorage.getItem('vapanda_lang') || 'en',
+  locale: 'en',
   fallbackLocale: 'en',
   messages: {
     zh,
@@ -41,6 +41,5 @@ const i18n = createI18n({
 })
 
 export default i18n
-
 
 

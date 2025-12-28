@@ -29,7 +29,6 @@ const currentLang = ref(languages.find(lang => lang.code === locale.value) || la
 
 const switchLanguage = (langCode) => {
   locale.value = langCode
-  localStorage.setItem('vapanda_lang', langCode)
   currentLang.value = languages.find(lang => lang.code === langCode)
   isOpen.value = false
 }
@@ -41,11 +40,6 @@ const handleClickOutside = (event) => {
 }
 
 onMounted(() => {
-  const savedLang = localStorage.getItem('vapanda_lang')
-  if (savedLang) {
-    locale.value = savedLang
-    currentLang.value = languages.find(lang => lang.code === savedLang) || languages[0]
-  }
   document.addEventListener('click', handleClickOutside)
 })
 
@@ -108,4 +102,3 @@ onUnmounted(() => {
   transform: translateY(-10px);
 }
 </style>
-

@@ -74,11 +74,11 @@ onMounted(() => {
       <!-- 使用场景网格 -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div v-for="(image, i) in lifestyleImages" :key="image"
-             class="aspect-square border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden group hover:border-[#39FF14]/50 transition-all">
+             class="aspect-square border border-white/10 overflow-hidden group hover:border-[#39FF14]/50 transition-all">
           <img
             :src="image"
             :alt="t('lifestyle.sceneLabel', { index: i + 1 })"
-            class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+            class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
             loading="lazy"
           />
         </div>
@@ -90,6 +90,5 @@ onMounted(() => {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 </style>
-
 
 
