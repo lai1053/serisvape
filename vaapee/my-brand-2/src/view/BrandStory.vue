@@ -13,12 +13,12 @@ gsap.registerPlugin(ScrollTrigger)
 const milestones = computed(() => tm('brandStory.milestones'))
 const valueCards = computed(() => tm('brandStory.values'))
 const certificateThumbs = [
-  '/certificates/international-certificates/11.png',
-  '/certificates/international-certificates/12.png',
-  '/certificates/patents/3.png',
-  '/certificates/patents/4.png',
-  '/certificates/alibaba-and-made-in-china-certificates/1.png',
-  '/certificates/alibaba-and-made-in-china-certificates/2.png'
+  '/certificates/international-certificates/11.webp',
+  '/certificates/international-certificates/12.webp',
+  '/certificates/patents/3.webp',
+  '/certificates/patents/4.webp',
+  '/certificates/alibaba-and-made-in-china-certificates/1.webp',
+  '/certificates/alibaba-and-made-in-china-certificates/2.webp'
 ]
 
 const activeMilestone = ref(0)

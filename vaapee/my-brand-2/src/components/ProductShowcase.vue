@@ -31,7 +31,7 @@ const modules = [Autoplay, Pagination];
         <div class="md:col-span-1 bg-brand-primary rounded-3xl p-8 relative overflow-hidden group min-h-[500px] flex flex-col justify-end" data-aos="fade-right">
           <div class="absolute top-[-50%] right-[-50%] w-[400px] h-[400px] border-[40px] border-black/10 rounded-full"></div>
 
-          <img src="../img/100k_pur.png" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-50 group-hover:scale-110 transition-transform duration-700" alt="">
+          <img src="../img/100k_pur.webp" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-50 group-hover:scale-110 transition-transform duration-700" alt="">
 
           <div class="relative z-10 text-brand-bg">
             <span class="bg-black text-white text-[10px] font-bold px-2 py-1 rounded mb-4 inline-block">KdCOMMENDED</span>
@@ -63,7 +63,7 @@ const modules = [Autoplay, Pagination];
                 <div class="w-full aspect-[4/5] bg-gray-900 rounded-2xl mb-4 overflow-hidden relative flex items-center justify-center">
                   <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black opacity-60"></div>
                   <img
-                      src="../img/100k_blue_pr.png"
+                      src="../img/100k_blue_pr.webp"
                       alt="Vape Product"
                       class="relative z-10 w-2/3 h-auto object-contain drop-shadow-2xl group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500"
                   />

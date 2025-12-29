@@ -17,7 +17,7 @@ const titans = [
     slogan: "CYBER LEATHER EDITION",
     color: "#39FF14",
     // 请确保图片文件名与你的文件夹内一致
-    img: "/img/titan/BLUEBERRY.png",
+    img: "/img/titan/BLUEBERRY.webp",
     features: ["PREMIUM LEATHER GRIP", "SIDE MECHA MONITOR", "50K TITAN PUFFS"]
   },
   {
@@ -26,7 +26,7 @@ const titans = [
     puffs: "100,000",
     slogan: "INFINITE POWER STATION",
     color: "#FFD700",
-    img: "/img/titan/Peach-Mango-Watermelon.png",
+    img: "/img/titan/Peach-Mango-Watermelon.webp",
     features: ["3D CURVED SCREEN", "DUAL TANK SYSTEM", "MESH 2.0 TECH"]
   },
   {
@@ -35,7 +35,7 @@ const titans = [
     puffs: "40,000",
     slogan: "INDUSTRIAL PERFORMANCE",
     color: "#FF007F",
-    img: "/img/titan/STRAWBERRY.png",
+    img: "/img/titan/STRAWBERRY.webp",
     features: ["ROBUST DESIGN", "STABLE VOLTAGE", "FAST CHARGE"]
   }
 ]

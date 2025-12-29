@@ -12,14 +12,14 @@ const lifestyleScenes = computed(() => tm('lifestyle.scenes'))
 
 const activeScene = ref(0)
 const lifestyleImages = [
-  '/life/img.png',
-  '/life/img_1.png',
-  '/life/img_3.png',
-  '/life/img_4.png',
-  '/life/img_5.png',
-  '/life/img_6.png',
-  '/life/img_7.png',
-  '/life/img_8.png'
+  '/life/img.webp',
+  '/life/img_1.webp',
+  '/life/img_3.webp',
+  '/life/img_4.webp',
+  '/life/img_5.webp',
+  '/life/img_6.webp',
+  '/life/img_7.webp',
+  '/life/img_8.webp'
 ]
 
 onMounted(() => {

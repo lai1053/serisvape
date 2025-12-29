@@ -37,7 +37,7 @@
 
         <div class="md:row-span-2 relative group overflow-hidden rounded-2xl bg-gray-900 border border-gray-800">
           <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/90 z-10"></div>
-          <img src="../img/100k_pur.png"
+          <img src="../img/100k_pur.webp"
                class="w-full h-full object-cover object-center opacity-80 group-hover:scale-110 transition-transform duration-700" alt="Detail">
           <div class="absolute bottom-6 left-6 z-20">
             <span class="text-brand-secondary text-xs font-bold border border-brand-secondary px-2 py-1 rounded">LIMITED</span>

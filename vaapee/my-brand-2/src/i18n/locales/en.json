@@ -83,25 +83,25 @@
         "year": "2015",
         "title": "THE GENESIS",
         "desc": "Vaapee was born in Shenzhen with a bold mission: to redefine the vaping landscape through uncompromised innovation.",
-        "image": "/licheng/2015.JPEG"
+        "image": "/licheng/2015.webp"
       },
       {
         "year": "2018",
         "title": "ENGINEERING MILESTONE",
         "desc": "Setting new benchmarks with the launch of our first high-capacity series, powered by independent R&D and core patents.",
-        "image": "/licheng/2018.JPEG"
+        "image": "/licheng/2018.webp"
       },
       {
         "year": "2020",
         "title": "GLOBAL FRONTIER",
         "desc": "Scaling heights across Europe and the Americas, establishing a trusted presence in over 50 countries through global exhibitions.",
-        "image": "/licheng/2020.jpeg"
+        "image": "/licheng/2020.webp"
       },
       {
         "year": "2024",
         "title": "FUTURE-PROOF LEADERSHIP",
         "desc": "Defining the next era of high-end vaping with industry-leading 100K+ puff technology and smart tech integration.",
-        "image": "/licheng/2024.jpeg"
+        "image": "/licheng/2024.webp"
       }
     ]
   },
@@ -165,9 +165,9 @@
         "subtitle": "ISO 9001 / 14001 / 45001",
         "path": "international-certificates",
         "certificates": [
-          { "id": 11, "name": "ISO Certificate 11", "file": "11.png" },
-          { "id": 12, "name": "ISO Certificate 12", "file": "12.png" },
-          { "id": 13, "name": "ISO Certificate 13", "file": "13.png" }
+          { "id": 11, "name": "ISO Certificate 11", "file": "11.webp" },
+          { "id": 12, "name": "ISO Certificate 12", "file": "12.webp" },
+          { "id": 13, "name": "ISO Certificate 13", "file": "13.webp" }
         ]
       },
       {
@@ -176,11 +176,11 @@
         "subtitle": "Design & Utility Patents",
         "path": "patents",
         "certificates": [
-          { "id": 3, "name": "Patent 3", "file": "3.png" },
-          { "id": 4, "name": "Patent 4", "file": "4.png" },
-          { "id": 5, "name": "Patent 5", "file": "5.png" },
-          { "id": 6, "name": "Patent 6", "file": "6.png" },
-          { "id": 7, "name": "Patent 7", "file": "7.png" }
+          { "id": 3, "name": "Patent 3", "file": "3.webp" },
+          { "id": 4, "name": "Patent 4", "file": "4.webp" },
+          { "id": 5, "name": "Patent 5", "file": "5.webp" },
+          { "id": 6, "name": "Patent 6", "file": "6.webp" },
+          { "id": 7, "name": "Patent 7", "file": "7.webp" }
         ]
       },
       {
@@ -189,11 +189,11 @@
         "subtitle": "Alibaba & Made-in-China SGS Reports",
         "path": "alibaba-and-made-in-china-certificates",
         "certificates": [
-          { "id": 1, "name": "Certificate 1", "file": "1.png" },
-          { "id": 2, "name": "Certificate 2", "file": "2.png" },
-          { "id": 8, "name": "Certificate 8", "file": "8.png" },
-          { "id": 9, "name": "Certificate 9", "file": "9.png" },
-          { "id": 10, "name": "Certificate 10", "file": "10.png" }
+          { "id": 1, "name": "Certificate 1", "file": "1.webp" },
+          { "id": 2, "name": "Certificate 2", "file": "2.webp" },
+          { "id": 8, "name": "Certificate 8", "file": "8.webp" },
+          { "id": 9, "name": "Certificate 9", "file": "9.webp" },
+          { "id": 10, "name": "Certificate 10", "file": "10.webp" }
         ]
       }
     ]

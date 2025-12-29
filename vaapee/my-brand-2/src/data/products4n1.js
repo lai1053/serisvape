@@ -27,61 +27,61 @@ export const product4n1 = {
   flavors: [
     {
       name: 'Blue Razz Lemonade + Lemon Lime + Grape Ice + Cherry Cola Ice',
-      file: 'Blue_Razz_Lemonade_Lemon_Lime_Grape_Ice_Cherry_Cola_Ice.png',
+      file: 'Blue_Razz_Lemonade_Lemon_Lime_Grape_Ice_Cherry_Cola_Ice.webp',
       flavors: ['Blue Razz Lemonade', 'Lemon Lime', 'Grape Ice', 'Cherry Cola Ice'],
       color: '#00CED1'
     },
     {
       name: 'Cola Ice + Blueberry Ice + Triple Melon + Strawberry Grape',
-      file: 'Cola_Ice_Blueberry_Ice_Triple_Melon_Strawberry_Grape.png',
+      file: 'Cola_Ice_Blueberry_Ice_Triple_Melon_Strawberry_Grape.webp',
       flavors: ['Cola Ice', 'Blueberry Ice', 'Triple Melon', 'Strawberry Grape'],
       color: '#4169E1'
     },
     {
       name: 'Peach Ice + Grape Ice + Peach Mango Watermelon + Watermelon Ice',
-      file: 'Peach_Ice_Grape_Ice_Peach_Mango_Watermelon_Watermelon_Ice.png',
+      file: 'Peach_Ice_Grape_Ice_Peach_Mango_Watermelon_Watermelon_Ice.webp',
       flavors: ['Peach Ice', 'Grape Ice', 'Peach Mango Watermelon', 'Watermelon Ice'],
       color: '#FF69B4'
     },
     {
       name: 'Red Bull + Blue Razz Ice + Kiwi Passion Fruit Guava + Strawberry Watermelon',
-      file: 'Red_Bull_Blue_Razz_Ice_Kiwi_Passion_Fruit_Guava_Strawberry_Watermelon.png',
+      file: 'Red_Bull_Blue_Razz_Ice_Kiwi_Passion_Fruit_Guava_Strawberry_Watermelon.webp',
       flavors: ['Red Bull', 'Blue Razz Ice', 'Kiwi Passion Fruit Guava', 'Strawberry Watermelon'],
       color: '#FF4500'
     },
     {
       name: 'Red Bull + Cherry Cola + Blueberry Ice + Black Dragon Ice',
-      file: 'Red_Bull_Cherry_Cola_Blueberry_Ice_Black_Dragon_Ice.png',
+      file: 'Red_Bull_Cherry_Cola_Blueberry_Ice_Black_Dragon_Ice.webp',
       flavors: ['Red Bull', 'Cherry Cola', 'Blueberry Ice', 'Black Dragon Ice'],
       color: '#DC143C'
     },
     {
       name: 'Sour Apple Blueberry + Double Apple Ice + Apple Peach + Peach Ice',
-      file: 'Sour_Apple_Blueberry_Double_Apple_Ice_Apple_Peach_Peach_Ice.png',
+      file: 'Sour_Apple_Blueberry_Double_Apple_Ice_Apple_Peach_Peach_Ice.webp',
       flavors: ['Sour Apple Blueberry', 'Double Apple Ice', 'Apple Peach', 'Peach Ice'],
       color: '#32CD32'
     },
     {
       name: 'Strawberry Ice + Strawberry Raspberry Cherry + Blue Raspberry Ice + Strawberry Kiwi',
-      file: 'Strawberry_Ice_Strawberry_Raspberry_Cherry_Blue_Raspberry_Ice_Strawberry_Kiwi.png',
+      file: 'Strawberry_Ice_Strawberry_Raspberry_Cherry_Blue_Raspberry_Ice_Strawberry_Kiwi.webp',
       flavors: ['Strawberry Ice', 'Strawberry Raspberry Cherry', 'Blue Raspberry Ice', 'Strawberry Kiwi'],
       color: '#FF1493'
     },
     {
       name: 'Strawberry Raspberry Cherry + Mixed Berries + Blue Raspberry Ice + Raspberry Watermelon',
-      file: 'Strawberry_Raspberry_Cherry_Mixed_Berries_Blue_Raspberry_Ice_Raspberry_Watermelon.png',
+      file: 'Strawberry_Raspberry_Cherry_Mixed_Berries_Blue_Raspberry_Ice_Raspberry_Watermelon.webp',
       flavors: ['Strawberry Raspberry Cherry', 'Mixed Berries', 'Blue Raspberry Ice', 'Raspberry Watermelon'],
       color: '#9370DB'
     },
     {
       name: 'Tangerine Ice + Lemon Ice + Mango Ice + Strawberry Banana',
-      file: 'Tangerine_Ice_Lemon_Ice_Mango_Ice_Strawberry_Banana.png',
+      file: 'Tangerine_Ice_Lemon_Ice_Mango_Ice_Strawberry_Banana.webp',
       flavors: ['Tangerine Ice', 'Lemon Ice', 'Mango Ice', 'Strawberry Banana'],
       color: '#FFD700'
     },
     {
       name: 'Vanilla Cola + Pink Lemonade + Pineapple Orange + Mango Peach',
-      file: 'Vanilla_Cola_Pink_lemonade_Pineapple_Orange_Mango_Peach.png',
+      file: 'Vanilla_Cola_Pink_lemonade_Pineapple_Orange_Mango_Peach.webp',
       flavors: ['Vanilla Cola', 'Pink Lemonade', 'Pineapple Orange', 'Mango Peach'],
       color: '#FFA500'
     }

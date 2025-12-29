@@ -20,7 +20,7 @@ export default {
                 sans: ['Rajdhani', 'ui-sans-serif', 'system-ui', 'sans-serif'],
             },
             backgroundImage: {
-                'hero-pattern': "url('/src/img/bg.png')", // 赛博朋克风格占位图
+                'hero-pattern': "url('/src/img/bg.webp')", // 赛博朋克风格占位图
             },
             animation: {
                 'float': 'float 6s ease-in-out infinite',

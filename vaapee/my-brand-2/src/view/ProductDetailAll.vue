@@ -287,7 +287,7 @@ onMounted(() => {
                   ? { borderColor: currentProduct.color } 
                   : { borderColor: `${currentProduct.color}30` }"
                 class="relative bg-white/5 rounded overflow-hidden transition-all hover:opacity-90"
-                :aria-label="img.replace('.png', '').replace(/_/g, ' ')"
+                :aria-label="img.replace(/\.(png|webp)$/i, '').replace(/_/g, ' ')"
               >
                 <img
                   :src="`${product.basePath}/${product.imageType}/${img}`"
@@ -310,7 +310,7 @@ onMounted(() => {
                 {{ currentProduct.series }}
               </h1>
               <p class="text-gray-500 font-bold tracking-widest text-lg mb-6">
-                {{ currentProduct.fileName.replace('.png', '').replace(/_/g, ' ') }}
+                {{ currentProduct.fileName.replace(/\.(png|webp)$/i, '').replace(/_/g, ' ') }}
               </p>
             </div>
 
@@ -403,7 +403,7 @@ onMounted(() => {
               />
             </div>
             <div class="mt-2 text-[8px] font-bold text-gray-400 uppercase text-center truncate">
-              {{ img.replace('.png', '').replace(/_/g, ' ').substring(0, 15) }}
+              {{ img.replace(/\.(png|webp)$/i, '').replace(/_/g, ' ').substring(0, 15) }}
             </div>
           </div>
         </div>

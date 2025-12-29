@@ -171,7 +171,7 @@ onMounted(() => {
           <!-- 底部文件名 -->
           <div class="absolute bottom-0 left-0 right-0 p-1 bg-black/90 backdrop-blur-sm z-10">
             <div class="text-[7px] font-bold text-white uppercase text-center truncate">
-              {{ product.fileName.replace('.png', '').replace(/_/g, ' ').substring(0, 20) }}
+              {{ product.fileName.replace(/\.(png|webp)$/i, '').replace(/_/g, ' ').substring(0, 20) }}
             </div>
           </div>
         </div>

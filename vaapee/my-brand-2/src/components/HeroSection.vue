@@ -43,7 +43,7 @@
         <div class="absolute w-[450px] h-[450px] border-[1px] border-white/20 rounded-full animate-[spin_15s_linear_infinite_reverse] border-dashed"></div>
 
         <img
-            src="../img/100k_green-removebg-preview.png"
+            src="../img/100k_green-removebg-preview.webp"
             alt="Hero Product"
             class="relative z-10 w-[500px] md:w-[600px] object-contain drop-shadow-[0_30px_60px_rgba(57,255,20,0.25)] animate-float"
         />
