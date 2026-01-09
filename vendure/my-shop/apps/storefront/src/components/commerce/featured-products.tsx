@@ -8,11 +8,10 @@ async function getFeaturedCollectionProducts() {
     cacheLife('days')
 
     // Fetch featured products from a specific collection
-    // Replace 'featured' with your actual collection slug
     const result = await query(GetCollectionProductsQuery, {
-        slug: "electronics",
+        slug: "vaapee",
         input: {
-            collectionSlug: "electronics",
+            collectionSlug: "vaapee",
             take: 12,
             skip: 0,
             groupByProduct: true
@@ -25,11 +24,12 @@ async function getFeaturedCollectionProducts() {
 
 export async function FeaturedProducts() {
     const products = await getFeaturedCollectionProducts();
+    const featured = products.slice(0, 1);
 
     return (
         <ProductCarousel
             title="Featured Products"
-            products={products}
+            products={featured}
         />
     )
 }

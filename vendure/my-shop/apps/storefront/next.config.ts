@@ -5,7 +5,21 @@ const nextConfig: NextConfig = {
     images: {
         // This is necessary to display images from your local Vendure instance
         dangerouslyAllowLocalIP: true,
+        unoptimized: true,
+        domains: ['cdn.vaapee.com'],
         remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'cdn.vaapee.com',
+                pathname: '/**',
+                search: '*',
+            },
+            {
+                protocol: 'http',
+                hostname: '175.178.87.111',
+                port: '3002',
+                pathname: '/assets/**',
+            },
             {
                 hostname: 'readonlydemo.vendure.io',
             },

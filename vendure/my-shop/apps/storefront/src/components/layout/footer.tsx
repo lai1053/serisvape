@@ -10,7 +10,7 @@ async function Copyright() {
 
     return (
         <div>
-            © {new Date().getFullYear()} Vendure Store. All rights reserved.
+            © {new Date().getFullYear()} Vape Device Store. All rights reserved.
         </div>
     )
 }
@@ -27,7 +27,11 @@ export async function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div>
                         <p className="text-sm font-semibold mb-4 uppercase tracking-wider">
-                            Vendure Store
+                            Vape Device Store
+                        </p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                            The merchant only sell vape devices, not nicotine. The merchant&apos;s devices cannot be used
+                            to consume any illegal substances.
                         </p>
                     </div>
 
@@ -48,37 +52,17 @@ export async function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-sm font-semibold mb-4">Vendure</h4>
+                        <h4 className="text-sm font-semibold mb-4">Support</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
                             <li>
-                                <a
-                                    href="https://github.com/vendure-ecommerce"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="hover:text-foreground transition-colors"
-                                >
-                                    GitHub
-                                </a>
+                                <Link href="/account/orders" className="hover:text-foreground transition-colors">
+                                    Order tracking
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="https://docs.vendure.io"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="hover:text-foreground transition-colors"
-                                >
-                                    Documentation
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/vendure-ecommerce/vendure"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="hover:text-foreground transition-colors"
-                                >
-                                    Source code
-                                </a>
+                                <Link href="/account/profile" className="hover:text-foreground transition-colors">
+                                    Account settings
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -89,24 +73,14 @@ export async function Footer() {
                     className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
                     <Copyright/>
                     <div className="flex items-center gap-2">
-                        <span>Powered by</span>
-                        <a
-                            href="https://vendure.io"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-foreground transition-colors"
-                        >
-                            <Image src="/vendure.svg" alt="Vendure" width={40} height={27} className="h-4 w-auto dark:invert" />
-                        </a>
-                        <span>&</span>
-                        <a
-                            href="https://nextjs.org"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-foreground transition-colors"
-                        >
-                            <Image src="/next.svg" alt="Next.js" width={16} height={16} className="h-5 w-auto dark:invert" />
-                        </a>
+                        <Image
+                            src="/favicon_logosc/favicon-32x32.png"
+                            alt="Vape Device Store"
+                            width={16}
+                            height={16}
+                            className="h-4 w-4"
+                        />
+                        <span>Committed to compliant device-only sales.</span>
                     </div>
                 </div>
             </div>

@@ -6,6 +6,7 @@ import {Navbar} from "@/components/layout/navbar";
 import {Footer} from "@/components/layout/footer";
 import {ThemeProvider} from "@/components/providers/theme-provider";
 import {SITE_NAME, SITE_URL} from "@/lib/metadata";
+import {AgeGate} from "@/components/compliance/age-gate";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
         template: `%s | ${SITE_NAME}`,
     },
     description:
-        "Shop the best products at Vendure Store. Quality products, competitive prices, and fast delivery.",
+        "Shop device-only products with clear compliance standards and straightforward service.",
     openGraph: {
         type: "website",
         siteName: SITE_NAME,
@@ -63,6 +64,7 @@ export default function RootLayout({children}: LayoutProps<'/'>) {
                 className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
             >
                 <ThemeProvider>
+                    <AgeGate />
                     <Navbar />
                     {children}
                     <Footer />

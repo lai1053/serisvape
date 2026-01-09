@@ -8,9 +8,10 @@ import { GetCustomerAddressesQuery, GetAvailableCountriesQuery } from '@/lib/ven
 import { AddressesClient } from './addresses-client';
 
 export default async function AddressesPage(_props: PageProps<'/account/addresses'>) {
+    const noStoreFetch = { cache: 'no-store' as const };
     const [addressesResult, countriesResult] = await Promise.all([
-        query(GetCustomerAddressesQuery, {}, { useAuthToken: true }),
-        query(GetAvailableCountriesQuery, {}),
+        query(GetCustomerAddressesQuery, {}, { useAuthToken: true, fetch: noStoreFetch }),
+        query(GetAvailableCountriesQuery, {}, { fetch: noStoreFetch }),
     ]);
 
     const addresses = addressesResult.data.activeCustomer?.addresses || [];

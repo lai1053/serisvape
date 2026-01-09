@@ -2,11 +2,14 @@
   "name": "my-shop",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "workspaces": [
     "apps/*"
   ],
   "scripts": {
-    "dev": "concurrently -n server,storefront -c blue,magenta \"npm run dev -w server\" \"npm run dev -w storefront\"",
+    "dev": "node ./scripts/check-node.mjs && concurrently -n server,storefront -c blue,magenta \"npm run dev -w server\" \"npm run dev -w storefront\"",
     "dev:server": "npm run dev -w server",
     "dev:storefront": "npm run dev -w storefront",
     "build": "npm run build -w server && npm run build -w storefront",
@@ -20,4 +23,3 @@
     "concurrently": "^9.0.0"
   }
 }
-

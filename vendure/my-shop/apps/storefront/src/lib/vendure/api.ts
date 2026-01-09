@@ -1,5 +1,6 @@
 import type {TadaDocumentNode} from 'gql.tada';
 import {print} from 'graphql';
+import {unstable_noStore} from 'next/cache';
 import {getAuthToken} from '@/lib/auth';
 
 const VENDURE_API_URL = process.env.VENDURE_SHOP_API_URL || process.env.NEXT_PUBLIC_VENDURE_SHOP_API_URL;
@@ -67,8 +68,18 @@ export async function query<TResult, TVariables>(
     // Set the channel token header (use provided channelToken or default)
     headers[VENDURE_CHANNEL_TOKEN_HEADER] = channelToken || VENDURE_CHANNEL_TOKEN;
 
+    const shouldBypassCache = Boolean(useAuthToken || authToken);
+    if (shouldBypassCache) {
+        unstable_noStore();
+    }
+    const noStoreFetch: RequestInit = {cache: 'no-store'};
+    const mergedFetchOptions: RequestInit | undefined =
+        shouldBypassCache && (!fetchOptions || !('cache' in fetchOptions))
+            ? {...noStoreFetch, ...(fetchOptions || {})}
+            : fetchOptions;
+
     const response = await fetch(VENDURE_API_URL!, {
-        ...fetchOptions,
+        ...mergedFetchOptions,
         method: 'POST',
         headers,
         body: JSON.stringify({

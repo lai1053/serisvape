@@ -15,8 +15,15 @@ export function Navbar() {
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center gap-8">
-                        <Link href="/" className="text-xl font-bold">
-                            <Image src="/vendure.svg" alt="Vendure" width={40} height={27} className="h-6 w-auto dark:invert" />
+                        <Link href="/" className="flex items-center gap-2 text-xl font-bold">
+                            <Image
+                                src="/favicon_logosc/android-chrome-192x192.png"
+                                alt="Vape Device Store"
+                                width={32}
+                                height={32}
+                                className="h-7 w-7"
+                            />
+                            <span className="hidden sm:inline">Vape Device Store</span>
                         </Link>
                         <nav className="hidden md:flex items-center gap-6">
                             <Suspense>

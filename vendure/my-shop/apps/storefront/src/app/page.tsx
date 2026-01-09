@@ -5,17 +5,17 @@ import {SITE_NAME, SITE_URL, buildCanonicalUrl} from "@/lib/metadata";
 
 export const metadata: Metadata = {
     title: {
-        absolute: `${SITE_NAME} - Your One-Stop Shop`,
+        absolute: `${SITE_NAME} - Device-Only Marketplace`,
     },
     description:
-        "Discover high-quality products at competitive prices. Shop now for the best deals on electronics, fashion, home goods, and more.",
+        "Browse device-only products with clear compliance standards and straightforward service.",
     alternates: {
         canonical: buildCanonicalUrl("/"),
     },
     openGraph: {
-        title: `${SITE_NAME} - Your One-Stop Shop`,
+        title: `${SITE_NAME} - Device-Only Marketplace`,
         description:
-            "Discover high-quality products at competitive prices. Shop now for the best deals.",
+            "Browse device-only products with clear compliance standards and straightforward service.",
         type: "website",
         url: SITE_URL,
     },
@@ -40,8 +40,8 @@ export default async function Home(_props: PageProps<'/'>) {
                                           d="M5 13l4 4L19 7"/>
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-semibold">High Quality</h3>
-                            <p className="text-muted-foreground">Premium products carefully selected for you</p>
+                            <h3 className="text-xl font-semibold">Device-Only Focus</h3>
+                            <p className="text-muted-foreground">All listings are hardware-focused for clear compliance</p>
                         </div>
                         <div className="space-y-3">
                             <div
@@ -52,8 +52,8 @@ export default async function Home(_props: PageProps<'/'>) {
                                           d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-semibold">Best Prices</h3>
-                            <p className="text-muted-foreground">Competitive pricing on all our products</p>
+                            <h3 className="text-xl font-semibold">Transparent Policies</h3>
+                            <p className="text-muted-foreground">Clear product details and consistent store standards</p>
                         </div>
                         <div className="space-y-3">
                             <div
@@ -64,8 +64,8 @@ export default async function Home(_props: PageProps<'/'>) {
                                           d="M13 10V3L4 14h7v7l9-11h-7z"/>
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-semibold">Fast Delivery</h3>
-                            <p className="text-muted-foreground">Quick and reliable shipping worldwide</p>
+                            <h3 className="text-xl font-semibold">Secure Checkout</h3>
+                            <p className="text-muted-foreground">Protected payments and reliable fulfillment</p>
                         </div>
                     </div>
                 </div>
