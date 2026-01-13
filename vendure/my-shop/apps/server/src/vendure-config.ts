@@ -87,18 +87,26 @@ export const config: VendureConfig = {
         DefaultJobQueuePlugin.init({ useDatabaseForBuffer: true }),
         DefaultSearchPlugin.init({ bufferUpdates: false, indexStockStatus: true }),
         EmailPlugin.init({
-            devMode: true,
-            outputPath: path.join(__dirname, '../static/email/test-emails'),
             route: 'mailbox',
+            transport: {
+                type: 'smtp',
+                host: process.env.SMTP_HOST,
+                port: +(process.env.SMTP_PORT || 465),
+                secure: process.env.SMTP_SECURE !== 'false',
+                auth: {
+                    user: process.env.SMTP_USER,
+                    pass: process.env.SMTP_PASS,
+                },
+            },
             handlers: defaultEmailHandlers,
             templateLoader: new FileBasedTemplateLoader(path.join(__dirname, '../static/email/templates')),
             globalTemplateVars: {
                 // The following variables will change depending on your storefront implementation.
                 // Here we are assuming a storefront running at http://localhost:8080.
-                fromAddress: '"example" <noreply@example.com>',
-                verifyEmailAddressUrl: 'http://localhost:8080/verify',
-                passwordResetUrl: 'http://localhost:8080/password-reset',
-                changeEmailAddressUrl: 'http://localhost:8080/verify-email-address-change'
+                fromAddress: process.env.SMTP_FROM_ADDRESS || '"Vaapee" <vaapee@serisvape.com>',
+                verifyEmailAddressUrl: 'https://shop.vaapee.com/verify',
+                passwordResetUrl: 'https://shop.vaapee.com/reset-password',
+                changeEmailAddressUrl: 'https://shop.vaapee.com/account/verify-email'
             },
         }),
         DashboardPlugin.init({

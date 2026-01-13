@@ -1,6 +1,3 @@
-'use client';
-
-import {use} from 'react';
 import {VerifyResult} from './verify-result';
 import {verifyAccountAction} from './actions';
 import {Card, CardContent} from '@/components/ui/card';
@@ -9,12 +6,13 @@ import Link from 'next/link';
 import {XCircle} from 'lucide-react';
 
 interface VerifyContentProps {
-    searchParams: Promise<{ token?: string }>;
+    searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
-export function VerifyContent({searchParams}: VerifyContentProps) {
-    const params = use(searchParams);
-    const token = params.token;
+export async function VerifyContent({searchParams}: VerifyContentProps) {
+    const params = await searchParams;
+    const tokenValue = params.token;
+    const token = Array.isArray(tokenValue) ? tokenValue[0] : tokenValue;
 
     if (!token) {
         return (
@@ -46,7 +44,7 @@ export function VerifyContent({searchParams}: VerifyContentProps) {
         );
     }
 
-    const verifyPromise = verifyAccountAction(token);
+    const result = await verifyAccountAction(token);
 
-    return <VerifyResult resultPromise={verifyPromise}/>;
+    return <VerifyResult result={result}/>;
 }

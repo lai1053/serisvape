@@ -1,5 +1,3 @@
-'use server';
-
 import {mutate} from '@/lib/vendure/api';
 import {VerifyCustomerAccountMutation} from '@/lib/vendure/mutations';
 import {setAuthToken} from '@/lib/auth';
