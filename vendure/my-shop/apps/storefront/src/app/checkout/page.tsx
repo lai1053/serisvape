@@ -12,6 +12,7 @@ import {CheckoutProvider} from './checkout-provider';
 import {noIndexRobots} from '@/lib/metadata';
 import {getActiveCustomer} from '@/lib/vendure/actions';
 import {getAvailableCountriesCached} from '@/lib/vendure/cached';
+import {PaymentLogos} from "@/components/shared/payment-logos";
 
 export const metadata: Metadata = {
     title: 'Checkout',
@@ -54,7 +55,10 @@ export default async function CheckoutPage(_props: PageProps<'/checkout'>) {
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <h1 className="text-3xl font-bold mb-8">Checkout</h1>
+            <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <h1 className="text-3xl font-bold">Checkout</h1>
+                <PaymentLogos heading="Cards accepted at checkout"/>
+            </div>
             <CheckoutProvider
                 order={activeOrder}
                 addresses={addresses}

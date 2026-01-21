@@ -14,7 +14,7 @@ services:
         environment:
             POSTGRES_DB: vendure
             POSTGRES_USER: vendure
-            POSTGRES_PASSWORD: -KvrOgm7VNj7ELMnFUWVJg
+            POSTGRES_PASSWORD: admin123
         labels:
             - "io.vendure.create.name=my-shop"
 
